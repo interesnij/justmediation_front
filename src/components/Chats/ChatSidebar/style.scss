@@ -1,0 +1,72 @@
+.chat-sidebar{
+  width: 320px;
+  border-right: 1px solid #ccc;
+  text-align: left;
+  background: white;
+  &__top{
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #ccc;
+    background: white;
+  }
+  &__content{
+    height: calc(100vh - 230px);
+    overflow: auto;
+  }
+  &__thread{
+    background: white;
+    padding: 20px 16px 20px 40px;
+    display: flex;
+    cursor: pointer;
+    border-bottom: 1px solid #ccc;
+    transition: all 300ms ease;
+    color: #98989a;
+    font-size: 12px;
+    &.active{
+      background: #81828b10;
+    }
+    &.hasUnread{
+      font-weight: 600;
+    }  
+    &:hover{
+      background: #81828b10;
+      .chat-sidebar__thread-name,
+      .chat-sidebar__thread-text,
+      .chat-sidebar__thread-time{
+        color: #98989a;
+      }
+    }
+    &-avatar{
+      position: relative;
+      margin-right: 12px;
+    }
+    &--active{
+      background: #666;
+      color: white;
+    }
+    &-name{
+      font-size: 16px;
+      color: #000;
+      max-width: 180px;
+      margin-right: 9px;
+    }
+    &-star{
+      width: 20px;
+    }
+    &-text{
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
+      max-width: 130px;
+    }
+  }
+
+  @media (min-width: 1500px){
+    &__thread {
+      &-text {
+        max-width: 140px;
+      }
+    }
+  }
+}

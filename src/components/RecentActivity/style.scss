@@ -1,0 +1,22 @@
+.recent-activity-control{
+  color: #000;
+  font-size: 14px;
+  line-height: 26px;
+  .doc-file{
+    background: rgba(224, 224, 225, 0.15);
+    border: 1px solid rgba(224, 224, 225, 0.3);
+    box-sizing: border-box;
+    border-radius: 4px;
+    color: #2E2E2E;
+    font-size: 12px;
+    line-height: 18px;
+    display: flex;
+    padding: 8px 14px;
+    margin: 8px 0;
+    width: fit-content;
+    img{
+      height: 24px;
+      margin-right: 10px;
+    }
+  }
+}

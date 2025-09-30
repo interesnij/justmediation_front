@@ -1,0 +1,126 @@
+.matter-billing-header, .matter-billing-row{
+  box-shadow: inset 0px -1px 0px #E7E7ED;
+  background: white;
+  height: 48px;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  display: grid;
+  grid-auto-flow: column dense;
+  grid-auto-rows: 1fr;
+  grid-template-columns: 1fr 2fr 2fr 4fr 2fr 4fr 2fr 2fr 4fr 2fr;
+  gap: 0 0;
+  align-items: center;
+  &>:nth-child(10){
+    justify-content: center;
+  }
+}
+.matter-billing-header {
+  &>*{
+    display: flex;
+  }
+  &-item{
+    display: flex;
+    font-size: 14px;
+    color: #2e2e2e;
+    &.sortable{
+      cursor:pointer;
+      img{
+        margin: auto 0 auto 4px;
+        height: 12px;
+      }
+    }
+  }
+}
+.matter-billing-row{
+  height: 64px;
+  background: white;
+  transition: all 300ms ease;
+  &>:nth-child(1){
+    padding-left: 12px;
+  }
+  &.checked{
+    background: #D9EFE2;
+  }
+  &-item{
+    flex-direction: row;
+    line-height: 24px;
+    font-size: 14px;
+    &>*{
+      margin-top: auto;
+      margin-bottom: auto;
+    }
+    span{
+      width: fit-content;
+    }
+    .check-box{
+      display: block;
+      position: relative;
+      padding-left: 30px;
+      margin: auto 0;
+      cursor: pointer;
+      color: black;
+      font-size: 14px;
+      line-height: 20px;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      width: 20px;
+      height: 20px;
+      input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 0;
+        width: 0;
+      }
+    
+      span{
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 20px;
+        width: 20px;
+        border: 1px solid var(--grey);
+        border-radius: 2px;
+        background-color: white;
+        margin-top: 0;
+        &:after {
+          content: "";
+          position: absolute;
+          display: none;
+        }
+      }
+    
+      &:hover input ~ span {
+        background-color: var(--green-light);
+      }
+      input:checked ~ span {
+        background-color: var(--green);
+        border-color: var(--green);
+      }
+      input:checked ~ span:after {
+        display: block;
+      }
+      span:after {
+        left: 6px;
+        top: 2px;
+        width: 6px;
+        height: 12px;
+        border: solid white;
+        border-width: 0 2px 2px 0;
+        -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        transform: rotate(45deg);
+      }
+    }
+    &-action-btn {
+      .dropdown__button {
+        justify-content: center;
+      }
+    }
+    &-action{
+      width: 16px;
+    }
+  }
+}

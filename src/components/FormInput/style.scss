@@ -1,0 +1,70 @@
+.input-control{
+  font-family: var(--font-family-primary);
+  input{
+    display: flex;
+    transition: all 300ms ease;
+    color: #000;
+    font-size: 14px;
+    line-height: 26px;
+    height: 26px;
+    display: flex;
+    width: 100%;
+    margin: auto;
+    font-family: var(--font-family-primary);
+    height: 48px;
+    padding: 12px;
+    border: 1px solid rgba(0, 0, 0, 0.25);
+    box-sizing: border-box;
+    border-radius: 4px;
+    &.active, &:focus, &:active, &:hover{
+      border: 1px solid var(--green);
+      outline: none;
+    }
+
+    /* Chrome, Safari, Edge, Opera */
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+    
+    /* Firefox */
+    &[type=number] {
+      -moz-appearance: textfield;
+    }
+  }
+  &__label{
+    color: #000;
+    font-size: 14px;
+    line-height: 26px;
+  }
+  &.error .input-control__label{
+    color: #CC4B39;
+  }
+  &.error .input-control__required{
+    color: #CC4B39;
+  }
+  &.error input{
+    border: 1px solid #CC4B39;
+  }
+  &__required{
+    font-size: 12px;
+    line-height: 18px;
+    color: #98989A;
+  }
+  &__footer{
+    margin-top: 4px;
+    font-size: 12px;
+    line-height: 18px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__help{
+    color: #616161;
+    text-align: left;
+  }
+  &__validation{
+    color: #CC4B39;
+  }
+}

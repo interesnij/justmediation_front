@@ -1,0 +1,83 @@
+.my-vault-page{
+  &__content{
+    flex: 1;
+    overflow: auto;
+    background: #F4F5F9;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__table{
+    margin: 0px 0px 30px 0;
+    color: var(--grey-dark);
+    font-family: var(--font-family-primary);
+    &-header, &-row{
+      box-shadow: inset 0px -1px 0px #E7E7ED;
+      background: white;
+      &>:nth-child(1){
+        flex: 1;
+      }
+      &>:nth-child(2){
+        width: 200px;
+      }
+      &>:nth-child(3){
+        width: 80px;
+      }
+    }
+    &-header{
+      display: flex;
+      height: 48px;
+      border-top-left-radius: 3px;
+      border-top-right-radius: 3px;
+      &>*{
+        display: flex;
+      }
+      &-item{
+        padding: 0 12px;
+        display: flex;
+        font-size: 14px;
+        color: #2e2e2e;
+        &.sortable{
+          cursor:pointer;
+          img{
+            margin: auto 0 auto 4px;
+            height: 12px;
+          }
+        }
+      }
+    }
+    &-row{
+      display: flex;
+      height: 64px;
+      background: white;
+      &-item{
+        display: flex;
+        flex-direction: row;
+        line-height: 24px;
+        font-size: 14px;
+        padding: 0 12px;
+        &>*{
+          margin-top: auto;
+          margin-bottom: auto;
+        }
+        span{
+          width: fit-content;
+        }
+        .file-size{
+          color: #616161;
+          font-size: 12px;
+        }
+        &.document-name{
+          
+          span{
+            cursor: pointer;
+          }
+        }
+        &-action{
+          width: 16px;
+        }
+      }
+    }
+  }
+}

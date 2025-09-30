@@ -1,0 +1,17 @@
+.side-modal__content{
+
+    .user-type-label{
+        font-family: var(--font-family-primary);
+        color: var(--grey-dark);
+        font-style: normal;
+        font-weight: bold;
+        font-size: 12px;
+        line-height: 16px;
+        text-transform: uppercase;
+    
+        &.link{
+            color: var(--green-dark);
+            cursor: pointer;
+        }
+    }
+}

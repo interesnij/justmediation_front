@@ -1,0 +1,9 @@
+.chat-page{
+ 
+  &__header{
+    display: flex;
+    border-bottom: 2px solid #eee;
+    background: white;
+    padding-right: 40px;
+  }
+}

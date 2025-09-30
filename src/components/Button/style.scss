@@ -1,0 +1,128 @@
+.btn{
+  border-radius: 20px;
+  border: none;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 14px;
+  display: flex;
+  padding: 0px 24px;
+  height: 40px;
+  letter-spacing: .5px; 
+  background-position: center;
+  transition: all 0.3s ease;
+  outline: none;
+  font-family: var(--font-family-primary);
+  cursor: pointer;
+  white-space: nowrap;
+  
+  &:disabled:hover{
+    opacity: .3;
+    cursor: normal;
+  }
+  &:hover{
+    opacity: .8;
+  }
+  span{
+    margin: auto;
+  }
+  img{
+    margin: auto 4px auto 0;
+    height: 14px;
+  }
+  &.large{
+    height: 48px;
+    border-radius: 24px;
+  }
+}
+.btn--outline.ripple-effect:after{
+  background-image: radial-gradient(circle, var(--primary-color) 10%, transparent 10.01%);
+}
+.btn--text{
+  background: transparent;
+  color: black;
+  border: none;
+  box-shadow: none;
+  outline: none;
+  padding: 0;
+}
+.btn--green{
+  background-color: var(--green);
+  color: white;
+  &:hover{
+    background-color: var(--green-dark);
+  }
+  &.btn--outline{
+    border: 2px solid var(--green);
+    background: white;
+    color: var(--green-dark);
+  }
+}
+.btn--yellow{
+  background-color: var(--yellow);
+  color: var(--grey-dark);
+  &:hover{
+    background-color: var(--yellow-dark);
+  }
+  &.btn--outline{
+    border: 2px solid var(--yellow);
+    background: white;
+    color: var(--grey-dark);
+  }
+}
+.btn--seafoam{
+  background-color: var(--seafoam);
+  color: var(--grey-dark);
+  &:hover{
+    background-color: var(--seafoam-dark);
+  }
+  &.btn--outline{
+    border: 2px solid var(--seafoam);
+    background: white;
+    color: var(--grey-dark);
+  }
+}
+.btn--red{
+  background-color: var(--red);
+  color: white;
+  &:hover{
+    opacity: .9;
+  }
+  &.btn--outline{
+    border: 2px solid var(--red);
+    background: white;
+    color: var(--grey-dark);
+  }
+}
+.btn--white{
+  background-color: #fff;
+  color: var(--grey-dark);
+  border: 1px solid #E0E0E1;
+
+  &:hover{
+    opacity: .9;
+  }
+  &.btn--outline{
+    border: 2px solid var(--red);
+    background: white;
+    color: var(--grey-dark);
+  }
+}
+
+.btn--grey{
+  background: #FFFFFF;
+  color: #616161;
+
+  &:hover{
+    opacity: .9;
+  }
+  &.btn--outline{
+    border: 1px solid #E0E0E1;
+    background: white;
+  }
+}
+
+.btn--disabled{
+  opacity: .3;
+  cursor: auto;
+}

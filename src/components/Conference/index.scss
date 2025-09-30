@@ -1,0 +1,62 @@
+.resume-call-btn{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 16px;
+  right: 42%;
+  padding: 12px 20px;
+  border-radius: 30px;
+  background: #26ad3a;
+  color: #fff;
+  cursor: pointer;
+  box-shadow: 3px 2px 11px rgb(0 0 0 / 30%);
+  z-index: 10;
+}
+.switch-mode {
+  color: black !important;
+}
+
+#vxt-widget-container{
+
+  .vxt-modal-close-btn .icon-close{
+    font-weight: 600;
+    font-size: 1.2rem;
+    color: #fff;
+    &:before{
+      content: "\E914";
+    }
+  }
+  
+  .vxt-conference-attendees .SidebarSpeaker .screenshare-current-user .active-speaker{
+    opacity: 1;
+  }
+  
+  .vxt-conference-attendees .SidebarSpeaker .screenshare-current-user .screenshare-current-user-enable{
+    background-color: #2f9663;
+    border-color: var(--grey-dark);
+  }
+  
+  .vxt-widget-fullscreen-on .vxt-conference-attendees .SidebarSpeaker .video-frame.screen-share{
+    border-color: var(--grey-dark);
+    background: #111;
+  } 
+
+  .vxt-conference-attendees .SidebarSpeaker .active-speaker .video-frame .fullscreen-screenshare{
+    height: 30px;
+    left: auto;
+    right: 10px;
+    top: 10px;
+  }
+
+  .vxt-bottom-bar .vxt-bottom-bar-actions ul li .bubble-tip{
+    background-color: #0e4925;
+    border: 3px solid var(--grey-dark);
+    a:hover{
+      background: #277a49;
+      &.icon-close{
+        background: none;
+      }
+    }
+  }
+}

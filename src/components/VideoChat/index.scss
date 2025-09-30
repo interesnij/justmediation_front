@@ -1,0 +1,83 @@
+.vxt-widget-modal{
+  z-index: 100 !important;
+
+    .vxt-widget-container.vxt-widget-fullscreen-on { 
+      max-width: 1600px; 
+      max-height: 1200px;
+      width: 90%; 
+    }
+    .vxt-bottom-bar { 
+      background-color: #0e4925;
+      border-color: var(--grey-dark);
+    }
+    .vxt-conference-attendees{
+      .conference-empty p,
+      .onboardingmessage,
+      .onboardingmessage-fadeout{
+        background: var(--green-dark);
+      }
+      .SidebarTiles .tiles-list{
+        background: #111 !important;
+      }
+      .layout-container{
+        display: none;
+      }
+    }
+    .attendees-list,
+    .attendees-settings{
+      background-color: #111;
+      border-left: 2px solid var(--grey-dark);
+    }
+  
+    .attendees-chat {
+      background-color: #111;
+      border-left: 2px solid var(--grey-dark);
+      .chat-container-myself div{
+        width: 100%;
+      }
+      .chat-content-myself{
+        background: var(--green-dark);
+      }
+    }
+    .onactivespeakeroverlay,
+    .onactivespeakeroverlay-hidden{
+      opacity: 0 !important;
+    }
+  } 
+  .voxeet-loading-message-container {
+    opacity: .3 !important;
+    background: white !important;
+    z-index: 4;
+  }
+  .vxt-conference-attendees{
+    background: none !important;
+  }
+  .settings-preconfig{ 
+    .content{
+      background: #111 !important;
+      .video{
+        border:none !important;
+      }
+      .start-conference{
+        background-color: #e9c966 !important;
+        color: black !important;
+      }
+    }
+  }
+  
+  .vxt-conference-attendees .SidebarTiles .tiles-list .tile-local-item#video-local-video-on .tile-video .myself .video-participant, 
+  .vxt-conference-attendees .SidebarTiles .tiles-list .tile-local-item#video-local-video-off .tile-video .myself .video-participant{
+    border: none !important;
+  }
+
+  .attendees-chat .container-input-chat .container-input {
+    width: 100% !important; 
+    border-radius: 30px 0px 0px 30px;
+    overflow: hidden;
+  }
+  .attendees-chat .container-input-chat .container-input input {
+    padding-left: 20px;
+  }
+  .attendees-chat .container-input-chat .container-attach{
+    display: none;
+  }

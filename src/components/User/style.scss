@@ -1,0 +1,132 @@
+.user-avatar{
+  border-radius: 50%;
+  background: var(--green-light);
+  display: flex;
+  color: var(--green);
+  margin: auto 0;
+  &.tiny{
+    width: 24px;
+    height: 24px;
+    min-width: 24px;
+    font-size: 12px;
+  }
+  &.small{
+    width: 32px;
+    height: 32px;
+    min-width: 32px;
+    font-size: 16px;
+  }
+  &.normal{
+    width: 48px;
+    height: 48px;
+    min-width: 48px;
+    font-size: 24px;
+  }
+  &.large{
+    width: 128px;
+    height: 128px;
+    min-width: 128px;
+    font-size: 64px;
+  }
+  img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  svg{
+    margin: auto;
+  }
+
+  &-container{
+    display: flex;
+    width: fit-content;
+    &.tiny{
+      height: 24px;
+    }
+    &.small{
+      height: 32px;
+    }
+    &.normal{
+      height: 48px;
+    }
+    &.large{
+      height: 128px;
+    }
+    &.toRight{
+      flex-direction: row;
+    }
+    &.toLeft{
+      flex-direction: row-reverse;
+    }
+  }
+  &__name{
+    font-size: 14px;
+    line-height: 26px;
+    margin: auto 8px;
+  }
+  &__desc{
+    font-size: 14px;
+    color: #2e2e2e;
+  }
+
+}
+.user-avatar2{
+  border-radius: 50%;
+  background: var(--green-light);
+  display: flex;
+  color: var(--green);
+  margin: auto 0;
+  &.small{
+    width: 32px;
+    height: 32px;
+    min-width: 32px;
+    font-size: 16px;
+  }
+  &.normal{
+    width: 48px;
+    height: 48px;
+    min-width: 48px;
+    font-size: 24px;
+  }
+  &.large{
+    width: 128px;
+    height: 128px;
+    min-width: 128px;
+    font-size: 64px;
+  }
+  img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  svg{
+    margin: auto;
+  }
+
+  &-container{
+    display: flex;
+    width: fit-content;
+    
+    &.toRight{
+      flex-direction: row;
+    }
+    &.toLeft{
+      flex-direction: row-reverse;
+    }
+  }
+  &__name{
+    font-size: 14px;
+    line-height: 26px;
+    margin: 0 0 0 8px;
+    text-align: left;
+    color: #2e2e2e;
+  }
+  &__desc{
+    font-size: 14px;
+    color: #98988a;
+    margin: 0 0 0 8px;
+  }
+
+}

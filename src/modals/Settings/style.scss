@@ -1,0 +1,116 @@
+.settings{
+  padding: 40px;
+  background: var(--grey-light);
+
+  .label{
+    color: var(--grey);
+    font-size: 12px;
+    line-height: 26px;
+  }
+  .heading{
+    color: #000;
+    font-size: 18px;
+    line-height: 24px;
+  }
+  .desc{
+    font-size: 14px;
+    line-height: 26px;
+    color: #2e2e2e;
+  }
+  .team-logo{
+    .user-avatar img {
+      border-radius: 12px;
+    }
+  }
+
+  .members-count {
+    &:not(:first-child){
+      border-left: 1px solid #e5e5e5;
+      padding-left: 40px;
+    }
+    &>div:nth-child(1){
+      font-family: DM Sans;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 26px;
+      color: #616161;
+    }
+    &>div:nth-child(2){
+      font-family: DM Sans;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 22px;
+      line-height: 29px;
+      color: #2E2E2E;
+    }
+  }
+
+  .folder-btn {
+    position: absolute;
+    top: -55px;
+    right: 10px;
+  }
+}
+
+.overlay-spinner{
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  left: 0;
+  top: 0;
+  z-index: 100;
+  background: rgba(255,255,255,.5);
+  &>div{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.matter-stage {
+  &-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 300ms ease;
+    &:hover {
+      transition: all 300ms ease;
+      .matter-stage-item {
+        &__action {
+          opacity: 1;
+          transition: all 300ms ease;
+        }
+        &__icon-button {
+          pointer-events: auto;
+        }
+      }
+    }
+
+    &__title {
+      font-weight: 500;
+      font-size: 18px;
+    }
+
+    &__action {
+      display: flex;
+      align-items: center;
+      opacity: 0;
+      transition: all 300ms ease;
+    }
+
+    &__icon-button {
+      pointer-events: none;
+      cursor: pointer;
+      border: none;
+      background: transparent;
+      img {
+        height: 22px;
+      }
+    }
+  }
+}

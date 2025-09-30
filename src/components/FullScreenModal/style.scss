@@ -1,0 +1,138 @@
+.full-modal__background{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  max-width: 100vw;
+  max-height: 100vh;
+  background: #00000060;
+  display: none;
+  z-index: 9;
+  //animation: modal-background-close .5s ease forwards;
+
+  &.open{
+    display: block;
+  }
+}
+
+@keyframes modal-background-close {
+  from {
+  display: block;
+  }
+  to {
+  display: none;
+  }
+}
+.full-modal__container{
+  color: #333;
+  height: 100vh;
+  z-index: 10;
+  background: white;
+  position: fixed;
+  right: -100%;
+  animation: full-modal-slide-close .5s ease forwards;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  &.with-visible-navbar{
+    width: calc(100vw - 265px);
+  }
+  &.open{
+    animation: full-modal-slide-open .5s ease forwards;
+  }
+}
+@keyframes full-modal-slide-open {
+  from {transform:translateX(0px); }
+  to {transform:translateX(-100%); }
+}
+@keyframes full-modal-slide-close {
+  from {transform:translateX(-100%);
+  }
+  to {transform:translateX(0px);
+  }
+}
+.full-modal__header{
+  height: 80px;
+  font-size: 26px;
+  line-height: 26px;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 40px;
+  font-family: var(--font-family-secondary);
+  .close-button{
+    width: 20px;
+    height: 20px;
+    transition: all 300ms ease;
+    cursor: pointer;
+    &:hover{
+      opacity: .7;
+    }
+  }
+}
+.full-modal__content{
+  flex: 1;
+  overflow: auto;
+  padding-bottom: 96px;
+  display: flex;
+  flex-direction: column;
+  &.with-no-footer{
+    padding-bottom: 0;
+  }
+}
+.full-modal__footer{
+  height: 96px;
+  display: flex;
+  font-size: 14px;
+  padding: 0 40px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+  z-index: 9;
+  &>*{
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+}
+
+.full-modal__background {
+  &.green-theme {
+    .full-modal__header {
+      background: var(--green-dark);
+      color: #fff;
+    }
+
+    .full-modal__content {
+      background: var(--green-light);
+    }
+
+    .full-modal__footer {
+      background: var(--green-dark);
+      color: #fff;
+    }
+  }
+
+  &.grey-theme {
+    .full-modal__header {
+      background: var(--green-dark);
+      color: #fff;
+    }
+
+    .full-modal__content {
+      background: var(--grey-light);
+    }
+
+    .full-modal__footer {
+      background: var(--green-dark);
+      color: #fff;
+    }
+
+    &.white-theme {
+      .full-modal__header {
+        background: white;
+        border-bottom: 2px solid #eee;
+      }
+    }
+  }
+}

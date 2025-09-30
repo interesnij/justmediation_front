@@ -1,0 +1,17 @@
+.practice-area-item {
+  &:hover {
+    .practice-area-item__action {
+      opacity: 1;
+    }
+  }
+  .practice-area-item__action {
+    transition: 0.3s all;
+    opacity: 0;
+    button {
+      background: transparent;
+      border: none;
+      outline: none;
+      cursor: pointer;
+    }
+  }
+}

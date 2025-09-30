@@ -1,0 +1,102 @@
+.folder-control{
+  &__header{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #dcdcdc;
+    margin-right: 8px;
+  }
+  &__heading{
+    height: 55px;
+    line-height: 55px;
+    background: white;
+    font-size: 20px;
+    color: #000;
+    padding-left: 24px;
+    position: relative;
+    border-top-left-radius: 8px;
+    border-left: 1px solid #dcdcdc;
+    border-top: 1px solid #dcdcdc;
+    font-family: var(--font-family-secondary);
+
+    &::after{
+      position: absolute;
+      border-top-right-radius: 12px;
+      right: -40px;
+      content: ' ';
+      width: 32px;
+      height: calc(100% + 1px);
+      top: -1px;
+      transform:skew(20deg);
+      background: white;
+      border-right: 1px solid #dcdcdc;
+      border-top: 1px solid #dcdcdc;
+      box-sizing: border-box;
+    }
+    &-after{
+      width: 18px;
+      height: 100%;
+      position: relative;
+      background: white;
+      border-top: 1px solid #dcdcdc;
+      box-sizing: border-box;
+      &::after{
+        content: ' ';
+        transform:skew(20deg);
+        box-shadow: -10px 0px 0 #fff;
+        border: 1px solid #dcdcdc;
+        position: absolute;
+        bottom: 0px;
+        right: -38px;
+        width: 12px;
+        height: 24px;
+        border-bottom-left-radius: 12px;
+        border-width: 0 0 1px 1px;
+        box-sizing: border-box;
+      }
+    }
+  }
+  &__view-all{
+    color: var(--green);
+    text-transform: uppercase;
+    margin: auto 16px auto 0;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+  }
+  &__content{
+    position: relative;
+  }
+
+  &.jumbo{
+    .folder-control__heading{
+      height: 80px;
+      line-height: 80px;
+      padding-left: 40px;
+      &::after{
+        right: -36px;
+      }
+    }
+    .folder-item{
+      padding: 24px 40px;
+    }
+  }
+}
+
+.folder-item{
+  background: white;
+  padding: 24px;
+  color: #000;
+  border-left: 1px solid #dcdcdc;
+  border-right: 1px solid #dcdcdc;
+  font-family: var(--font-family-primary);
+  &:first-child{
+    border-top-right-radius: 8px;
+  }
+  &:last-child{
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+  }
+  &--with-separator{
+    box-shadow: inset 0px -1px 0px #DCDCDC;
+  }
+}

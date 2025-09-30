@@ -1,0 +1,24 @@
+.chat-loader{
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  z-index: 2147483005; // more than odd intercom button :) 
+
+  &>div {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: rgba(255,255,255,.6);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none;
+
+    &>p{
+      font-size: 1.4rem;
+      margin-bottom: 3rem;
+      font-weight: 600;
+    }
+  }
+}

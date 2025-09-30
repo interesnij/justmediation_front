@@ -1,0 +1,15 @@
+.link-button{
+  display: flex;
+  color: rgba(0,0,0,.6);
+  font-size: 14px;
+  line-height: 26px;
+  cursor: pointer;
+  transition: all 300ms ease;
+  width: fit-content;
+  img{
+    margin-right: 12px;
+  }
+  &:hover{
+    font-weight: bold;
+  }
+}

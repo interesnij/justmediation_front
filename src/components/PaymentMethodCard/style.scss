@@ -1,0 +1,46 @@
+.payment-method-item {
+  position: relative;
+
+  .card-icon {
+    display: flex !important;
+  }
+  &__desc {
+    color: var(--grey);
+  }
+  &__icon-arrow {
+    &.show {
+      transform: rotate(90deg);
+    }
+  }
+
+  .section-main {
+    padding: 0.5rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .section-additional {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #dcdcdc;
+
+    &__right-side {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      justify-content: space-between;
+      &.card-block {
+        flex-direction: row;
+      }
+    }
+
+    &.isExpanded {
+      padding: 2rem 0 0;
+      margin: 1.5rem 0 0.5rem;
+      height: 100%;
+      opacity: 1;
+      transition: all 300ms ease;
+    }
+  }
+}

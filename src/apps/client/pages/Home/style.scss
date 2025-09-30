@@ -1,0 +1,160 @@
+.client-home-page{
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  overflow: auto;
+  .client-overview-page{
+    background: #F4F5F9;
+    padding: 40px;
+    display: flex;
+    flex-direction: row;
+    border-top-left-radius: 8px;
+    flex: 1;
+    &__left{
+      width: 60%;
+    }
+    &__right{
+      margin-left: 30px;
+      width: 40%;
+    }
+    .recent-document{
+      background: white;
+      line-height: 26px;
+      display: flex;
+      div{
+        overflow: hidden;
+      }
+      &__img{
+        margin-right: 24px;
+      }
+      &__name{
+        font-size: 14px;
+        color: #000;
+        text-overflow: ellipsis;
+      }
+      &__size{
+        font-size: 12px;
+        color: #616161;
+      }
+      &__detail{
+        font-size: 12px;
+        color: #000;
+        display: flex;
+      }
+      &__time{
+        color: #757575;
+        font-size: 12px;
+        margin-left: auto;
+      }
+    }
+    .upcoming-bill{
+      &__card-link {
+        text-decoration: none;
+        &:hover {
+          color: inherit;
+          text-transform: inherit;
+        }
+        color: inherit;
+        text-transform: inherit;
+      }
+      &__name{
+        font-size: 16px;
+        line-height: 20px;
+        color: #000;
+      }
+      &__arrow{
+        margin-left: auto;
+      }
+      &__detail{
+        font-size: 12px;
+        line-height: 26px;
+        color: #616161;
+      }
+      &__cost{
+        font-size: 22px;
+        line-height: 30px;
+        color: #000;
+        margin-top: 12px;
+      } 
+    }
+  }
+  
+  .client-matters-page{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    
+    &__top{
+      background: white;
+      display: flex;
+      height: 72px;
+      padding: 0 40px;
+      box-shadow: inset 0px -1px 0px #E7E7ED;
+  
+    }
+    &__content{
+      padding: 40px;
+      background: #F4F5F9;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+    .client-matter-control{
+      background: #FFFFFF;
+      border: 1px solid #E0E0E1;
+      box-sizing: border-box;
+      border-radius: 8px;
+      padding: 24px;
+      border-radius: 8px;
+      margin-bottom: 16px;
+      a{
+        text-decoration: none;
+        color: black;
+        &:hover{
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+  .recent-matter{
+    &__name{
+      font-size: 18px;
+      a{
+        color: #000;
+        text-decoration: none;
+        &:hover{
+          text-decoration: underline;
+        }
+      }
+    }
+    &__desc{
+      font-size: 14px;
+    }
+    &__date{
+      font-size: 12px;
+      &-label{
+        color: #616161;
+      }
+    }
+    &__card{
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: var(--green-light);
+      display: flex;
+      img{
+        margin: auto;
+        width: 24px;
+      }
+    }
+  }
+  .profile-link{
+    cursor: pointer;
+    color: #000;
+    text-decoration: none;
+    &:hover{
+      text-decoration: underline;
+      opacity: .8;
+    }
+  }
+}

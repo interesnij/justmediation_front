@@ -1,0 +1,85 @@
+.date-picker-control{
+  font-family: var(--font-family-primary);
+  position: relative;
+  border: 1px solid #E0E0E1;
+  border-radius: 4px;
+  height: 36px;
+  display: flex;
+  background: white;
+  transition: all 300ms ease;
+  &:hover, &:focus{
+    border: 1px solid var(--green);
+    outline: none;
+  }
+  &__input{
+    display: flex;
+    height: 24px;
+    margin: auto 36px auto 8px;
+    font-size: 14px;
+    border: none;
+    border-right: 1px solid #E0E0E1;
+    width: 120px;
+    &:hover, &:focus{
+      outline: none;
+    }
+  }
+  &__icon{
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+    position: absolute;
+    right: 10px;
+    top: 8px;
+
+  }
+  &__calendar{
+    position: absolute;
+    background: white;
+    z-index: 1;
+    margin-top: 38px;
+    box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.15);
+    padding: 4px;
+    border-radius: 8px;
+    visibility: hidden;
+    &.visible{
+      visibility: visible;
+    }
+  }
+}
+
+
+.react-calendar {
+  font-family: var(--font-family-primary);
+  border: none;
+  .react-calendar__tile--active,
+  .react-calendar__tile--active:enabled:hover,
+  .react-calendar__tile--active:enabled:active,
+  .react-calendar__tile--active:enabled:focus {
+    background: var(--green);
+    outline: none;
+  }
+  .react-calendar__tile.react-calendar__month-view__days__day {
+    outline: none;
+  }
+  .react-calendar__navigation button:enabled:hover,
+  .react-calendar__navigation button:enabled:focus {
+    outline: none;
+  }
+  .react-calendar__month-view__weekdays__weekday{
+    abbr{
+      text-decoration: none;
+    }
+  }
+  .react-calendar__tile:enabled:hover, .react-calendar__tile:enabled:focus,
+  .react-calendar__navigation button:enabled:hover, .react-calendar__navigation button:enabled:focus 
+  {
+    background-color: var(--green-light);
+  }
+  .react-calendar__navigation{
+    margin-bottom: 8px;
+    border-bottom: 1px solid var(--grey);
+  }
+  .react-calendar__tile--now{
+    background: var(--yellow);
+  }
+}

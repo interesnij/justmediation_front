@@ -1,0 +1,33 @@
+.modal-success {
+
+  .title {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 22px;
+    line-height: 29px;
+    letter-spacing: -0.01em;
+    text-align: center;
+  }
+
+  &-body {
+    min-width: 216px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &.modal-control-container {
+    .modal-control {
+      &__header {
+        box-shadow: none;
+      }
+      &__content {
+        padding-top: 0;
+      }
+      .btn {
+        max-width: 160px;
+        width: 100%;
+      }
+    }
+  }
+}

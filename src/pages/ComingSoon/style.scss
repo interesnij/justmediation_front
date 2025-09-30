@@ -1,0 +1,12 @@
+.bg{
+    background: green;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 5rem;
+    h1, h4{
+        color: white;
+    }
+}

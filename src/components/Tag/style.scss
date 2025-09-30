@@ -1,0 +1,191 @@
+.tag-control{
+  line-height: 24px;
+  font-size: 12px;
+  border-radius: 4px;
+  height: fit-content;
+  padding: 0 12px;
+  width: fit-content;
+  &--attorney{
+    background: #1779BF;
+    color: white;
+    text-transform: uppercase;
+  }
+  &--paralegal{
+    background: #17B5BF;
+    color: white;
+    text-transform: uppercase;
+  }
+  &--client{
+    background: #3BA729;
+    color: white;
+    text-transform: uppercase;
+  }
+  &--enterprise{
+    background: #D8B12A;
+    color: white;
+    text-transform: uppercase;
+  }
+  &--admin{
+    background: #F8B184;
+    color: white;
+    text-transform: uppercase;
+  }
+  &--lead{
+    background: #C5B4E2;
+    color: white;
+    text-transform: uppercase;
+  }
+  
+  &--active{
+    background: #1779BF;
+    color: white;
+    text-transform: uppercase;
+  }
+  &--completed{
+    background: #3BA729;
+    color: white;
+    text-transform: uppercase;
+  }
+  &--pending{
+    background: #CD92D2;
+    color: white;
+    text-transform: uppercase;
+  }
+  &--revoked{
+    background: #F8B184;
+    color: white;
+    text-transform: uppercase;
+  }
+
+
+  &--stage {
+    background: var(--green-light);
+    color: var(--grey-dark);
+    text-transform: uppercase;
+  }
+  &--open {
+    &.invoice {
+      background: white;
+      color: var(--grey-dark);
+      text-transform: uppercase;
+      border: 1px solid #E0E0E1;
+    }
+    &.status {
+      background: var(--green-light);
+      color: var(--grey-dark);
+      text-transform: uppercase;
+    }
+  }
+  &--referral {
+    //background: #fff;
+    //color: black;
+    //text-transform: uppercase;
+    //border: 1px solid #E0E0E1;
+    background: #E0E0E1;
+    color: #616161;
+    text-transform: uppercase;
+  }
+  &--referred {
+    background: #E0E0E1;
+    color: #616161;
+    text-transform: uppercase;
+  }
+  &--closed{
+    background: #E0E0E1;
+    color: #616161;
+    text-transform: uppercase;
+  }
+  &--close {
+    background: #E0E0E1;
+    color: #616161;
+    text-transform: uppercase;
+  }
+  &--discovery{
+    background: #F8B184;
+    color: black;
+    text-transform: uppercase;
+  }
+  &--referral-request{
+    background: var(--purple);
+    color: white;
+  }
+  &--referral-pending{
+    background: var(--purple-light);
+    color: white;
+  }
+  &--resend-invitation{
+    background: #C5B4E2;
+    color: white;
+    text-transform: uppercase;    
+  }
+ 
+  &--time{
+    background: #fff;
+    color: black;
+    text-transform: uppercase;
+    border: 1px solid #E0E0E1;
+  }
+  &--flat_fee{
+    background: #fff;
+    color: black;
+    text-transform: uppercase;
+    border: 1px solid #E0E0E1;
+  }
+  &--expense{
+    background: #fff;
+    color: black;
+    text-transform: uppercase;
+    border: 1px solid #E0E0E1;
+  }
+  &--lead{
+    background: #D8B12A;
+    color: white;
+    text-transform: uppercase;
+  }
+  &--draft{
+    background: #E0E0E1;
+    color: #616161;
+    text-transform: uppercase;
+  }
+  &--overdue{
+    background: var(--red);
+    color: white;
+    text-transform: uppercase;
+  }
+  &--due{
+    background: var(--red);
+    color: white;
+    text-transform: uppercase;
+  }
+  &--paid{
+    background: var(--green-light);
+    color: var(--grey-dark);
+    text-transform: uppercase;
+  }
+  &--unpaid{
+    background: white;
+    border: 1px solid var(--red);
+    color: var(--red);
+    text-transform: uppercase;
+  }
+  &--voided{
+    background: #E0E0E1;
+    color: #616161;
+    text-transform: uppercase;
+  }
+  &--date{
+    background: #E0E0E1;
+    color: var(--grey-dark);
+  }
+  &--custom {
+    background: #fff;
+    color: black;
+    text-transform: capitalize;
+    border: 1px solid #E0E0E1;
+  }
+  &--done {
+    background: rgba(0, 0, 0, 0.8);
+    font-weight: 500;
+    color: #FFFFFF;
+  }
+}

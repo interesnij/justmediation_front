@@ -1,0 +1,21 @@
+.badge-control{
+  position: relative;
+
+  &__count{
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    height: 20px;
+    width: 20px;
+    position: absolute;
+    background: #C85445;
+    color: white;
+    height: 16px;
+    min-width: 16px;
+    width: 16px;
+    line-height: 16px;
+    font-size: 10px;
+    border-radius: 8px;
+    text-align: center;
+  }
+}

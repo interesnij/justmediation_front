@@ -1,0 +1,23 @@
+.form-add-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  &-container {
+    max-width: 353px;
+    width: 100%;
+    &.row {
+      margin-left: 0;
+      margin-right: 0;
+    }
+    .input-control {
+      margin-bottom: 1.5rem;
+    }
+  }
+}
+
+.title-block {
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: -0.5px;
+  margin-bottom: 1rem;
+}

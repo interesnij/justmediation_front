@@ -1,0 +1,135 @@
+.client-select-control{
+  font-family: var(--font-family-primary);
+  &__main{
+    height: 48px;
+    width: 100%;
+    border: 1px solid rgba(0, 0, 0, 0.25);
+    box-sizing: border-box;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+    transition: all 300ms ease;
+    font-size: 14px;
+    padding: 0 0 0 16px;
+    color: #00000080;
+    font-family: var(--font-family-primary);
+  
+    &:hover{
+      cursor:pointer;
+      border: 1px solid var(--green);
+      color: #00000080;
+      .select-control__arrow{
+        opacity: 1;
+      }
+    }
+    &.active{
+      border: 1px solid rgba(0, 0, 0, 0.5);
+      color: #000;
+    }
+
+    input{
+      outline: none;
+      border: none;
+      flex: 1;
+      font-size: 14px;
+      font-family: var(--font-family-primary);
+    }
+  }
+
+  &.error .select-control__label{
+    color: #CC4B39;
+  }
+  &.error .select-control__required{
+    color: #CC4B39;
+  }
+  &.error .select-control__main{
+    border: 1px solid #CC4B39;
+  }
+
+  &__arrow{
+    width: 8px;
+    opacity: .7;
+    transition: all 300ms ease;
+    padding: 0 16px;
+    box-sizing: initial;
+  }
+
+  &__label{
+    color: #000;
+    font-size: 14px;
+    line-height: 26px;
+  }
+  &__required{
+    font-size: 12px;
+    line-height: 18px;
+    color: var(--green-dark);
+  }
+  &__help{
+    font-size: 12px;
+    line-height: 18px;
+    color: #000;
+    text-align: right;
+    width: 100%;
+  }
+  &__menu{
+    margin-top: 6px;
+    border-radius: 4px;
+    position: absolute;
+    padding: 8px;
+    z-index: 1;
+    visibility: hidden;
+    opacity: 0;
+    width: 100%;
+    background: #fff;
+    box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.3);
+    max-height: 280px;
+    overflow: auto;
+    &.active{
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+  &__menu-item{
+    font-size: 16px;
+    color: var(--grey-dark);
+    cursor: pointer;
+    transition: all 300ms ease;
+    display: flex;
+    justify-content: space-between;
+    padding: 4px 12px;
+    &:hover{
+      background: var(--green-light);
+      color: var(--green);
+      border-radius: 4px;
+    }
+    &.active{
+      color: var(--green);
+    }
+  }
+  &__container{
+    position: relative;
+    &:focus{
+      border: none;
+      outline: none;
+    }
+    &:focus .select-control__menu { opacity:1; visibility:visible; }
+    &:focus .select-control__arrow{
+      transform: rotate(180deg);
+    }
+  }
+  &__footer{
+    margin-top: 4px;
+    font-size: 12px;
+    line-height: 18px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__help{
+    color: #000;
+    text-align: right;
+  }
+  &__validation{
+    color: #CC4B39;
+  }
+}

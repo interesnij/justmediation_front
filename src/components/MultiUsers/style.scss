@@ -1,0 +1,42 @@
+.multi-avatar{
+  display: flex;
+  position: relative;
+  transition: all 300ms ease;
+  height: 32px;
+  cursor: pointer;
+  &__icon{
+    margin-left: 5px;
+    &>a:hover div{
+      opacity: .8;
+    }
+  }
+  span{
+    font-size: 16px;
+    margin-left: 4px;
+  }
+  &__modal-user{
+    display: flex;
+    margin: 8px 0;
+    & .type{
+      background: #333;
+      color: white;
+      border-radius: 3px;
+      padding: 0 4px;
+      line-height: 24px;
+      height: 24px;
+      margin: auto 0 auto 8px;
+    }
+  }
+
+  &.overlapping-avatars{
+    &.row-reverse{
+      flex-direction: row-reverse;
+    }
+    .multi-avatar__icon{
+      margin-left: -12px;
+      .user-avatar{
+        border: 1.5px solid #fff;
+      }
+    }
+  }
+}

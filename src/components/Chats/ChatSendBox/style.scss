@@ -1,0 +1,29 @@
+
+.chat-send-box{
+  background: white;
+  border: 1px solid #E0E0E1;
+  border-radius: 4px;
+  margin: 8px;
+  padding: 16px;
+  display: flex;
+  box-sizing: border-box;
+  flex-direction: column;
+  img{
+    height: 20px;
+    margin: auto 10px;
+    cursor: pointer;
+    transition: all 300ms ease;
+    &:hover{
+      opacity: .7;
+    }
+  }
+  // textarea{
+  //   font-size: 14px;
+  //   line-height: 26px;
+  //   flex: 1;
+  //   border: none;
+  //   outline: none;
+  //   font-family: var(--font-family-primary);
+  //   color: #000;
+  // }
+}

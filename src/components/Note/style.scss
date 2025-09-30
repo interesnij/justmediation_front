@@ -1,0 +1,27 @@
+.note-control{
+  display: flex;
+  cursor: pointer;
+  img{
+    width: 22px;
+    height: 40px;
+  }
+  .date{
+    font-size: 12px;
+  }
+  .preview{
+    .text{
+      font-size: 12px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 1;
+              line-clamp: 1; 
+      -webkit-box-orient: vertical;
+      margin-right: 15px;
+    }
+    img{
+      margin-top: -15px;
+      height: 24px;
+    }
+  }
+}

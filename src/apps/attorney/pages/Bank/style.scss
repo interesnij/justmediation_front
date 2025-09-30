@@ -1,0 +1,40 @@
+.bank-page{
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  &__main{
+    flex: 1;
+    overflow: auto;
+    background: #F4F5F9;
+  }
+}
+
+.bank-balances-page{
+  padding: 40px;
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--grey-dark);
+  h2{
+    font-size: 20px;
+    line-height: 40px;
+    margin: 0;
+  }
+}
+
+.bank-transactions-page{
+  padding: 40px;
+  font-size: 24px;
+  
+}
+
+.bank-payout-settings-page{
+  padding: 40px;
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--grey-dark);
+  h2{
+    font-size: 20px;
+    line-height: 40px;
+    margin: 0;
+  }
+}

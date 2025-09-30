@@ -1,0 +1,60 @@
+.profile-photo-control{
+  font-family: var(--font-family-primary);
+  .dropzone{
+    border-radius: 4px;
+    box-sizing: border-box;
+    &:active, &:focus{
+      border-color: var(--green)
+    }
+  }
+  &__label{
+    color: #000;
+    font-size: 14px;
+    line-height: 26px;
+  }
+  &__required{
+    font-size: 12px;
+    line-height: 18px;
+    color: #98989A;
+  }
+  &__file{
+    background: rgba(224, 224, 225, 0.15);
+    border: 1px solid rgba(224, 224, 225, 0.3);
+    box-sizing: border-box;
+    border-radius: 4px;
+    color: #2E2E2E;
+    display: flex;
+    height: 40px;
+    padding: 0 14px;
+    &:hover{
+      border: 1px solid rgba(224, 224, 225, 0.9);
+    }
+    margin: 8px;
+  }
+  &__content{
+    display: flex;
+    flex-direction: column;
+    border: 1px dashed var(--grey);
+    border-radius: 4px;
+    padding: 24px;
+  }
+  &__close{
+    height: 12px;
+    cursor: pointer;
+    &:hover{
+      opacity: .7;
+    }
+  }
+  &__img{
+    height: 24px;
+  }
+
+  &__validation{
+    color: #CC4B39;
+    margin-top: 4px;
+    font-size: 12px;
+    line-height: 18px;
+    width: 100%;
+    display: flex;
+  }
+}

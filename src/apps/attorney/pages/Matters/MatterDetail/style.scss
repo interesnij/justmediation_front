@@ -1,0 +1,58 @@
+.matter-detail-page{
+  &__bar{
+    display: flex;
+    justify-content: space-between;
+    padding: 24px 32px;
+    border-bottom: 1px solid #ccc;
+    border-top-left-radius: 8px;
+    background: white;
+    .heading{
+      font-size: 26px;
+      font-family: var(--font-family-secondary);
+    }
+    .dropdown{
+      color: var(--green-dark);
+    }
+    &>div:last{
+      display: flex;
+    }
+  }
+  &__content {
+    padding: 30px;
+    background: #F4F5F9;
+    flex: 1;
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+}
+
+.matter-detail-overview{
+  .details{
+    .label{
+      font-size: 12px;
+    }
+    .content{
+      font-size: 16px;
+    }
+  }
+  .contacts{
+    .shared-length{
+      margin-top: -2px;
+    }
+    .shared-user{
+      .user-avatar__name{
+        line-height: 18px;
+      }
+      .user-avatar-container{
+        flex: 1;
+      }
+      .user-type{
+        text-transform: uppercase;
+        font-size: 12px;
+        font-weight: 700;
+        margin-right: 10px;
+        margin-top: 5px;
+      }
+    }
+  }
+}

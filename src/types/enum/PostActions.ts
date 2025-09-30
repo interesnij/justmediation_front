@@ -1,0 +1,7 @@
+/** Available actions with post */
+export enum PostActions {
+  /** Edit post. */
+  Edit,
+  /** Delete post */
+  Delete,
+}

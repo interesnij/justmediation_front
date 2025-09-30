@@ -1,0 +1,69 @@
+.signup-page-account-type{
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 23px;
+  text-align: center;
+  letter-spacing: -0.01em;
+  color: #FFFFFF;
+}
+.signup-page-account{
+  display: flex;
+  flex-direction: column;
+  background: #F4F5F9;
+  border-radius: 12px;
+  padding: 24px 32px;
+  width: 640px;
+  margin: 16px auto;
+  transition: all 300ms ease;
+  cursor: pointer;
+  text-decoration: none;
+  position: relative;
+
+  &:hover{
+    background: white;
+    & .signup-page-account__label
+    & .signup-page-account__title
+    {
+      color: rgba(0, 0, 0, 0.8);
+    }
+  }
+
+  &__label{
+    color: #616161;
+    font-size: 18px;
+    transition: all 300ms ease;
+    :hover > &
+    {
+      color: rgba(0, 0, 0, 0.8);
+    }
+  }
+
+  &__title{
+    color: black;
+    font-size: 34px;
+    font-family: var(--font-family-secondary);
+    transition: all 300ms ease;
+    :hover > &
+    {
+      color: rgba(0, 0, 0, 0.8);
+    }
+  }
+  &__arrow{
+    display: none;
+    position: absolute;
+    right: 30px;
+    top: 40px;
+    :hover > &{
+      display: block;
+    }
+  }
+  &__content{
+    font-size: 14px;
+    line-height: 26px;
+    color: #2e2e2e;
+    margin: 0;
+    li{
+      margin: 8px 0;
+    }
+  }
+}
