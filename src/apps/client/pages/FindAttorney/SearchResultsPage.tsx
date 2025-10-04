@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { RouteComponentProps, useLocation, navigate } from "@reach/router";
 import { Breadcrumb, SearchBar, Button, Select, RiseLoader } from "components";
-import { Attorney, SearchCheckbox } from "./components";
-import { AttorneyFindLayout } from "apps/client/layouts";
-import { createChat, getFavoriteAttorneys, toggleFavoriteAttorney } from "api"; 
+import { Mediator, SearchCheckbox } from "./components";
+import { MediatorFindLayout } from "apps/client/layouts";
+import { createChat, getFavoriteMediators, toggleFavoriteMediator } from "api"; 
 import { useQuery } from "react-query";
 import { useBasicDataContext, useChatContext, useAuthContext } from "contexts";
-import { CompareAttorneysModal, CallStartModal } from "modals";
+import { CompareMediatorsModal, CallStartModal } from "modals";
 import { useModal } from "hooks";
 import { experienceData } from "./helpers";
 import MapComponent from "./components/MapComponent";
@@ -23,10 +23,10 @@ export const SearchResultsPage: React.FunctionComponent<RouteComponentProps> =
   const { userId, profile } = useAuthContext();
   const [loading, setLoading] = useState(false)
   const [compares, setCompares] = useState<number[]>([]);
-  const compareAttorneys = useModal();
-  const [centeredAttorney, setCenteredAttorney] = useState(null);
+  const compareMediators = useModal();
+  const [centeredMediator, setCenteredMediator] = useState(null);
   const callStartModal = useModal();
-  const [currentAttorney, setCurrentAttorney] = useState<any>(null);
+  const [currentMediator, setCurrentMediator] = useState<any>(null);
   const [defaultPracticeAreas, setDefaultPracticeArea] = useState<any>([]);
 
   const { 
@@ -34,7 +34,7 @@ export const SearchResultsPage: React.FunctionComponent<RouteComponentProps> =
     refetch: refetchFavorites,
     isLoading: isLoadingFavorites,
   } = useQuery(
-    ["favorite-attorneys"], () => getFavoriteAttorneys(), { keepPreviousData: true }
+    ["favorite-mediators"], () => getFavoriteMediators(), { keepPreviousData: true }
   );
 
   const {
@@ -71,7 +71,7 @@ export const SearchResultsPage: React.FunctionComponent<RouteComponentProps> =
 
   useEffect(() => {
     if (filteredData.length && !addressString.value) {
-      setCenteredAttorney(filteredData[0]);
+      setCenteredMediator(filteredData[0]);
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [filteredData?.length])
@@ -90,18 +90,18 @@ export const SearchResultsPage: React.FunctionComponent<RouteComponentProps> =
 
   const handleToggleFavorite = async (id: number, value: boolean) => {
     setLoading(true)
-    await toggleFavoriteAttorney(id, value)
+    await toggleFavoriteMediator(id, value)
     await refetchFavorites()
     setLoading(false)
   }
 
   return (
-    <AttorneyFindLayout tab="Search" className="no-background">
+    <MediatorFindLayout tab="Search" className="no-background">
       <div className="find-search-result-page">
         <div className="search-section">
           <Breadcrumb
             previous={[
-              { label: "Find an attorney home", url: "/client/find/search" },
+              { label: "Find an mediator home", url: "/client/find/search" },
             ]}
             current="Search results"
           />
@@ -185,20 +185,20 @@ export const SearchResultsPage: React.FunctionComponent<RouteComponentProps> =
             </div>
           ) : !!filteredData?.length ? (
             <>
-              <div className="attorney-section">
+              <div className="mediator-section">
                 {filteredData.filter(item => !!item.firm_locations.length).map((a => (
-                  <Attorney 
+                  <Mediator 
                     key={`att-${a.id}`} 
                     data={a}
                     languages={languages}
                     specialties={specialties}
-                    onClick={() => setCenteredAttorney(a)}
-                    favoriteIds={favorites?.favorite_attorneys || []}
+                    onClick={() => setCenteredMediator(a)}
+                    favoriteIds={favorites?.favorite_mediators || []}
                     toggleFavorite={value => handleToggleFavorite(a.id, value)}
                     toggleCompare={() => handleToggleCompare(a.id)}
                     isComparing={compares.indexOf(a.id) !== -1}
                     onCall={() => {
-                      setCurrentAttorney(a);
+                      setCurrentMediator(a);
                       callStartModal.setOpen(true)
                     }}
                     onChat={() => handleChat(a.id)}
@@ -207,15 +207,15 @@ export const SearchResultsPage: React.FunctionComponent<RouteComponentProps> =
                 )))}
                 {compares.length > 1 && compares.length < 8 && (
                   <div className="compare-btn-wrap">
-                    <Button onClick={() => compareAttorneys.setOpen(true)}>
-                      Compare ({compares.length}) selected attorneys
+                    <Button onClick={() => compareMediators.setOpen(true)}>
+                      Compare ({compares.length}) selected mediators
                     </Button>
                   </div>
                 )}
               </div>
               <div className="map-section">
                 <MapComponent 
-                  attorney={centeredAttorney}
+                  mediator={centeredMediator}
                   data={filteredData || []} 
                   address={addressString.value}
                   query={searchQuery}
@@ -229,15 +229,15 @@ export const SearchResultsPage: React.FunctionComponent<RouteComponentProps> =
           )}
         </div>
       </div>
-      {compareAttorneys?.open && !!filteredData?.length && compares.length > 1 && (
-        <CompareAttorneysModal 
-          {...compareAttorneys} 
+      {compareMediators?.open && !!filteredData?.length && compares.length > 1 && (
+        <CompareMediatorsModal 
+          {...compareMediators} 
           removeFromCompare={handleToggleCompare}
-          attorneys={filteredData.filter(item => compares.indexOf(item.id) !== -1)}
-          favoriteIds={favorites?.favorite_attorneys || []}
+          mediators={filteredData.filter(item => compares.indexOf(item.id) !== -1)}
+          favoriteIds={favorites?.favorite_mediators || []}
           toggleFavorite={(id, value) => handleToggleFavorite(id, value)}
           onCall={id => {
-            setCurrentAttorney(filteredData.filter(item => item.id === id))
+            setCurrentMediator(filteredData.filter(item => item.id === id))
             callStartModal.setOpen(true)
           }}
           onChat={handleChat}
@@ -245,10 +245,10 @@ export const SearchResultsPage: React.FunctionComponent<RouteComponentProps> =
       )}
       <CallStartModal 
         {...callStartModal} 
-        onConfirm={() => onStartCall({ participants: [+userId, currentAttorney?.id] })} 
-        participants={[currentAttorney]} 
+        onConfirm={() => onStartCall({ participants: [+userId, currentMediator?.id] })} 
+        participants={[currentMediator]} 
         userId={profile?.id} 
       />
-    </AttorneyFindLayout>
+    </MediatorFindLayout>
   )
 }

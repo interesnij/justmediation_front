@@ -27,7 +27,7 @@ export const getBusinessLeadsById = async (id: number) => {
 /** Create business leads. */
 interface CreateBusinessLeads {
   client: number;
-  attorney: number;
+  mediator: number;
 }
 export const createBusinessLeads = (data: CreateBusinessLeads) => {
   return API().post("business/leads/", data);

@@ -108,7 +108,7 @@ export const Proposal = ({ open, setOpen, post, proposal, onCreate = () => {} }:
         <Formik
           initialValues={{
             post: post?.id,
-            attorney: userId,
+            mediator: userId,
             rate_type: proposal?.rate_type || "hourly",
             description: proposal?.description || "",
             rate: proposal?.rate || "",
@@ -118,8 +118,8 @@ export const Proposal = ({ open, setOpen, post, proposal, onCreate = () => {} }:
           validationSchema={validationSchema}
           onSubmit={async (values) => {
             try {
-              if ((userType && ['paralegal', 'other'].indexOf(userType) !== -1) || (userType === "enterprise" && profile.role !== "Attorney")){
-                setError('Only attorneys can send proposals')
+              if ((userType && ['paralegal', 'other'].indexOf(userType) !== -1) || (userType === "enterprise" && profile.role !== "Mediator")){
+                setError('Only mediators can send proposals')
                 return;
               }
               setError('');

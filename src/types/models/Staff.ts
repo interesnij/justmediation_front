@@ -1,7 +1,7 @@
 import { User } from "./User";
 import { VerificationStatus } from "../enum";
 
-/** Staff user. Also might be considered as Attorney's support. */
+/** Staff user. Also might be considered as Mediator's support. */
 export interface Staff extends User {
   /** Avatar. */
   avatar: string;

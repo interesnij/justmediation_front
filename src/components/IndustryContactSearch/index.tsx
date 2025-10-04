@@ -1,7 +1,7 @@
 import React, { useRef, useState, useEffect } from "react";
 import classNames from "classnames";
 import styled from "styled-components";
-import { useDebounce, useGetAttorneys, useOnClickOutside } from "hooks";
+import { useDebounce, useGetMediators, useOnClickOutside } from "hooks";
 import { User } from "components";
 import SearchIcon from "assets/icons/search.svg";
 import CloseIcon from "assets/icons/close.svg";
@@ -33,7 +33,7 @@ export const IndustryContactSearch = ({
 }: Props) => {
   const debouncedSearchTerm = useDebounce(value, 500);
   const [{ data, loading }, fetchClients] =
-    useGetAttorneys(debouncedSearchTerm);
+    useGetMediators(debouncedSearchTerm);
   const actionRef = useRef<HTMLDivElement>(null);
   const [showMenu, setShowMenu] = useState(false);
   const { userId } = useAuthContext();

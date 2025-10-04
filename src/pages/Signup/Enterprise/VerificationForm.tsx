@@ -31,8 +31,8 @@ import {useLocation} from "@reach/router";
 
 const roleData = [ 
   {
-    title: "Attorney",
-    id: "Attorney",
+    title: "Mediator",
+    id: "Mediator",
   },
   {
     title: "Other (E.g. Accounting, HR, etc.)",
@@ -220,7 +220,7 @@ export const VerificationForm = ({ initData, onBack }: Props) => {
                 <div className="heading col-12 mt-3 mb-2"> 
                       Firm Location
                       <span className="heading__desc text-gray ml-4">
-                        JustLaw will use this address to match you with potential
+                        JustMediation will use this address to match you with potential
                         clients in your proximity
                       </span>
                     </div>

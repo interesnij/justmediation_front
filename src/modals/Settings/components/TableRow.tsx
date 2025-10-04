@@ -74,8 +74,8 @@ export default function TableRow({ member, onDelete = () => {} }) {
       </div>
       <div className="members-page__table-row-item capitalize">
         <span>
-          {isMe || member?.is_attorney === true || member?.type === "attorney"
-            ? "Attorney"
+          {isMe || member?.is_mediator === true || member?.type === "mediator"
+            ? "Mediator"
             : member?.is_paralegal === true || member?.type === "paralegal"
               ? "Paralegal"
               : "Other"}

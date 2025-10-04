@@ -38,7 +38,7 @@ export const RevokeProposalModal = ({ open, setOpen, onConfirm, proposalId }: Pr
           </div>
           <div className="mt-2">
             Revoking this proposal will reactivate your post and allow other
-            attorneys to submit proposals on your matter. You can
+            mediators to submit proposals on your matter. You can
             deactive/delete your post by clicking “Edit Post”.
           </div>
         </Content>

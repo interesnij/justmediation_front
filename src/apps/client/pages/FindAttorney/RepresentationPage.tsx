@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Folder, FolderItem, RiseLoader } from "components";
 import { RouteComponentProps, useParams, navigate } from "@reach/router";
-import { AttorneyFindLayout } from "apps/client/layouts";
+import { MediatorFindLayout } from "apps/client/layouts";
 import { MatterRepresentation, Post, PostWithProposals } from "./components";
 import { useQuery } from "react-query";
 import { useInput, useModal } from "hooks";
@@ -102,7 +102,7 @@ export const RepresentationPage: React.FunctionComponent<RouteComponentProps> =
   }
 
   return (
-    <AttorneyFindLayout tab="Representation">
+    <MediatorFindLayout tab="Representation">
       {isActivesLoading || isInactivesLoading ? (
         <div className="representation-page align-items-center justify-content-center">
           <div className="post-page__post mt-3">
@@ -149,6 +149,6 @@ export const RepresentationPage: React.FunctionComponent<RouteComponentProps> =
       {activateModal?.open && 
         <ReactivatePostedMatterModal {...activateModal} callback={refetchPosts} id={postId} />
       } 
-    </AttorneyFindLayout>
+    </MediatorFindLayout>
   );
 };

@@ -12,7 +12,7 @@ interface Props {
     last_name: string;
     email: string;
     phone?: string;
-    is_attorney: boolean;
+    is_mediator: boolean;
     is_paralegal: boolean;
     state: string;
   }[];

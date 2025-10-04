@@ -62,7 +62,7 @@ export default function TableRow({ data, onUpdate = () => {} }) {
         onClick={handleClick}
       >
         <span className="my-auto">{data?.number}</span>
-        {/* <Link to="/attorney/invoice/a">C972607</Link> */}
+        {/* <Link to="/mediator/invoice/a">C972607</Link> */}
       </div>
 
       <div

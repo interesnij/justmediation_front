@@ -25,7 +25,7 @@ import SearchActiveIco from "assets/icons/nav_search_active.svg";
 import BidIco from "assets/icons/nav_bid.svg";
 import BidActiveIco from "assets/icons/nav_bid_active.svg";
 
-export const ATTORNEY_MENU = (userType: string, role?: string) =>{
+export const MEDIATOR_MENU = (userType: string, role?: string) =>{
   const dashboardItems = [
     {
       label: "Overview",
@@ -76,7 +76,7 @@ export const ATTORNEY_MENU = (userType: string, role?: string) =>{
       activeIcon: BankActiveIco,
     },
   ]
-  if(userType === "attorney" || ( userType === "enterprise" && role === "Attorney")){
+  if(userType === "mediator" || ( userType === "enterprise" && role === "Mediator")){
     dashboardItems.push( {
       label: "Potential Engagement",
       route: `/${userType}/engagement`,
@@ -93,7 +93,7 @@ export const ATTORNEY_MENU = (userType: string, role?: string) =>{
     title: "Social",
     items: [
       {
-        label: "JustLaw News",
+        label: "JustMediation News",
         route: `/${userType}/news`,
         icon: NewsIco,
         activeIcon: NewsActiveIco,
@@ -166,7 +166,7 @@ export const PARALEGAL_MENU = [
     title: "Social",
     items: [
       {
-        label: "JustLaw News",
+        label: "JustMediation News",
         route: "/paralegal/news",
         icon: NewsIco,
         activeIcon: NewsActiveIco,
@@ -203,7 +203,7 @@ export const CLIENT_MENU = [
         activeIcon: ChatActiveIco,
       },
       {
-        label: "Find an Attorney",
+        label: "Find an Mediator",
         route: "/client/find",
         icon: SearchIco,
         activeIcon: SearchActiveIco,
@@ -215,7 +215,7 @@ export const CLIENT_MENU = [
         activeIcon: ForumActiveIco,
       },
       {
-        label: "JustLaw News",
+        label: "JustMediation News",
         route: "/client/news",
         icon: NewsIco,
         activeIcon: NewsActiveIco,
@@ -314,32 +314,22 @@ export const SIGNUP_ACCOUNT_DATA = [
     label: "I am a",
     name: "Client",
     features: [
-      "Ask your legal questions on the JustLaw forum",
-      "Get connected directly to qualified Attorneys that fit your needs",
-      "Targeted attorney searching yields precise results",
-      "1-on-1 messaging with your attorney",
+      "Ask your legal questions on the JustMediation forum",
+      "Get connected directly to qualified Mediators that fit your needs",
+      "Targeted mediator searching yields precise results",
+      "1-on-1 messaging with your mediator",
     ],
     id: "client",
   },
   {
     label: "I am an",
-    name: "Attorney",
+    name: "Mediator",
     features: [
       "Powerful and user-friendly tools for lead generation, lead management and conversion",
       "Open forum where legal professionals answer people’s questions about the law",
-      "Constant, secure attorney/client communication on open matters",
+      "Constant, secure mediator/client communication on open matters",
     ],
-    id: "attorney",
-  },
-  {
-    label: "I am a",
-    name: "Paralegal / Other",
-    features: [
-      "For paralegals, assistants, associates, and any other matter related role",
-      "Work efficiently and collaboratively with attorneys directly on matters",
-      "Help attorneys manage their practice using lead generation, invoicing, time tracking, and document management",
-    ],
-    id: "paralegal",
+    id: "mediator",
   },
   {
     label: "",

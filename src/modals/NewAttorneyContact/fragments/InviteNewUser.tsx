@@ -13,7 +13,7 @@ import {
 import { Formik, Form } from "formik";
 import * as Yup from "yup";
 import { isEqual } from "lodash";
-import { inviteUserToAttorney } from "api";
+import { inviteUserToMediator } from "api";
 import styled from "styled-components";
 import { useCommonUIContext } from "contexts";
 
@@ -49,8 +49,8 @@ interface Props {
 
 const clientTypeData = [
   {
-    id: "attorney",
-    title: "Attorney",
+    id: "mediator",
+    title: "Mediator",
   },
   {
     id: "paralegal",
@@ -88,7 +88,7 @@ export const InviteNewUser = ({
         validationSchema={validationSchema}
         onSubmit={async (values) => {
           try {
-            const res: any = await inviteUserToAttorney({
+            const res: any = await inviteUserToMediator({
               ...values,
               client_type: values.user_type == "client" ? values.user_type : "lead",
             });

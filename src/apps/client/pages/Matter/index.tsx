@@ -78,7 +78,7 @@ export const ClientMatterPage: React.FunctionComponent<RouteComponentProps> =
       if (!matterData) return;
       const currentParticipants: any[] = [
         getPerson(matterData?.client_data),
-        getPerson(matterData?.attorney_data),
+        getPerson(matterData?.mediator_data),
       ]
         .concat(matterData.shared_with_data)
         .filter((person) => person.id !== +userId);
@@ -121,16 +121,16 @@ export const ClientMatterPage: React.FunctionComponent<RouteComponentProps> =
             <>
               <span className="my-auto">{matterData?.title}</span>
               <div className="d-flex">
-                <span className="text-gray my-auto mr-2">ATTORNEY:</span>
-                <Link className="profile-link" to={`/client/find/attorneys/${matterData?.attorney}`}>
+                <span className="text-gray my-auto mr-2">Mediator:</span>
+                <Link className="profile-link" to={`/client/find/mediators/${matterData?.mediator}`}>
                   <User
-                    userName={getUserName(matterData?.attorney_data)}
-                    avatar={matterData?.attorney_data?.avatar}
+                    userName={getUserName(matterData?.mediator_data)}
+                    avatar={matterData?.mediator_data?.avatar}
                   />
                 </Link>
                 {matterData?.shared_with_data?.length > 0 && (
                   <>
-                    <span className="text-gray my-auto ml-4">SHARED:</span>
+                    <span className="text-gray my-auto ml-4">Shared:</span>
                     <MultiUsers
                       className="ml-3 overlapping-avatars"
                       data={matterData?.shared_with_data}

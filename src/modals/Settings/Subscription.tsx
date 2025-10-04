@@ -115,7 +115,7 @@ export const Subscription = () => {
           )}
         </FolderItem>
       </Folder>
-      { userType === "attorney" ? (
+      { userType === "mediator" ? (
     <div>
       <Folder
         label="Cards"

@@ -35,7 +35,7 @@ import { convert2DBDate, acceptFileTypes } from "helpers";
 import {
   getStages,
   createMatter,
-  getAttorneysAndParalegals,
+  getMediatorsAndParalegals,
   getLeadClients,
   uploadFiles,
   updateMatter,
@@ -139,7 +139,7 @@ export const NewMatterModal = ({
   const { isLoading: isSharesLoading, data: shareData } = useQuery<
     any[],
     Error
-  >(["attorneys_paralegals"], () => getAttorneysAndParalegals({}), {
+  >(["mediators_paralegals"], () => getMediatorsAndParalegals({}), {
     keepPreviousData: true,
     enabled: open,
   });

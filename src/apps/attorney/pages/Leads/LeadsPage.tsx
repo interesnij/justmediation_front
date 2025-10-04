@@ -4,7 +4,7 @@ import { SearchBar, Select, Button, Pagination } from "components";
 import { useInput, useModal } from "hooks";
 import {useAuthContext, useContextSubscriptionAccess} from "contexts";
 import { LeadsTable } from "./components/LeadsTable";
-import { AttorneyLayout } from "apps/attorney/layouts";
+import { MediatorLayout } from "apps/mediator/layouts";
 import { NewContactModal } from "modals";
 import { useQuery } from "react-query";
 import { css } from "@emotion/react";
@@ -61,7 +61,7 @@ export const LeadsPage: React.FunctionComponent<RouteComponentProps> = () => {
   };
 
   return (
-    <AttorneyLayout title="Leads & Clients" userType={userType}>
+    <MediatorLayout title="Leads & Clients" userType={userType}>
       <div className="leads-page__bar">
         <div className="leads-page__bar-input">
           <SearchBar
@@ -135,6 +135,6 @@ export const LeadsPage: React.FunctionComponent<RouteComponentProps> = () => {
         contactModal?.open &&
         <NewContactModal {...contactModal} onAdd={() => refetch()} />
       }
-    </AttorneyLayout>
+    </MediatorLayout>
   );
 };

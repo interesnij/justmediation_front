@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import classNames from "classnames";
-import { deleteIndustryContactForAttorney } from "api";
+import { deleteIndustryContactForMediator } from "api";
 import useOnclickOutside from "react-cool-onclickoutside";
 import { Button, RiseLoader } from "components";
 import CloseIcon from "assets/icons/close.svg";
@@ -27,7 +27,7 @@ export const DeleteIndustryContactModal = ({
   const handleDelete = async () => {
     setIsLoading(true);
 
-    await deleteIndustryContactForAttorney(userId, contactId);
+    await deleteIndustryContactForMediator(userId, contactId);
 
     setIsLoading(false);
     onOk();

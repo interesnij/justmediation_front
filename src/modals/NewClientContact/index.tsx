@@ -61,7 +61,7 @@ export const NewClientContactModal = ({ open, setOpen }: Props) => {
                   className="d-flex"
                   onClick={() => setUserType("other")}
                 >
-                  <div className="m-auto">Attorney, paralegal or others</div>
+                  <div className="m-auto">Mediator others</div>
                 </UserType>
               </div>
             </div>

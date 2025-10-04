@@ -49,8 +49,8 @@ export default function Recentmatter({ data }) {
           </Tag>
         </div>
         <User
-          userName={getUserName(data?.attorney_data)}
-          avatar={data?.attorney_data?.avatar}
+          userName={getUserName(data?.mediator_data)}
+          avatar={data?.mediator_data?.avatar}
           direction="toLeft"
         />
       </div>

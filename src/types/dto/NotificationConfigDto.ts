@@ -13,7 +13,7 @@ export interface NotificationTypeDescriptionDto {
   runtime_tag: NotificationTypeDto;
 
   /** Describes notification type receiver */
-  recipient_type: "client" | "attorney" | "all";
+  recipient_type: "client" | "mediator" | "all";
 
   /** Group */
   group: NotificationGroupDto;

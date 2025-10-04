@@ -1,37 +1,37 @@
 import React, { useState, useEffect } from "react";
 import { RouteComponentProps, navigate } from "@reach/router";
 import styled from "styled-components";
-import { Attorney } from "./components";
+import { Mediator } from "./components";
 import { RiseLoader, Button } from "components";
-import { AttorneyFindLayout } from "apps/client/layouts";
+import { MediatorFindLayout } from "apps/client/layouts";
 import { useQuery } from "react-query";
-import { getFavoriteAttorneys, createChat, toggleFavoriteAttorney } from "api"; 
+import { getFavoriteMediators, createChat, toggleFavoriteMediator } from "api"; 
 import { useChatContext, useAuthContext, useBasicDataContext } from "contexts";
-import { CompareAttorneysModal, CallStartModal } from "modals";
+import { CompareMediatorsModal, CallStartModal } from "modals";
 import { useModal } from "hooks";
 import MapComponent from "./components/MapComponent";
 
 export const FavoritesPage: React.FunctionComponent<RouteComponentProps> = () => {
   const { specialties, languages } = useBasicDataContext();
-  const [centeredAttorney, setCenteredAttorney] = useState(null);
+  const [centeredMediator, setCenteredMediator] = useState(null);
   const [compares, setCompares] = useState<number[]>([]);
   const { onStartCall } = useChatContext();
   const { userId, profile } = useAuthContext();
-  const compareAttorneys = useModal();
+  const compareMediators = useModal();
   const [loading, setLoading] = useState(false);
   const callStartModal = useModal();
-  const [currentAttorney, setCurrentAttorney] = useState<any>(null);
+  const [currentMediator, setCurrentMediator] = useState<any>(null);
   
   const { isFetching, data, refetch: refetchFavorites } = useQuery(
-    ["favorite-attorneys"], 
-    () => getFavoriteAttorneys(), 
+    ["favorite-mediators"], 
+    () => getFavoriteMediators(), 
     { keepPreviousData: true }
   );
 
   useEffect(() => {
-    if (!data?.favorite_attorneys_data?.length) return;
-    setCenteredAttorney(data.favorite_attorneys_data[0]);
-  }, [data?.favorite_attorneys_data?.length])
+    if (!data?.favorite_mediators_data?.length) return;
+    setCenteredMediator(data.favorite_mediators_data[0]);
+  }, [data?.favorite_mediators_data?.length])
 
   const handleChat = async (id: number) => {
     const chatObject = await createChat({ participants: [id], is_group: 0 });
@@ -47,37 +47,37 @@ export const FavoritesPage: React.FunctionComponent<RouteComponentProps> = () =>
 
   const handleToggleFavorite = async (id: number, value: boolean) => {
     setLoading(true)
-    await toggleFavoriteAttorney(id, value)
+    await toggleFavoriteMediator(id, value)
     refetchFavorites()
     setLoading(false)
   }
 
   return (
-    <AttorneyFindLayout tab="Favorites" className="no-background">
+    <MediatorFindLayout tab="Favorites" className="no-background">
       {isFetching || loading ? (
         <div className="spinner-wrap">
           <RiseLoader />
         </div>
-      ) : data?.favorite_attorneys_data?.length ? (
+      ) : data?.favorite_mediators_data?.length ? (
         <div className="find-search-result-page">
           <Heading>
-            You have {data?.favorite_attorneys?.length} favorited attorney profiles
+            You have {data?.favorite_mediators?.length} favorited mediator profiles
           </Heading>
           <div className="d-flex" style={{maxHeight: 'calc(100vh - 197px)'}}>
-            <div className="attorney-section">
-              {data?.favorite_attorneys_data.map(a => (
-                <Attorney 
+            <div className="mediator-section">
+              {data?.favorite_mediators_data.map(a => (
+                <Mediator 
                   key={`att-${a.id}`} 
                   data={a}
                   languages={languages}
                   specialties={specialties}
-                  onClick={() => setCenteredAttorney(a)} 
-                  favoriteIds={data?.favorite_attorneys || []}
+                  onClick={() => setCenteredMediator(a)} 
+                  favoriteIds={data?.favorite_mediators || []}
                   toggleFavorite={value => handleToggleFavorite(a.id, value)}
                   toggleCompare={() => handleToggleCompare(a.id)}
                   isComparing={compares.indexOf(a.id) !== -1}
                   onCall={() => {
-                    setCurrentAttorney(a);
+                    setCurrentMediator(a);
                     callStartModal.setOpen(true)
                   }}
                   onChat={() => handleChat(a.id)}
@@ -85,16 +85,16 @@ export const FavoritesPage: React.FunctionComponent<RouteComponentProps> = () =>
               ))}
               {compares.length>1 && compares.length<8 && (
                 <div className="compare-btn-wrap">
-                  <Button onClick={() => compareAttorneys.setOpen(true)}>
-                    Compare ({compares.length}) selected attorneys
+                  <Button onClick={() => compareMediators.setOpen(true)}>
+                    Compare ({compares.length}) selected mediators
                   </Button>
                 </div>
               )}
             </div>
             <div className="map-section">
               <MapComponent 
-                attorney={centeredAttorney}
-                data={data?.favorite_attorneys_data || []} 
+                mediator={centeredMediator}
+                data={data?.favorite_mediators_data || []} 
               />
             </div>
           </div>
@@ -102,19 +102,19 @@ export const FavoritesPage: React.FunctionComponent<RouteComponentProps> = () =>
       ) : (
         <div className="find-search-result-page">
           <Heading>
-            You don't have favorited attorney profiles
+            You don't have favorited mediator profiles
           </Heading>
         </div>
       )}
-      {compareAttorneys?.open && !!data?.favorite_attorneys_data?.length && compares.length > 1 && (
-        <CompareAttorneysModal 
-          {...compareAttorneys} 
+      {compareMediators?.open && !!data?.favorite_mediators_data?.length && compares.length > 1 && (
+        <CompareMediatorsModal 
+          {...compareMediators} 
           removeFromCompare={handleToggleCompare}
-          attorneys={data?.favorite_attorneys_data.filter(item => compares.indexOf(item.id) !== -1)}
-          favoriteIds={data?.favorite_attorneys || []}
+          mediators={data?.favorite_mediators_data.filter(item => compares.indexOf(item.id) !== -1)}
+          favoriteIds={data?.favorite_mediators || []}
           toggleFavorite={(id, value) => handleToggleFavorite(id, value)}
           onCall={id => {
-            setCurrentAttorney(data?.favorite_attorneys_data.filter(item => item.id === id))
+            setCurrentMediator(data?.favorite_mediators_data.filter(item => item.id === id))
             callStartModal.setOpen(true)
           }}
           onChat={handleChat}
@@ -122,11 +122,11 @@ export const FavoritesPage: React.FunctionComponent<RouteComponentProps> = () =>
       )}
       <CallStartModal 
         {...callStartModal} 
-        onConfirm={() => onStartCall({ participants: [+userId, currentAttorney?.id] })} 
-        participants={[currentAttorney]} 
+        onConfirm={() => onStartCall({ participants: [+userId, currentMediator?.id] })} 
+        participants={[currentMediator]} 
         userId={profile?.id} 
       />
-    </AttorneyFindLayout>
+    </MediatorFindLayout>
   );
 };
 

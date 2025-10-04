@@ -13,28 +13,18 @@ interface AccountProps {
 const accountData: AccountProps[] = [
   {
     label: "I am an",
-    title: "Attorney",
+    title: "Mediator",
     features: [
       "Powerful and user-friendly tools for lead generation, lead management and conversion",
       "Open forum where legal professionals answer people’s questions about the law",
-      "Constant, secure attorney/client communication on open matters",
+      "Constant, secure mediator/client communication on open matters",
     ],
-    route: "/auth/register/attorney",
-  },
-  {
-    label: "I am a",
-    title: "Paralegal/Other",
-    features: [
-      "For paralegals, assistants, associates, and any other matter related role",
-      "Work efficiently and collaboratively with attorneys directly on matters",
-      "Help attorneys manage their practice using lead generation, invoicing, time tracking, and document management",
-    ],
-    route: "/auth/register/paralegal",
+    route: "/auth/register/mediator",
   },
   {
     title: "Law Firm",
     features: [
-      "No hidden fees – every JustLaw feature included",
+      "No hidden fees – every JustMediation feature included",
       "Safe & secure – only platform with patented blockchain technology",
       "End-to-end solution – only platform to provide an end-to-end solution for you & your clients",
       "Exceptional service for all – no tier-based service",
@@ -46,7 +36,7 @@ const accountData: AccountProps[] = [
 export const SignupPage: React.FC<RouteComponentProps> = () => {
   return (
     <CreateAccountLayout
-      title="JustLaw"
+      title="JustMediation"
       label="Sign Up with"
       desc="A legal practice management system for lawyers, paralegals and law firms who want an end-to-end solution that is easy to use and enhances their practice."
       feature="Features"

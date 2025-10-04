@@ -6,7 +6,7 @@ import { API } from "helpers";
  */
  interface iCreateOpportunity {
     client: number;
-    attorney: number;
+    mediator: number;
   }
  export const createOpportunity = (data: iCreateOpportunity) => {
   return API().post("business/opportunities/", data);

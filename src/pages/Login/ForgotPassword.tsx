@@ -92,7 +92,7 @@ export const ForgotPasswordPage: React.FC<RouteComponentProps> = () => {
       </div>
       <div className="login-page__footer mb-auto">
         <span>If you need help, contact</span>&nbsp;
-        <Link to="/policy">JustLaw Support</Link>.
+        <Link to="/policy">JustMediation Support</Link>.
       </div>
     </LoginLayout>
   );

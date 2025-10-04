@@ -133,10 +133,10 @@ export const RepPostMatterModal = ({
                 <div className="row">
                   <div className="col-12 text-black">
                     <div>
-                      Have attorneys submit their proposals to your matter!
+                      Have mediators submit their proposals to your matter!
                     </div>
                     <ul className="mt-1">
-                      <li>Only attorneys can submit proposals</li>
+                      <li>Only mediators can submit proposals</li>
                       <li>Only you can see submissions from your posts</li>
                     </ul>
                   </div>

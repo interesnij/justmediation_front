@@ -19,7 +19,7 @@ interface Props {
   onUpdate?(params: string): void;
 }
 const titles = [
-  "Welcome to JustLaw!",
+  "Welcome to JustMediation!",
   "2-Factor Authentication",
   "Type your code",
 ];

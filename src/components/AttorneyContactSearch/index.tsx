@@ -4,7 +4,7 @@ import styled from "styled-components";
 import { useDebounce, useOnClickOutside } from "hooks";
 import { User } from "components";
 import { useQuery } from "react-query";
-import { SearchAttorneys } from "api";
+import { SearchMediators } from "api";
 import SearchIcon from "assets/icons/search.svg";
 import CloseIcon from "assets/icons/close.svg";
 import ClipLoader from "react-spinners/ClipLoader";
@@ -22,7 +22,7 @@ interface Props {
   onSelect?(params): void;
 }
 
-export const AttorneyContactSearch = ({
+export const MediatorContactSearch = ({
   label,
   className,
   placeholder = "Search by email or name",
@@ -36,11 +36,11 @@ export const AttorneyContactSearch = ({
   const {
     isLoading,
     data,
-    refetch: fetchAttorneys,
+    refetch: fetchMediators,
   } = useQuery<any[], Error>(
     ["all-clients", debouncedSearchTerm],
     () =>  
-    SearchAttorneys({ 
+    SearchMediators({ 
         search: debouncedSearchTerm,
       }),
     {
@@ -72,7 +72,7 @@ export const AttorneyContactSearch = ({
     () => {
       if (debouncedSearchTerm) {
         setShowMenu(true);
-        fetchAttorneys();
+        fetchMediators();
       }
     },
     // eslint-disable-next-line react-hooks/exhaustive-deps

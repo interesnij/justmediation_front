@@ -20,11 +20,11 @@ export const RegistrationReceiveModal = ({ open, setOpen }: Props) => {
     >
       <div className="pb-4" style={{ width: 600 }}>
         <div className="text-black" style={{ fontSize: 18 }}>
-          JustLaw has received your registration.
+          JustMediation has received your registration.
         </div>
         <br />
         <div className="text-dark">
-            Please check your inbox for an email from JustLaw to verify your email address.
+            Please check your inbox for an email from JustMediation to verify your email address.
         </div>
       </div>
       <div className="d-flex mt-4">

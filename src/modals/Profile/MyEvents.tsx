@@ -34,7 +34,7 @@ export const MyEvents: FC<IProps> = ({ handleCancel }) => {
     refetch: refetchEvents,
   } = useQuery<{ results: any[]; count: number }, Error>(
     ["events", sortBy.value],
-    () => getEvents({ [!profile.role || profile.role === "Attorney"?"attorney":"paralegal"]: profile.role?profile.admin_user_data.id: profile.id, ordering: sortBy.value }),
+    () => getEvents({ [!profile.role || profile.role === "Mediator"?"mediator":"paralegal"]: profile.role?profile.admin_user_data.id: profile.id, ordering: sortBy.value }),
     {
       keepPreviousData: true,
       enabled: !!profile?.id

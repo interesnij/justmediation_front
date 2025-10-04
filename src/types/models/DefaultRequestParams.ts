@@ -18,7 +18,7 @@ export interface PageableRequestParams {
   offset?: number;
 }
 
-/** Default JustLaw API request params. */
+/** Default JustMediation API request params. */
 export interface DefaultRequestParams
   extends OrderableRequestParams,
     SearchableRequestParams,

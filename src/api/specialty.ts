@@ -43,10 +43,3 @@ export const updateSpecialty = (id, title) => {
 export const deleteSpecialty = (id) => {
   return API().delete(`users/specialities/${id}/`)
 }
-
-
-/**
- * GET {{ jus-law_dev_url }}/users/specialities/?created_by={user_id} - can get editable and delectable PA
- * PUT {{ jus-law_dev_url }}/users/specialities/ - update pa belong to user
- * DELETE {{ jus-law_dev_url }}/users/specialities/ - delete pa belong to user
- */

@@ -103,7 +103,7 @@ export const ReferMatterModal = ({
               <div className="text-green">ATTENTION:</div>
               <div className="text-dark">
                 If your request is accepted, you will no longer have access to
-                this matter and its details unless the principle attorney shares
+                this matter and its details unless the principle mediator shares
                 it with you. You can view this referral in your <b>Matters</b>{" "}
                 by selecting <b>Status: Referred</b> .
               </div>
@@ -141,7 +141,7 @@ export const ReferMatterModal = ({
 
           <Formik
             initialValues={{
-              attorney: contact?.id,
+              mediator: contact?.id,
               message: "",
             }}
             validationSchema={validationSchema}

@@ -2,8 +2,8 @@ import React, {useState, useEffect} from "react";
 import { Formik, Form } from "formik";
 import * as Yup from "yup";
 import { SignupLayout } from "layouts";
-import { AttorneyRegisterDto } from "types";
-import { registerAttorney, uploadFiles } from "api";
+import { MediatorRegisterDto } from "types";
+import { registerMediator, uploadFiles } from "api";
 import CloseIcon from "assets/icons/close.svg";
 import { isEqual, last } from "lodash";
 import { Button, SignupBar, LinkButton } from "components";
@@ -44,7 +44,7 @@ export const validateSchema = Yup.object().shape({
 });
 
 interface VerificationFormProps {
-  initData: AttorneyRegisterDto;
+  initData: MediatorRegisterDto;
   onNext?(param): void;
   onBack(): void;
 }
@@ -97,7 +97,7 @@ export const VerificationForm = ({
       <div className="label">Step 2 of 2</div>
       <div className="title">Verification Form</div>
       <div className="desc mx-auto mt-3">
-        To become a verified attorney on JustLaw, we need to validate the
+        To become a verified mediator on JustMediation, we need to validate the
         following information. Everything you share is confidential.
       </div>
       <Formik
@@ -107,13 +107,13 @@ export const VerificationForm = ({
         onSubmit={async (values) => {
           const attachments = await uploadFiles(
             values.registration_attachments || [],
-            "attorney_registration_attachments",
+            "mediator_registration_attachments",
             0
           );
 
           const formData = { ...values, registration_attachments: attachments }
           try {
-            await registerAttorney(formData, invite_uuid);
+            await registerMediator(formData, invite_uuid);
             verifyModal.setOpen(true);
           } catch (error: any) {
             showErrorModal("Error", error);

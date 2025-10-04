@@ -213,7 +213,7 @@ export const chatMessageMockup: IChatMessage[] = [
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam at commodo orci, id elementum mauris. Vivamus eu justo non lacus convallis pulvinar. Sed volutpat eros sagittis arcu sagittis semper. ",
     attachments: [
       {
-        name: "Justlaw doc.pdf",
+        name: "JustMediation doc.pdf",
         type: "doc",
         source:
           "https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf",
@@ -221,7 +221,7 @@ export const chatMessageMockup: IChatMessage[] = [
         size: "2.1MB",
       },
       {
-        name: "Justlaw doc.mp3",
+        name: "JustMediation doc.mp3",
         source:
           "https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf",
         fileType: "MP3",
@@ -248,7 +248,7 @@ export const chatMessageMockup: IChatMessage[] = [
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam at commodo orci, id elementum mauris. Vivamus eu justo non lacus convallis pulvinar. Sed volutpat eros sagittis arcu sagittis semper. ",
     attachments: [
       {
-        name: "Justlaw doc.pdf",
+        name: "JustMediation doc.pdf",
         type: "doc",
         source:
           "https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf",
@@ -256,7 +256,7 @@ export const chatMessageMockup: IChatMessage[] = [
         size: "2.1MB",
       },
       {
-        name: "Justlaw doc.mp3",
+        name: "JustMediation doc.mp3",
         source:
           "https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf",
         fileType: "MP3",
@@ -294,7 +294,7 @@ export const recentPosts: IPost[] = [
     replyCount: 4,
     userCount: 12,
     lastRepliedAt: "2021-02-22 11:12:50",
-    path: "/attorney/forums/post/a",
+    path: "/mediator/forums/post/a",
   },
   {
     postTitle: "Title of forum post",
@@ -306,7 +306,7 @@ export const recentPosts: IPost[] = [
     replyCount: 4,
     userCount: 12,
     lastRepliedAt: "2021-02-22 11:12:50",
-    path: "/attorney/forums/post/a",
+    path: "/mediator/forums/post/a",
   },
   {
     postTitle: "Title of forum post",
@@ -318,7 +318,7 @@ export const recentPosts: IPost[] = [
     replyCount: 4,
     userCount: 12,
     lastRepliedAt: "2021-02-22 11:12:50",
-    path: "/attorney/forums/post/a",
+    path: "/mediator/forums/post/a",
   },
 ];
 export const topics: ITopic[] = [
@@ -330,7 +330,7 @@ export const topics: ITopic[] = [
     postCount: 98,
     followerCount: 1245,
     isFollowing: false,
-    path: "/attorney/forums/topic/a",
+    path: "/mediator/forums/topic/a",
   },
   {
     topicTitle: "Accounting Law Title",
@@ -340,7 +340,7 @@ export const topics: ITopic[] = [
     postCount: 198,
     followerCount: 45,
     isFollowing: true,
-    path: "/attorney/forums/topic/a",
+    path: "/mediator/forums/topic/a",
   },
   {
     topicTitle: "Practice Area Title",
@@ -350,7 +350,7 @@ export const topics: ITopic[] = [
     postCount: 1238,
     followerCount: 72245,
     isFollowing: false,
-    path: "/attorney/forums/topic/a",
+    path: "/mediator/forums/topic/a",
   },
   {
     topicTitle: "Practice Area Title",
@@ -360,7 +360,7 @@ export const topics: ITopic[] = [
     postCount: 98,
     followerCount: 1245,
     isFollowing: false,
-    path: "/attorney/forums/topic/a",
+    path: "/mediator/forums/topic/a",
   },
   {
     topicTitle: "Accounting Law Title",
@@ -370,7 +370,7 @@ export const topics: ITopic[] = [
     postCount: 198,
     followerCount: 45,
     isFollowing: true,
-    path: "/attorney/forums/topic/a",
+    path: "/mediator/forums/topic/a",
   },
 ];
 export const myPosts: IPost[] = [
@@ -384,7 +384,7 @@ export const myPosts: IPost[] = [
     replyCount: 4,
     userCount: 12,
     lastRepliedAt: "2021-02-22 11:12:50",
-    path: "/attorney/forums/post/a",
+    path: "/mediator/forums/post/a",
   },
   {
     postTitle: "Title of forum post",
@@ -396,7 +396,7 @@ export const myPosts: IPost[] = [
     replyCount: 4,
     userCount: 12,
     lastRepliedAt: "2021-02-22 11:12:50",
-    path: "/attorney/forums/post/a",
+    path: "/mediator/forums/post/a",
   },
   {
     postTitle: "Title of forum post",
@@ -408,6 +408,6 @@ export const myPosts: IPost[] = [
     replyCount: 4,
     userCount: 12,
     lastRepliedAt: "2021-02-22 11:12:50",
-    path: "/attorney/forums/post/a",
+    path: "/mediator/forums/post/a",
   },
 ];

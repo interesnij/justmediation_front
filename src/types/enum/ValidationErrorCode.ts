@@ -35,7 +35,7 @@ export enum ValidationErrorCode {
    */
   Pattern = "pattern",
   /**
-   * JustLaw error.
+   * JustMediation error.
    */
   JusLawError = "JustLawError",
   /**

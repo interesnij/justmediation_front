@@ -1,11 +1,11 @@
 import React, { useState} from "react";
 import { Button, Card, User, RiseLoader } from "components";
 import { RouteComponentProps, useParams, navigate } from "@reach/router";
-import { AttorneyLayout } from "apps/attorney/layouts";
+import { MediatorLayout } from "apps/mediator/layouts";
 import { useQuery } from "react-query";
-import { getIndustryContactDetailForAttorney, createChat } from "api";
+import { getIndustryContactDetailForMediator, createChat } from "api";
 import { useAuthContext, useChatContext } from "contexts";
-import { Paralegal, Attorney } from "./components";
+import { Paralegal, Mediator } from "./components";
 import { CallStartModal } from "modals";
 import { useModal } from "hooks";
 import "./style.scss";
@@ -19,7 +19,7 @@ export const ContactPage: React.FunctionComponent<RouteComponentProps> = () => {
 
   const { isLoading, isError, error, data } = useQuery<any, Error>(
     ["industry-contact-detail"],
-    () => getIndustryContactDetailForAttorney(userId, params.id),
+    () => getIndustryContactDetailForMediator(userId, params.id),
     {
       keepPreviousData: true,
     }
@@ -43,7 +43,7 @@ export const ContactPage: React.FunctionComponent<RouteComponentProps> = () => {
   const handleWebsite = () => {};
 
   return (
-    <AttorneyLayout
+    <MediatorLayout
       title="Back to Industry Contacts"
       backUrl={`/${userType}/contacts`}
       userType={userType}
@@ -99,13 +99,13 @@ export const ContactPage: React.FunctionComponent<RouteComponentProps> = () => {
                 {data?.type === "paralegal" ? (
                   <Paralegal data={data} />
                 ) : (
-                  <Attorney data={data} />
+                  <Mediator data={data} />
                 )} 
               </Card>
             </div>
             <Card className="ml-4">
               <div className="contact-page__buttons">
-                {data?.type === "attorney" ? (
+                {data?.type === "mediator" ? (
                   <Button
                     type="outline"
                     className="mt-3 mb-3"
@@ -137,6 +137,6 @@ export const ContactPage: React.FunctionComponent<RouteComponentProps> = () => {
         participants={[data?.about]} 
         userId={profile?.id} 
       />
-    </AttorneyLayout>
+    </MediatorLayout>
   );
 };

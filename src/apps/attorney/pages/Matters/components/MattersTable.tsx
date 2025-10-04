@@ -10,13 +10,13 @@ export interface ISortData {
   title: "up" | "down" | "normal";
   client__user__first_name: "up" | "down" | "normal";
   start_date: "up" | "down" | "normal";
-  attorney__user__first_name: "up" | "down" | "normal";
+  mediator__user__first_name: "up" | "down" | "normal";
 }
 const initSortData: ISortData = {
   title: "normal",
   client__user__first_name: "normal",
   start_date: "normal",
-  attorney__user__first_name: "normal",
+  mediator__user__first_name: "normal",
 };
 export const MattersTable = ({
   data,
@@ -29,7 +29,7 @@ export const MattersTable = ({
       | "title"
       | "client__user__first_name"
       | "start_date"
-      | "attorney__user__first_name",
+      | "mediator__user__first_name",
     state: "up" | "down" | "normal"
   ) => {
     let temp = { ...initSortData };

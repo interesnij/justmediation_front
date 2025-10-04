@@ -40,7 +40,7 @@ export const CreateAccountPage = ({ onNext, initData }: Props) => {
       label=""
       feature="Features"
       features={[
-        "No hidden fees – every JustLaw feature included",
+        "No hidden fees – every JustMediation feature included",
         "Safe & secure – only platform with patented blockchain technology",
         "End-to-end solution – only platform to provide an end-to-end solution for you & your clients",
         "Exceptional service for all – no tier-based service",

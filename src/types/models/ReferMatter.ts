@@ -15,5 +15,5 @@ export interface ReferMatter {
   /** List of users emails to share with. */
   emails: string[];
   /** User type to share matter with. */
-  userType: Role.Attorney | Role.Staff;
+  userType: Role.Mediator | Role.Staff;
 }

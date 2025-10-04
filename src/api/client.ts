@@ -106,19 +106,19 @@ export const getClientContacts = async (
 };
 
 /**
- * Get attorney/paralegal/enterprise by id
+ * Get mediator/paralegal/enterprise by id
  * @param id
  */
-export const getAttorneyDetails = async (id: number) => {
-  const response = await API().get(`users/attorneys/${id}`);
+export const getMediatorDetails = async (id: number) => {
+  const response = await API().get(`users/mediators/${id}`);
   return response.data;
 };
 
 /**
- * Search attorney/paralegal/enterprise
+ * Search mediator/paralegal/enterprise
  *
  */
-export const findAttorneys = async (params: any) => {
+export const findMediators = async (params: any) => {
   // appointment_type   2
   // user__specialities   2
   // fee_types    5
@@ -126,24 +126,24 @@ export const findAttorneys = async (params: any) => {
   // spoken_language     2
   // firm_locations__city    2
   // firm_locations__zip_code    10001
-  const response = await API().get(`/users/attorneys/`, { params });
+  const response = await API().get(`/users/mediators/`, { params });
   return response.data;
 };
 
 /**
- * Get Favorite Attorneys
+ * Get Favorite Mediators
  *
  */
-export const getFavoriteAttorneys = async () => {
+export const getFavoriteMediators = async () => {
   const response = await API().get(`/users/clients/current/favorite/`);
   return response.data;
 };
 
 /**
- * Add/remove attorney from favorites
+ * Add/remove Mediator from favorites
  *
  */
-export const toggleFavoriteAttorney = (id: number, value: boolean) => {
+export const toggleFavoriteMediator = (id: number, value: boolean) => {
   return value === true
     ? API().put(`/users/clients/current/favorite/${id}/`)
     : API().delete(`/users/clients/current/favorite/${id}/`);

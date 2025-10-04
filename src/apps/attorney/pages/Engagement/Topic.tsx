@@ -11,7 +11,7 @@ import {
 import { Post } from "./components";
 import { useInput } from "hooks";
 import { RouteComponentProps, useParams } from "@reach/router";
-import { AttorneyLayout, EngagementLayout } from "apps/attorney/layouts";
+import { MediatorLayout, EngagementLayout } from "apps/mediator/layouts";
 import { useQuery } from "react-query";
 import { getPracticeAreaPostedMatters } from "api";
 import { useAuthContext } from "contexts";
@@ -59,7 +59,7 @@ export const EngagementTopicPage: React.FunctionComponent<RouteComponentProps> =
     }, [sortBy.value, page.value])
     
     return (
-      <AttorneyLayout showButtons={false} userType={userType}>
+      <MediatorLayout showButtons={false} userType={userType}>
         <EngagementLayout tab="Browse Inquiries" userType={userType}>
           <div className="forums-page__topic">
             {isLoading || isFetching ? (
@@ -74,7 +74,7 @@ export const EngagementTopicPage: React.FunctionComponent<RouteComponentProps> =
               <>
                 <Breadcrumb
                   previous={[
-                    { label: "Browse Inquiries", url: "/attorney/engagement" },
+                    { label: "Browse Inquiries", url: "/mediator/engagement" },
                   ]}
                   current={topic?.title}
                   className="mb-3"
@@ -115,6 +115,6 @@ export const EngagementTopicPage: React.FunctionComponent<RouteComponentProps> =
             )}
           </div>
         </EngagementLayout>
-      </AttorneyLayout>
+      </MediatorLayout>
     );
   };

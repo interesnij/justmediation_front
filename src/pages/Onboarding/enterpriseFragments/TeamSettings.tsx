@@ -46,8 +46,8 @@ const validationSchema = Yup.object().shape({
 
 const userTypes = [
   {
-    id: "attorney",
-    title: "Attorney",
+    id: "mediator",
+    title: "Mediator",
   },
   {
     id: "paralegal",

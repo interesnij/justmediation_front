@@ -29,13 +29,13 @@ export default function Matter({ data }: Props) {
           </div>
         </div>
         <div className="d-flex fit-height">
-          <Link className="profile-link" to={`/client/find/attorneys/${data?.attorney}`}>
+          <Link className="profile-link" to={`/client/find/mediators/${data?.mediator}`}>
             <User
-              userName={`${data?.attorney_data?.first_name || ""} ${
-                data?.attorney_data?.middle_name || ""
-              } ${data?.attorney_data?.last_name || ""}`}
+              userName={`${data?.mediator_data?.first_name || ""} ${
+                data?.mediator_data?.middle_name || ""
+              } ${data?.mediator_data?.last_name || ""}`}
               direction="toLeft"
-              avatar={data?.attorney_data?.avatar}
+              avatar={data?.mediator_data?.avatar}
             />
           </Link>
           {data?.shared_with_data.length !== 0 && (

@@ -1,11 +1,11 @@
 import { EventLocation } from "./EventLocation";
 
 /** Event model. */
-export interface AttorneyEvent {
+export interface MediatorEvent {
   /** ID */
   id: number;
-  /** Attorney ID */
-  attorneyId: number;
+  /** Mediator ID */
+  mediatorId: number;
   /** Title */
   title: string;
   /** Description */

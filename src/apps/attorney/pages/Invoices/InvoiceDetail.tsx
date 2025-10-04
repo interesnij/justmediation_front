@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { Button, RiseLoader } from "components";
 import { RouteComponentProps, useParams } from "@reach/router";
-import { AttorneyLayout } from "apps/attorney/layouts";
+import { MediatorLayout } from "apps/mediator/layouts";
 import { getInvoiceById, downloadInvoice } from "api";
 import { useQuery } from "react-query";
 import { getUserName } from "helpers";
@@ -30,7 +30,7 @@ export const InvoiceDetailPage: React.FunctionComponent<RouteComponentProps> =
     };
 
     return (
-      <AttorneyLayout title="Back to Invoices" backUrl="/attorney/invoices" userType={userType}>
+      <MediatorLayout title="Back to Invoices" backUrl="/mediator/invoices" userType={userType}>
         {isLoading ? (
           <RiseLoader className="my-auto" />
         ) : isError ? (
@@ -52,7 +52,7 @@ export const InvoiceDetailPage: React.FunctionComponent<RouteComponentProps> =
             <div className="row mb-4 mt-2">
               <div className="col-md-6 d-flex my-1">
                 <SummaryTitle>Billed to</SummaryTitle>
-                <div>{getUserName(data?.attorney_data)}</div>
+                <div>{getUserName(data?.mediator_data)}</div>
               </div>
               <div className="col-md-6 d-flex my-1">
                 <SummaryTitle>Invoice number</SummaryTitle>
@@ -180,11 +180,11 @@ export const InvoiceDetailPage: React.FunctionComponent<RouteComponentProps> =
             </div>
             <FeeDescription>
               Notes:<br />
-              The total is equivalent to the “composite rate.” Composite Rate = Attorney Legal Fees + Separate and Standalone 5% JustLaw Management Fee.
+              The total is equivalent to the “composite rate.” Composite Rate = Mediator Legal Fees + Separate and Standalone 5% JustMediation Management Fee.
             </FeeDescription>
           </div>
         )}
-      </AttorneyLayout>
+      </MediatorLayout>
     );
   };
 

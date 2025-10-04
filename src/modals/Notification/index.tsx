@@ -78,7 +78,7 @@ export const NotificationModal = ({
           ? `/client/find/posts/${id}`
           : `/${userType}/engagement/submitted_post/${id}`;
       // Document
-      case "document_shared_by_attorney":
+      case "document_shared_by_mediator":
       case "document_uploaded":
         return userType === "client"
           ? `/client/overview`
@@ -86,12 +86,12 @@ export const NotificationModal = ({
       // Forum
       case "new_post":
         return `/${userType}/forums/post/${id}`;
-      case "new_attorney_post":
+      case "new_mediator_post":
         return `/${userType}/forums/post/${id}`;
       case "new_post_on_topic":
         return `/${userType}/forums/post/${id}`;
       // Promotion
-      case "new_attorney_event":
+      case "new_mediator_event":
         return `/${userType}/overview`;
       // Social
       case "new_message":

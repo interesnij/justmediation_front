@@ -292,8 +292,8 @@ export default function Overview({
                 <FolderItem>
                   <ContactHeading>Principle</ContactHeading>
                   <User
-                    avatar={matterData?.attorney_data?.avatar}
-                    userName={getUserName(matterData?.attorney_data)}
+                    avatar={matterData?.mediator_data?.avatar}
+                    userName={getUserName(matterData?.mediator_data)}
                     className="my-1"
                   />
                 </FolderItem>

@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { RouteComponentProps, useLocation, navigate } from "@reach/router";
 import { Folder, FolderItem, Select, RiseLoader, Pagination, SearchBar, Breadcrumb } from "components";
 import { useInput } from "hooks";
-import { AttorneyLayout } from "./../../layouts";
+import { MediatorLayout } from "./../../layouts";
 import { Post } from "./components";
 import { getPostedMatters } from "api";
 import { useQuery } from "react-query";
@@ -58,7 +58,7 @@ export const EngagementSearchResultsPage: React.FunctionComponent<RouteComponent
     }
 
     return (
-      <AttorneyLayout title="Potential Engagement Search Results" showButtons={false} userType={userType}>
+      <MediatorLayout title="Potential Engagement Search Results" showButtons={false} userType={userType}>
         <div className="forums-page search-results-page">
           <div>
             <div className="forum-layout-bar">
@@ -121,6 +121,6 @@ export const EngagementSearchResultsPage: React.FunctionComponent<RouteComponent
             )}
           </div>
         </div>
-      </AttorneyLayout>
+      </MediatorLayout>
     );
   };

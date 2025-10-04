@@ -1,7 +1,7 @@
 /**
- * Attorney Register.
+ * Mediator Register.
  */
-export interface AttorneyRegisterDto {
+export interface MediatorRegisterDto {
   /**
    * First name.
    */

@@ -97,7 +97,7 @@ export const CancelSubscriptionModal = ({
                   <li><img className="cancel-subscription__icon"
                            src={CancelIcon}
                            alt="icon" />
-                    Your profile will be removed from the JustLaw database and you will no longer be able to submit proposals to JustLaw client users and your profile will be removed from the database and clients will no longer be able to search or view your profile.</li>
+                    Your profile will be removed from the JustMediation database and you will no longer be able to submit proposals to JustMediation client users and your profile will be removed from the database and clients will no longer be able to search or view your profile.</li>
                   <li><img className="cancel-subscription__icon"
                            src={CancelIcon}
                            alt="icon" />
@@ -120,7 +120,7 @@ export const CancelSubscriptionModal = ({
 
               <div className="cancel-subscription__footer">
                 To cancel your subscription to Jus Law, please contact support at:<br/>
-                <a href="mailto:support@justlaw.com">support@justlaw.com</a>
+                <a href="mailto:support@jusmediation.com">support@jusmediation.com</a>
               </div>
             </>
           )}

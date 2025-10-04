@@ -36,7 +36,7 @@ export const CreateAccountPage = ({ onNext, initData }: Props) => {
   }, []);
   return (
     <CreateAccountLayout
-      title="JustLaw"
+      title="JustMediation"
       label="Sign Up with"
       desc="Access legal services that provide transparent, start-to-finish solutions and advice when and where you need it"
       feature="Client Features"

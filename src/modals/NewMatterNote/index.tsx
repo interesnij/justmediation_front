@@ -52,7 +52,7 @@ export const NewMatterNoteModal = ({
             try {
               const attachments = await uploadFiles(
                 values.attachments || [],
-                "attorney_registration_attachments",
+                "mediator_registration_attachments",
                 0
               );
               if (data) {

@@ -4,7 +4,7 @@ import { SearchBar, Select, Button, Pagination, RiseLoader } from "components";
 import { useInput, useModal } from "hooks";
 import { MattersTable } from "./components/MattersTable";
 import { NewMatterModal } from "modals";
-import { AttorneyLayout } from "apps/attorney/layouts";
+import { MediatorLayout } from "apps/mediator/layouts";
 import { useQuery } from "react-query";
 import { getMatters } from "api";
 import { useMatterContext, useAuthContext } from "contexts";
@@ -65,7 +65,7 @@ export const MattersPage: React.FunctionComponent<RouteComponentProps> = () => {
         pageSize: MATTERS_PER_PAGE,
         search: search.value,
         status: filter.value,
-        attorney: ownership.value === "mine" ? userId : "",
+        mediator: ownership.value === "mine" ? userId : "",
         shared_with: ownership.value === "other" ? userId : "",
         ordering: sorting,
       }),
@@ -98,7 +98,7 @@ export const MattersPage: React.FunctionComponent<RouteComponentProps> = () => {
   const isParalegal = !!(userType && ['paralegal', 'other'].indexOf(userType) !== -1);
 
   return (
-    <AttorneyLayout title="Matters" userType={userType}>
+    <MediatorLayout title="Matters" userType={userType}>
       <div className="matters-page__bar">
         <div className="matters-page__bar-input">
           <SearchBar
@@ -176,6 +176,6 @@ export const MattersPage: React.FunctionComponent<RouteComponentProps> = () => {
         newMatterModal?.open &&
         <NewMatterModal {...newMatterModal} onCreate={() => refetch()} />
       }
-    </AttorneyLayout>
+    </MediatorLayout>
   );
 };

@@ -1,4 +1,4 @@
-export * from "./FindAttorney";
+export * from "./FindMediator";
 export * from "./Home";
 export * from "./Chats/ChatsPage";
 export * from "./Contact";

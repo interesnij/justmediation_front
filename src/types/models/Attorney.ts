@@ -5,15 +5,15 @@ import { State } from "./State";
 export type PlaceResult = google.maps.places.PlaceResult;
 
 /**
- * Model for attorney's data.
+ * Model for Mediator's data.
  */
-export interface Attorney extends User {
+export interface Mediator extends User {
   /**
-   * Attorney's education.
+   * Mediator's education.
    */
   education: Education;
   /**
-   * Is attorney disciplined.
+   * Is Mediator disciplined.
    */
   isDisciplined: boolean;
   /**
@@ -53,7 +53,7 @@ export interface Attorney extends User {
    */
   yearsOfExperience: number;
   /**
-   * Does attorney has specialty?
+   * Does Mediator has specialty?
    */
   haveSpecialty: boolean;
   /**
@@ -79,7 +79,7 @@ export interface Attorney extends User {
    */
   feeRate: string;
   /**
-   * Information about attorneys fee kinds.
+   * Information about Mediators fee kinds.
    */
   feeKinds: FeeKind[];
   /**
@@ -108,29 +108,29 @@ export interface Attorney extends User {
   readonly followers: number[];
 
   /**
-   * Is attorney verified.
+   * Is Mediator verified.
    */
   isVerified: boolean;
 
   /**
-   * Is attorney feature.
+   * Is Mediator feature.
    */
   featured: boolean;
 
   /**
-   * Distance to attorney.
+   * Distance to Mediator.
    */
   distance: number;
   /**
-   * Has attorney active subscription.
+   * Has Mediator active subscription.
    */
   hasActiveSubscription: boolean;
   /**
-   * Is attorney sponsored.
+   * Is Mediator sponsored.
    */
   readonly isSponsored: boolean;
   /**
-   * Sponsor attorney link.
+   * Sponsor Mediator link.
    */
   sponsorLink: string;
 }

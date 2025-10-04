@@ -3,11 +3,11 @@
  * @see NotificationTypeDto Notification type dto.
  */
 export enum NotificationType {
-  /** Attorney created a post. */
-  NewAttorneyPost = 'NewAttorneyPost',
-  /** Attorney created an event. */
+  /** mediator created a post. */
+  NewMediatorPost = 'NewMediatorPost',
+  /** mediator created an event. */
   NewEvent = 'NewEvent',
-  /** Attorney uploaded a document. */
+  /** mediator uploaded a document. */
   DocumentShared = 'DocumentShared',
   /** New message. */
   NewMessage = 'NewMessage',
@@ -15,13 +15,13 @@ export enum NotificationType {
   MatterStatusUpdated = 'MatterStatusUpdated',
   /** Chat created. */
   NewChat = 'NewChat',
-  /** New opportunity for attorney. */
+  /** New opportunity for mediator. */
   NewOpportunity = 'NewOpportunity',
-  /** New post created by attorney. */
+  /** New post created by mediator. */
   NewTopicPost = 'NewTopicPost',
   /** Video call started. */
   NewVideoCall = 'NewVideoCall',
-  /** Attorney was invited to group chat. */
+  /** mediator was invited to group chat. */
   NewGroupChat = 'NewGroupChat',
   /** Matter was shared with user. */
   MatterShared = 'MatterShared',

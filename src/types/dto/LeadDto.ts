@@ -1,4 +1,4 @@
-// import { AttorneyDto } from "./AttorneyDto";
+// import { MediatorDto } from "./MediatorDto";
 import { ClientDto } from "./ClientDto";
 import { TopicDto } from "./TopicDto";
 
@@ -12,14 +12,14 @@ export interface LeadDto {
   id: number;
 
   /**
-   * Attorney ID.
+   * Mediator ID.
    */
-  attorney: number;
+  mediator: number;
 
   /**
-   * Attorney data.
+   * mediator data.
    */
-  // attorney_data: Partial<AttorneyDto>;
+  // mediator_data: Partial<MediatorDto>;
 
   /**
    * Topic ID.
@@ -67,9 +67,9 @@ export interface CreateLeadDto {
   client: number;
 
   /**
-   * Attorney ID.
+   * Mediator ID.
    */
-  attorney: number;
+  mediator: number;
 
   /**
    * Topic ID.

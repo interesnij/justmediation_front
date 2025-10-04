@@ -1,4 +1,4 @@
-import { Attorney } from "./Attorney";
+import { Mediator } from "./Mediator";
 
 /** Group chat model. */
 export interface Network {
@@ -9,7 +9,7 @@ export interface Network {
   /** Chat channel. */
   chatId?: string;
   /** Creator. */
-  creator?: Attorney;
+  creator?: Mediator;
   /** Participants. */
-  participants: Attorney[];
+  participants: Mediator[];
 }

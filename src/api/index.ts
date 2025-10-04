@@ -9,7 +9,7 @@ export * from "./chat";
 export * from "./news";
 export * from "./business";
 export * from "./matter";
-export * from "./attorney";
+export * from "./mediator";
 export * from "./forum";
 export * from "./document";
 export * from "./invoice";

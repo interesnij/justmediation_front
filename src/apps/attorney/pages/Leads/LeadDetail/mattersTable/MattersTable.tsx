@@ -8,17 +8,17 @@ interface Props {
 export interface ISortData {
   title: "up" | "down" | "normal";
   start_date: "up" | "down" | "normal";
-  attorney__user__first_name: "up" | "down" | "normal";
+  mediator__user__first_name: "up" | "down" | "normal";
 }
 const initSortData: ISortData = {
   title: "normal",
   start_date: "normal",
-  attorney__user__first_name: "normal",
+  mediator__user__first_name: "normal",
 };
 export const MattersTable = ({ data, onSort = () => {} }: Props) => {
   const [sortData, setSortData] = useState<ISortData>(initSortData);
   const handleSort = (
-    row: "title" | "start_date" | "attorney__user__first_name",
+    row: "title" | "start_date" | "mediator__user__first_name",
     state: "up" | "down" | "normal"
   ) => {
     let temp = { ...initSortData };

@@ -29,19 +29,19 @@ export const SettingsModal = ({ open, setOpen, userType }: Props) => {
         { tab: "Notification"  },
         { tab: "Integrations"  },
       ];
-    // enterprise | attorney
+    // enterprise | mediator
     const menu = [
       { tab: "My Account"    },
       { tab: "Subscription"  },
     ]
-    if (userType==='enterprise') { // [NEED] or attorney that has a team
+    if (userType==='enterprise') { // [NEED] or mediator that has a team
       menu.push({ tab: "Team Settings" })
     }
     const addedMenu = [
       { tab: "Notification"  }, 
       { tab: "Integrations"  }, 
     ]
-    if(!profile.role ||profile.role==="Attorney") {
+    if(!profile.role ||profile.role==="Mediator") {
       addedMenu.push({ tab: "Matter stages" })
     }
     return [

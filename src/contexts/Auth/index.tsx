@@ -103,13 +103,13 @@ export const AuthProvider = ({ children }) => {
     localStorage.setItem("key", key);
     if (userType === "client") {
       navigate("/client/overview");
-    } else if (userType === "attorney") {
+    } else if (userType === "mediator") {
       if (!planId) {
-        navigate(`/auth/onboarding/subscription/attorney`);
+        navigate(`/auth/onboarding/subscription/mediator`);
       } else if (planId && !avatar) {
-        navigate(`/auth/onboarding/profile/attorney`);
+        navigate(`/auth/onboarding/profile/mediator`);
       } else {
-        navigate(`/attorney/overview`);
+        navigate(`/mediator/overview`);
       }
     } else if (userType === "paralegal") {
       if (!avatar) {
@@ -136,13 +136,13 @@ export const AuthProvider = ({ children }) => {
     const { userType, planId, avatar, profile } = state;
     if (userType === "client") {
       navigate("/client/overview");
-    } else if (userType === "attorney") {
+    } else if (userType === "mediator") {
       if (!planId) {
-        navigate(`/auth/onboarding/subscription/attorney`);
+        navigate(`/auth/onboarding/subscription/mediator`);
       } else if (planId && !avatar) {
-        navigate(`/auth/onboarding/profile/attorney`);
+        navigate(`/auth/onboarding/profile/mediator`);
       } else {
-        navigate(`/attorney/overview`);
+        navigate(`/mediator/overview`);
       }
     } else if (userType === "paralegal") {
       if (!avatar) {
@@ -176,8 +176,8 @@ export const AuthProvider = ({ children }) => {
     set(updatedState);
     setState(updatedState);
     switch (type) {
-      case "attorney":
-        navigate("/attorney/overview");
+      case "mediator":
+        navigate("/mediator/overview");
         break;
       case "paralegal":
         navigate("/paralegal/overview");
@@ -204,7 +204,7 @@ export const AuthProvider = ({ children }) => {
     });
   }
   const setProfile = (params) => {
-    if (((state.userType === "attorney" || state.userType === "paralegal") && !params?.avatar) || (state.userType === "enterprise" && !params?.admin_user_data?.avatar)) return;
+    if (((state.userType === "mediator" || state.userType === "paralegal") && !params?.avatar) || (state.userType === "enterprise" && !params?.admin_user_data?.avatar)) return;
     setState({
       ...state,
       profile: params,

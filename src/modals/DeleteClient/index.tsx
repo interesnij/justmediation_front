@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import classNames from "classnames";
-import { deleteLeadClientsByAttorney, deleteClientById } from "api";
+import { deleteLeadClientsByMediator, deleteClientById } from "api";
 import useOnclickOutside from "react-cool-onclickoutside";
 import { Button, RiseLoader } from "components";
 import CloseIcon from "assets/icons/close.svg";
@@ -28,7 +28,7 @@ export const DeleteClientModal = ({
   });
   const handleDelete = async () => {
     setIsLoading(true);
-    await deleteLeadClientsByAttorney(userId, data?.id);
+    await deleteLeadClientsByMediator(userId, data?.id);
 
     setIsLoading(false);
     onOk();

@@ -20,7 +20,7 @@ export const MultiUsers = ({
     <div className={classNames("multi-avatar", className)} onClick={onClick}>
       {data.slice(0, 3).map((data, index) => {
         const profileLink = userType === 'client'
-          ? (data?.user_type === 'attorney' ? `/client/find/attorneys/${data?.id}` : `/client/find/paralegals/${data?.id}`)
+          ? (data?.user_type === 'mediator' ? `/client/find/mediators/${data?.id}` : `/client/find/paralegals/${data?.id}`)
           : data?.user_type === 'client' ? `/${userType}/leads/${data?.id}?type=${data?.user_type}` : `/${userType}/contacts/${data?.id}`;
         return (
           <div className="multi-avatar__icon" key={`${index}key`}>

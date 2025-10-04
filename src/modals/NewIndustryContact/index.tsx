@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Modal, Button, IndustryContactSearch } from "components";
 import { useInput } from "hooks";
 import { useAuthContext } from "contexts";
-import { addIndustryContactToAttorney } from "api";
+import { addIndustryContactToMediator } from "api";
 import "./style.scss";
 
 interface Props {
@@ -35,7 +35,7 @@ export const NewIndustryContactModal = ({
 
   const handleAddContact = async () => {
     setIsLoading(true);
-    await addIndustryContactToAttorney(userId, contactId);
+    await addIndustryContactToMediator(userId, contactId);
     onAdd();
     setIsLoading(false);
     setOpen(false);

@@ -26,7 +26,7 @@ export const TeamSettings = () => {
     ...data.team_members_registered_data,
     ...data.team_members,
   ]
-  const { attorney_count, paralegal_and_other_count, pending_invites_count, seats_used, seats_available } = data.team_members_stats;
+  const { mediator_count, paralegal_and_other_count, pending_invites_count, seats_used, seats_available } = data.team_members_stats;
 
   const updateLogo = async (file: any) => {
     try {
@@ -119,11 +119,11 @@ export const TeamSettings = () => {
         <FolderItem>
           <div className="row">
             <div className="col-3 members-count py-2">
-              <div>Attorneys</div>
-              <div>{attorney_count}</div>
+              <div>Mediators</div>
+              <div>{mediator_count}</div>
             </div>
             <div className="col-3 members-count py-2">
-              <div>Paralegals and Others</div>
+              <div>Others</div>
               <div>{paralegal_and_other_count}</div>
             </div>
             <div className="col-3 members-count py-2">

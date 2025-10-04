@@ -49,18 +49,18 @@ const useDocumentTitle = () => {
   }
 
   function updateTitle(pathname: any) {
-    document.title = `JustLaw`;
+    document.title = `JustMediation`;
     const urlParsed = pathname!.split("/").filter(k => k !== "");
 
     if (pathname && pathname.length > 2) {
       let title: string[] | string = pathname.split("/");
       title = title.length > 2 ? checkSpecifyTitle(title) : '';
       title = toTitleCase(title);
-      document.title = `JustLaw - ${title}`
+      document.title = `JustMediation - ${title}`
     }
 
     if(urlParsed.length === 1) {
-      document.title = `JustLaw - ${toTitleCase(urlParsed[0], true)}`
+      document.title = `JustMediation - ${toTitleCase(urlParsed[0], true)}`
     }
   }
 

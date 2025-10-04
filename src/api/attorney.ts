@@ -1,10 +1,10 @@
 import { API } from "helpers";
-import { AttorneySearchInfo, PlaceResult } from "types";
+import { MediatorSearchInfo, PlaceResult } from "types";
 import { MATTERS_PER_PAGE } from "config";
 const ITEMS_PER_PAGE = 10;
 
-interface ExtendedAttorneySearchInfo extends AttorneySearchInfo {
-  /** Attorney's company state. */
+interface ExtendedMediatorSearchInfo extends MediatorSearchInfo {
+  /** Mediator's company state. */
   state?: string;
 }
 interface RequestParam {
@@ -43,11 +43,11 @@ interface SearchParams {
   specialty?: number;
 }
 /**
- * Search attorneys
+ * Search mediators
  * @param param0 Search params.
  */
-export const searchForAttorney = ({ page, query, specialty }: SearchParams) => {
-  return API().get("users/attorneys/", {
+export const searchForMediator = ({ page, query, specialty }: SearchParams) => {
+  return API().get("users/mediators/", {
     params: {
       offset: (page || 0) * ITEMS_PER_PAGE,
       user__specialities: specialty,
@@ -55,25 +55,25 @@ export const searchForAttorney = ({ page, query, specialty }: SearchParams) => {
     },
   });
 };
-const getAttorneys = (params: RequestParam) => {
-  return API().get("users/attorneys/", {
+const getMediators = (params: RequestParam) => {
+  return API().get("users/mediators/", {
     params,
   });
 };
 
 /**
- * Return list of nearest attorneys.
+ * Return list of nearest mediators.
  *
- * @param searchInfo Attorney search info.
+ * @param searchInfo Mediator search info.
  * @param state Firm location state.
  */
-export const getNearestAttorneys = ({
+export const getNearestMediators = ({
   latitude,
   longitude,
   name,
   specialityId,
   state,
-}: ExtendedAttorneySearchInfo) => {
+}: ExtendedMediatorSearchInfo) => {
   let params: RequestParam = {};
   if (latitude != null && longitude != null) {
     params = {
@@ -96,15 +96,15 @@ export const getNearestAttorneys = ({
   if (state != null) {
     params.firm_location_state = state;
   }
-  return getAttorneys(params);
+  return getMediators(params);
 };
 
 /**
- * Get sponsored attorneys.
+ * Get sponsored mediators.
  *
- * @param place Used to sort sponsored attorneys by distance to location.
+ * @param place Used to sort sponsored mediators by distance to location.
  */
-export const getSponsoredAttorneys = (place: PlaceResult) => {
+export const getSponsoredMediators = (place: PlaceResult) => {
   let params: RequestParam = { sponsored: "true" };
 
   if (place) {
@@ -113,29 +113,29 @@ export const getSponsoredAttorneys = (place: PlaceResult) => {
     params.longitude = place.geometry?.location.lng().toString();
   }
 
-  return getAttorneys(params);
+  return getMediators(params);
 };
 
 /**
- * Follow attorney.
+ * Follow mediator.
  *
- * @param id Attorney's ID.
+ * @param id Mediator's ID.
  */
-export const followAttorney = (id: number | string) => {
-  return API().post(`users/attorneys/${id}/follow/`);
+export const followMediator = (id: number | string) => {
+  return API().post(`users/mediators/${id}/follow/`);
 };
 
 /**
- * Unfollow attorney.
+ * Unfollow Mediator.
  *
- * @param id Attorney's ID.
+ * @param id Mediator's ID.
  */
-export const unfollowAttorney = (id: number | string) => {
-  return API().post(`users/attorneys/${id}/unfollow/`);
+export const unfollowMediator = (id: number | string) => {
+  return API().post(`users/mediators/${id}/unfollow/`);
 };
 
 /**
- * Get all contacts of the attorney
+ * Get all contacts of the mediator
  *
  */
 interface iGetContacts {
@@ -172,16 +172,16 @@ export const getContacts = async (
 };
 
 /**
- * Get client and leads for attorney to create an invoice.
+ * Get client and leads for Mediator to create an invoice.
  *
- * @param id Attorney's ID.
+ * @param id Mediator's ID.
  */
 
 export const getClientsForInvoice = async (
   id: string,
 ) => {
   try {
-    const res = await API().get(`users/clients?attorney=${id}`);
+    const res = await API().get(`users/clients?mediator=${id}`);
     return res.data;
   } catch (error) {
     return {
@@ -192,9 +192,9 @@ export const getClientsForInvoice = async (
 };
 
 /**
- * Get client and leads for attorney.
+ * Get client and leads for Mediator.
  *
- * @param id Attorney's ID.
+ * @param id Mediator's ID.
  */
 
 interface GetLeadClientsParams {
@@ -217,7 +217,7 @@ export const getLeadClients = async (
     limit: data?.pageSize,
     type: data?.type
   };
-  const userType = (type === 'attorney' || role === 'Attorney') ? 'attorney' : 'paralegal';
+  const userType = (type === 'mediator' || role === 'Mediator') ? 'mediator' : 'paralegal';
   if (data?.ordering) {
     params["ordering"] = data?.ordering;
   }
@@ -239,8 +239,8 @@ export const getLeadClients = async (
  * @param id
  */
 
-export const deleteLeadClientsByAttorney = (id, dataId) => {
-  return API().delete(`users/attorneys/${id}/remove_leads_and_clients/`, {
+export const deleteLeadClientsByMediator = (id, dataId) => {
+  return API().delete(`users/mediators/${id}/remove_leads_and_clients/`, {
     data: { user_id: dataId },
   });
 };
@@ -248,33 +248,33 @@ export const deleteLeadClientsByAttorney = (id, dataId) => {
 /**
  * Add contact.
  *
- * @param id Attorney's ID.
+ * @param id Mediator's ID.
  */
-export const addContactToAttorney = (
+export const addContactToMediator = (
   id: number | string,
   client: number | string
 ) => {
-  return API().post(`users/attorneys/${id}/add_contact/`, {
+  return API().post(`users/mediators/${id}/add_contact/`, {
     client,
   });
 };
 
 /**
- * Invite client/lead to attorney.
+ * Invite client/lead to Mediator.
  *
  * @param data
  */
-export const inviteUserToAttorney = (data) => {
+export const inviteUserToMediator = (data) => {
   return API().post(`users/invites/`, data);
 };
 
 /**
- * get current attorney profile.
+ * get current Mediator profile.
  *
  */
-export const getCurrentAttorneyProfile = async () => {
+export const getCurrentMediatorProfile = async () => {
   try {
-    const response = await API().get(`users/attorneys/current/`);
+    const response = await API().get(`users/mediators/current/`);
     return response.data;
   } catch (error) {
     return {};
@@ -282,7 +282,7 @@ export const getCurrentAttorneyProfile = async () => {
 };
 
 /**
- * update current attorney profile.
+ * update current Mediator profile.
  *
  */
 export const updateCurrentProfile = async (data) => {
@@ -290,7 +290,7 @@ export const updateCurrentProfile = async (data) => {
     let userType: string = data.userType;
     
     if (userType == "enterprise") {
-      userType = "attorney";
+      userType = "mediator";
     }
     console.log("userType", userType);
     const response = await API().patch(`users/${userType}s/current/`, data);
@@ -307,13 +307,13 @@ export const updateCurrentProfile = async (data) => {
 /**
  * Add industry contact.
  *
- * @param id Attorney's ID.
+ * @param id Mediator's ID.
  */
-export const addIndustryContactToAttorney = (
+export const addIndustryContactToMediator = (
   id: number | string,
   user_id: number | string
 ) => {
-  return API().post(`users/attorneys/${id}/add_industrial_contact/`, {
+  return API().post(`users/mediators/${id}/add_industrial_contact/`, {
     user_id,
   });
 };
@@ -324,13 +324,13 @@ interface GetIndustryContactParams {
   page?: number;
   pageSize?: number;
   ordering?: string;
-  filter?: "attorney"|"paralegal"|"pending";
+  filter?: "mediator"|"paralegal"|"pending";
 }
 /**
  * Get industry contacts
  * @param data request params
  */
-export const getIndustryContactsForAttorney = async ({
+export const getIndustryContactsForMediator = async ({
   id,
   search = "",
   page = 0,
@@ -345,23 +345,23 @@ export const getIndustryContactsForAttorney = async ({
     type: filter || "",
 //    ordering,  // need BE adjustment (#754)
   };
-  const response = await API().get(`users/attorneys/${id}/industry_contacts/`, { params });
+  const response = await API().get(`users/mediators/${id}/industry_contacts/`, { params });
   return response.data;
 };
 
 /**
  * get industry contact detail.
  *
- * @param id Attorney's ID.
- * @param user_id attorney/paralegal ID.
+ * @param id Mediator's ID.
+ * @param user_id Mediator/paralegal ID.
  */
-export const getIndustryContactDetailForAttorney = async (
+export const getIndustryContactDetailForMediator = async (
   id: number | string,
   user_id: number | string
 ) => {
   try {
     let response = await API().get(
-      `users/attorneys/${id}/industry_contact_detail/`,
+      `users/mediators/${id}/industry_contact_detail/`,
       {
         params: { user_id },
       }
@@ -375,16 +375,16 @@ export const getIndustryContactDetailForAttorney = async (
 /**
  * Add contact.
  *
- * @param id Attorney's ID.
- * @param user_id attorney/paralegal ID.
+ * @param id Mediator's ID.
+ * @param user_id Mediator/paralegal ID.
  */
-export const deleteIndustryContactForAttorney = async (
+export const deleteIndustryContactForMediator = async (
   id: number | string,
   user_id: number | string
 ) => {
   try {
     let response = await API().delete(
-      `users/attorneys/${id}/remove_industrial_contact/`,
+      `users/mediators/${id}/remove_industrial_contact/`,
       {
         data: { user_id },
       }
@@ -396,24 +396,24 @@ export const deleteIndustryContactForAttorney = async (
 };
 
 /**
- * Get attorney by id
+ * Get Mediator by id
  * @param param0 id.
  */
-export const getAttorneyById = async (id, is_verified = true) => {
+export const getMediatorById = async (id, is_verified = true) => {
   let params = {
     is_verified,
   };
-  const res = await API().get(`users/attorneys/${id}/`, { params });
+  const res = await API().get(`users/mediators/${id}/`, { params });
   return res.data;
 };
 
 /**
- * Get attorney overview by id
+ * Get mediator overview by id
  * @param param0 id.
  */
-export const getAttorneyOverview = async (id) => {
+export const getMediatorOverview = async (id) => {
   try {
-    const res = await API().get(`users/attorneys/${id}/overview/`);
+    const res = await API().get(`users/mediators/${id}/overview/`);
     return res.data;
   } catch (error) {
     return {};

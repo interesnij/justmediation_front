@@ -21,7 +21,7 @@ import {
   createForumComment,
   followPost,
   unfollowPost,
-  addIndustryContactToAttorney,
+  addIndustryContactToMediator,
   createChat
 } from "api";
 import { EditPostModal } from "modals";
@@ -94,7 +94,7 @@ export const PostPage: React.FunctionComponent<RouteComponentProps> = () => {
     startCreatingChat(true)
     // create industry contact 
     if (targetUserType !== 'client') {
-      await addIndustryContactToAttorney(myId, userId);
+      await addIndustryContactToMediator(myId, userId);
     }
     // start network chat
     const chat: any = await createChat({ 

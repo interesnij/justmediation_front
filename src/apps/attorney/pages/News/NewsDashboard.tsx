@@ -3,7 +3,7 @@ import "./style.scss";
 import { News, Pagination, Select } from "components";
 import { useInput } from "hooks";
 import { RouteComponentProps } from "@reach/router";
-import { AttorneyLayout } from "apps/attorney/layouts";
+import { MediatorLayout } from "apps/mediator/layouts";
 import { getNewsByPage } from "api";
 import { NewsDto } from "types";
 import { NEWS_PER_PAGE } from "config";
@@ -30,7 +30,7 @@ export const NewsDashboardPage: React.FunctionComponent<RouteComponentProps> =
     });
 
     return (
-      <AttorneyLayout title="News" showButtons={false} userType={userType}>
+      <MediatorLayout title="News" showButtons={false} userType={userType}>
         <div className="news-dashboard">
           <div className="d-flex w-100 mb-4">
             <Select
@@ -73,6 +73,6 @@ export const NewsDashboardPage: React.FunctionComponent<RouteComponentProps> =
             </>
           )}
         </div>
-      </AttorneyLayout>
+      </MediatorLayout>
     );
   };

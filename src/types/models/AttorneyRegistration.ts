@@ -1,9 +1,9 @@
-import { Attorney } from "./Attorney";
+import { Mediator } from "./Mediator";
 
 /**
- * Attorney registration model.
+ * Mediator registration model.
  */
-export interface AttorneyRegistration extends Attorney {
+export interface MediatorRegistration extends Mediator {
   /**
    * Password.
    */

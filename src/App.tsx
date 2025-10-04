@@ -10,7 +10,7 @@ import { FIREBASE_CONFIG } from "config";
 import {
   LoginPage,
   SignupPage,
-  AttorneyRegisterPage,
+  MediatorRegisterPage,
   ClientRegisterPage,
   ParalegalRegisterPage,
   ForgotPasswordPage,
@@ -28,7 +28,7 @@ import {
   ComingSoon,
 } from "pages";
 import {
-  AttorneyRouter,
+  MediatorRouter,
   ClientRouter,
   ParalegalRouter,
   EnterpriseRouter,
@@ -101,14 +101,14 @@ function App() {
                         <ResetPasswordPage path="/auth/password-change-confirm" />
                         <SignupPage path="/auth/register" />
                         <ClientRegisterPage path="/auth/register/client" />
-                        <AttorneyRegisterPage path="/auth/register/attorney" />
+                        <MediatorRegisterPage path="/auth/register/mediator" />
                         <ParalegalRegisterPage path="/auth/register/paralegal" />
                         <EnterpriseRegisterPage path="/auth/register/enterprise" />
-                        <OnboardingSubscriptionPage path="/auth/onboarding/subscription/attorney" />
-                        <OnboardingProfilePage path="/auth/onboarding/profile/attorney" />
+                        <OnboardingSubscriptionPage path="/auth/onboarding/subscription/mediator" />
+                        <OnboardingProfilePage path="/auth/onboarding/profile/mediator" />
                         <OnboardingParalegalPage path="/auth/onboarding/paralegal" />
                         <EnterpriseOnboardingPage path="/auth/onboarding/enterprise" />
-                        <AttorneyRouter path="/attorney/*" />
+                        <MediatorRouter path="/mediator/*" />
                         <ClientRouter path="/client/*" />
                         <EnterpriseRouter path="/enterprise/*" />
                         <ParalegalRouter path="/paralegal/*" />

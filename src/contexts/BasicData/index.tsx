@@ -126,7 +126,7 @@ export const BasicDataProvider = ({ children }) => {
     setState((state: BasicDataContextInterface) => {
       return { ...state, states: res };
     });
-    if (_userType === "attorney") {
+    if (_userType === "mediator") {
       res = await getCurrentSubscriptionProfile();
       setState((state: BasicDataContextInterface) => {
         return { ...state, subscriptionInfo: res };

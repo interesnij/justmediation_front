@@ -26,7 +26,7 @@ export const JoinCallModal = ({
     if (!callObject) onDecline();
   }, [callObject])  
 
-  const audioPath2 = 'https://app.justlaw.com/sounds/voxeet_notify.mp3';
+  const audioPath2 = 'https://app.jusmediation.com/sounds/voxeet_notify.mp3';
   const audiow = useMemo(() => new Audio(audioPath2), []);
   //const audiow = new Audio(audioPath2);
   audiow.play();

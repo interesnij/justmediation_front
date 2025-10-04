@@ -5,7 +5,7 @@ interface GetMattersSearchParam {
   page?: number;
   pageSize?: number;
   search?: string;
-  attorney?: string;
+  mediator?: string;
   paralegal?: string;
   client?: string | number;
   shared_with?: string | number;
@@ -19,7 +19,7 @@ export const getMatters = async ({
   page = 0,
   pageSize,
   search = "",
-  attorney,
+  mediator,
   paralegal,
   client,
   shared_with,
@@ -31,7 +31,7 @@ export const getMatters = async ({
     offset: page * (pageSize || 0),
     limit: pageSize,
     search,
-    attorney,
+    mediator,
     paralegal,
     client,
     status,

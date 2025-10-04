@@ -103,9 +103,9 @@ export const NewMessageModal = ({
                         type: "Client",
                       },
                       {
-                        ...data?.attorney_data,
-                        name: getUserName(data?.attorney_data),
-                        type: "Attorney",
+                        ...data?.mediator_data,
+                        name: getUserName(data?.mediator_data),
+                        type: "Mediator",
                       },
                     ].filter(a=>+a?.id !== +userId)
                   : []}

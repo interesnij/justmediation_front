@@ -10,7 +10,7 @@ interface GetPostedMattersParams {
   pageSize?: number;
   ordering?: string;
   status?: string;
-  attorney?: string;
+  mediator?: string;
 }
 
 export const getPostedMatters = async (data?: GetPostedMattersParams) => {
@@ -19,7 +19,7 @@ export const getPostedMatters = async (data?: GetPostedMattersParams) => {
     offset: (data?.pageSize || 0) * (data?.page || 0),
     limit: data?.pageSize,
     ordering: data?.ordering || "-id",
-    attorney: data?.attorney,
+    mediator: data?.mediator,
   };
   if (data?.status)
     params.status = data.status;
@@ -38,11 +38,11 @@ export const getPostedMatters = async (data?: GetPostedMattersParams) => {
 /**
  * Get Posted Matter by id
  * @param id
- * @param attorneyId
+ * @param mediatorId
  */
-export const getPostedMatterById = async (id, attorneyId?: string) => {
+export const getPostedMatterById = async (id, mediatorId?: string) => {
   try {
-    const res = await API().get(`business/posted-matter/${id}/`, {params: {attorney: attorneyId}});
+    const res = await API().get(`business/posted-matter/${id}/`, {params: {mediator: mediatorId}});
     return res.data;
   } catch (error) {
     return {
@@ -157,7 +157,7 @@ export const getPostedMatterTopics = async (
     limit: data?.pageSize,
     is_active: data?.isActive || 0
   };
-  const res = await API().get(`/users/attorneys/${id}/engagements/`, { params });
+  const res = await API().get(`/users/mediators/${id}/engagements/`, { params });
   return res.data;
 };
 

@@ -1,4 +1,4 @@
-import { Attorney, Matter, Client } from "./";
+import { Mediator, Matter, Client } from "./";
 import { InvoiceStatus, InvoicePaymentStatus } from "../enum";
 
 export const PAYMENT_STATUS_TO_READABLE: Record<
@@ -30,7 +30,7 @@ export interface Invoice {
   id: number;
   /** Title */
   title: string;
-  /** A note left by attorney */
+  /** A note left by mediator */
   note: string;
   /** Status */
   status: ComplexInvoiceStatus;
@@ -50,6 +50,6 @@ export interface Invoice {
   downloadUrl: string;
   /** Can be paid. */
   canBePaid: boolean;
-  /** Attorney */
-  attorney: Attorney;
+  /** Mediator */
+  mediator: Mediator;
 }

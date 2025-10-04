@@ -40,7 +40,7 @@ export const Notification = () => {
 
   return (
     <div className="settings-modal">
-      <Folder label="JustLaw Dashboard">
+      <Folder label="JustMediation Dashboard">
         {isLoading ? (
           <FolderItem>
             <div className="my-auto d-flex">

@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { RouteComponentProps } from "@reach/router";
 import { Folder, FolderItem, Select, RiseLoader, Pagination } from "components";
 import { useInput } from "hooks";
-import { EngagementLayout, AttorneyLayout } from "../../layouts";
+import { EngagementLayout, MediatorLayout } from "../../layouts";
 import { Topic, RecentPost } from "./components";
 import { getPostedMatters, getPostedMatterTopics } from "api";
 import { useQuery } from "react-query";
@@ -72,7 +72,7 @@ export const EngagementInquiriesPage: React.FunctionComponent<RouteComponentProp
     }, [page.value, topcSortBy.value]);
 
     return (
-      <AttorneyLayout title="Potential Engagement" showButtons={false} userType={userType}>
+      <MediatorLayout title="Potential Engagement" showButtons={false} userType={userType}>
         <EngagementLayout tab="Browse Inquiries" userType={userType}>
           <div className="forums-page__all-posts">
             <Folder label="Recent Posts">
@@ -150,6 +150,6 @@ export const EngagementInquiriesPage: React.FunctionComponent<RouteComponentProp
             )}
           </div>
         </EngagementLayout>
-      </AttorneyLayout>
+      </MediatorLayout>
     );
   };

@@ -1,4 +1,4 @@
-/** Attorney's client from QuickBooks service. */
+/** Mediator's client from QuickBooks service. */
 export interface QuickbooksClient {
   /** Id. */
   id: number;

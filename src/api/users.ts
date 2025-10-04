@@ -36,7 +36,7 @@ export const getClients = async (data?: GetClientsParams) => {
     params.paralegal = data?.userId;
   }
   else {
-    params.attorney = data?.userId;
+    params.mediator = data?.userId;
   }
   try {
     const response = await API().get("users/clients/", { params });
@@ -52,15 +52,15 @@ export const getClients = async (data?: GetClientsParams) => {
 };
 
 
-/** Search attorneys. */
-interface SearchAttorneysParams {
+/** Search Mediators. */
+interface SearchMediatorsParams {
   search?: string;
   page?: number;
   pageSize?: number;
   userId?: number | string;
   userType?: string;
 }
-export const SearchAttorneys = async (data?: SearchAttorneysParams) => {
+export const SearchMediators = async (data?: SearchMediatorsParams) => {
   let params : any = {
     search: data?.search,
     offset: (data?.page || 0) * (data?.pageSize || 0),
@@ -70,10 +70,10 @@ export const SearchAttorneys = async (data?: SearchAttorneysParams) => {
     params.paralegal = data?.userId;
   }
   else {
-    params.attorney = data?.userId;
+    params.mediator = data?.userId;
   }
   try {
-    const response = await API().get("users/attorneys/", { params });
+    const response = await API().get("users/mediators/", { params });
     return response.data?.results
       ? response.data.results.map((item) => ({
           ...item,
@@ -86,8 +86,8 @@ export const SearchAttorneys = async (data?: SearchAttorneysParams) => {
 };
 
 
-/** Get clients who have leads with current attorney. */
-export const getClientsForAttorney = () => {
+/** Get clients who have leads with current Mediator. */
+export const getClientsForMediator = () => {
   //return []
   const params = {
     user_clients: "true",
@@ -96,7 +96,7 @@ export const getClientsForAttorney = () => {
   return API().get("users/clients/", { params });
 };
 
-/** Get clients who have leads with current attorney. */
+/** Get clients who have leads with current Mediator. */
 export const getClientsWithMatters = () => {
   const params = {
     has_matter_with_user: "true",
@@ -106,13 +106,13 @@ export const getClientsWithMatters = () => {
 };
 
 /** 
- * Get attorneys.
+ * Get Mediatorss.
  */
-export const getAttorneys = () => {
+export const getMediators = () => {
   const params = {
     ...DEFAULT_USER_PARAMS,
   };
-  return API().get("users/attorneys/", { params });
+  return API().get("users/mediators/", { params });
 };
 
 /**
@@ -135,12 +135,12 @@ export const getClientById = async (id: number | string) => {
   return resposne.data;
 };
 
-/** Return followed attorneys for current user */
-export const followedAttorneys = () => {
+/** Return followed Mediators for current user */
+export const followedMediators = () => {
   const params = {
     followed: "true",
   };
-  return API().get("users/attorneys/", { params });
+  return API().get("users/mediators/", { params });
 };
 
 /**
@@ -217,22 +217,22 @@ export const getUserInvites = async (id) => {
 };
 
 /**
- * Get Attorneys and paralegals.
+ * Get Mediators and paralegals.
  *
  * @param search params.
  */
-interface GetAttorneyParalegalParams {
+interface GetMediatorParalegalParams {
   search?: string;
   page?: number;
   pageSize?: number;
   sharable?: boolean;
 }
-export const getAttorneysAndParalegals = async ({
+export const getMediatorsAndParalegals = async ({
   search,
   page = 0,
   pageSize,
   sharable = false,
-}: GetAttorneyParalegalParams) => {
+}: GetMediatorParalegalParams) => {
   const params = {
     search,
     offset: page * (pageSize || 0),
@@ -241,7 +241,7 @@ export const getAttorneysAndParalegals = async ({
   };
   try {
     const res = await API().get(
-      `/users/clients/search_attorneys_and_paralegals/`,
+      `/users/clients/search_mediators_and_paralegals/`,
       {
         params,
       }
@@ -275,11 +275,11 @@ export const resendInviteLead = async (id) => {
 /**
  * Update user type of client/lead
  */
-export const updateUserTypeClientLead = async (attorneyId, client) => {
-  console.log("attorney id", attorneyId);
+export const updateUserTypeClientLead = async (mediatorId, client) => {
+  console.log("mediator id", mediatorId);
   console.log("client id", client);
   const response = await API().post(
-    `users/attorneys/${attorneyId}/change_user_type/`,
+    `users/mediators/${mediatorId}/change_user_type/`,
     { client }
   );
   return response.data;
@@ -288,9 +288,9 @@ export const updateUserTypeClientLead = async (attorneyId, client) => {
 /**
  * Share client/lead
  */
-export const shareContact = async (attorneyId, data) => {
+export const shareContact = async (mediatorId, data) => {
   const response = await API().put(
-    `users/attorneys/${attorneyId}/share_contact/`,
+    `users/mediators/${mediatorId}/share_contact/`,
     data
   );
   return response.data;
@@ -299,9 +299,9 @@ export const shareContact = async (attorneyId, data) => {
 /**
  * Update contact
  */
-export const updateContact = async (attorneyId, data) => {
+export const updateContact = async (mediatorId, data) => {
   const response = await API().put(
-    `users/attorneys/${attorneyId}/update_contact/`,
+    `users/mediators/${mediatorId}/update_contact/`,
     data
   );
   return response.data;
@@ -339,12 +339,12 @@ export const send2FA = async (phone) => {
 
 /**
  * Get profile overview
- * @param type (attorney, paralegal, enterprise, other)
+ * @param type (mediator, paralegal, enterprise, other)
  * @param id
  */
  export const getProfileOverview = async (type: string, id, role) => {
   try {
-    const userType = type === 'attorney' || role==='Attorney' ? 'attorney' : 'paralegal';
+    const userType = type === 'mediator' || role==='Mediator' ? 'mediator' : 'paralegal';
     const res = await API().get(`users/${userType}s/${id}/overview/`);
     return res.data;
   } catch (error) {
@@ -354,7 +354,7 @@ export const send2FA = async (phone) => {
 
 /**
  * Get current profile
- * @param type (attorney, paralegal, enterprise, other)
+ * @param type (mediator, paralegal, enterprise, other)
  */
  export const getCurrentProfile = async (type: string) => {
   try {
@@ -379,7 +379,7 @@ export const send2FA = async (phone) => {
 
 /**
  * Update current profile
- * @param type (attorney, paralegal, enterprise, other)
+ * @param type (mediator, paralegal, enterprise, other)
  */
  export const updateProfile = async (type, data) => {
   try {
@@ -393,7 +393,7 @@ export const send2FA = async (phone) => {
 
 /**
  * Add contact
- * @param type (attorney, paralegal, enterprise, other)
+ * @param type (mediator, paralegal, enterprise, other)
  * @param id
  */
  export const addContact = (
@@ -412,7 +412,7 @@ export const send2FA = async (phone) => {
     });
   }
   else {
-    const userType = (type === 'attorney' || role === 'Attorney') ? 'attorney' : 'paralegal';
+    const userType = (type === 'mediator' || role === 'Mediator') ? 'mediator' : 'paralegal';
     return API().post(`users/${userType}s/${id}/add_contact/`, {
       client,
     });

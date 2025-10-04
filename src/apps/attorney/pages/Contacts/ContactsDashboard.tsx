@@ -2,11 +2,11 @@ import React from "react";
 import { RouteComponentProps } from "@reach/router";
 import { SearchBar, Select, Button, Pagination, RiseLoader } from "components";
 import { useInput, useModal } from "hooks";
-import { AttorneyLayout } from "apps/attorney/layouts";
+import { MediatorLayout } from "apps/mediator/layouts";
 import { NewIndustryContactModal } from "modals";
 import { useAuthContext } from "contexts";
 import { ContactsTable } from "./components/ContactsTable";
-import { getIndustryContactsForAttorney } from "api";
+import { getIndustryContactsForMediator } from "api";
 import { useQuery } from "react-query";
 import "./style.scss";
 const filterData = [
@@ -15,12 +15,8 @@ const filterData = [
     id: "",
   },
   {
-    title: "Attorneys",
-    id: "attorney",
-  },
-  {
-    title: "Paralegals",
-    id: "paralegal",
+    title: "Mediators",
+    id: "mediator",
   },
   {
     title: "Pending",
@@ -46,7 +42,7 @@ export const ContactsDashboardPage: React.FunctionComponent<RouteComponentProps>
     >(
       ["industry-contacts", page, search.value, type.value],
       () =>
-        getIndustryContactsForAttorney({
+        getIndustryContactsForMediator({
           id: userId,
           page: page.value,
           search: search.value,
@@ -58,7 +54,7 @@ export const ContactsDashboardPage: React.FunctionComponent<RouteComponentProps>
     );
 
     return (
-      <AttorneyLayout title="Industry Contacts" userType={userType}>
+      <MediatorLayout title="Industry Contacts" userType={userType}>
         <div className="contacts-page">
           <div className="contacts-page__bar">
             <SearchBar
@@ -121,6 +117,6 @@ export const ContactsDashboardPage: React.FunctionComponent<RouteComponentProps>
           contactModal?.open &&
           <NewIndustryContactModal {...contactModal} onAdd={() => refetch()} />
         }
-      </AttorneyLayout>
+      </MediatorLayout>
     );
   };

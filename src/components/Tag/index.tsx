@@ -2,7 +2,7 @@ import React from "react";
 import classNames from "classnames";
 import "./style.scss";
 const contentData = {
-  attorney: "Attorney",
+  mediator: "Mediator",
   paralegal: "Paralegal",
   client: "Client",
   lead: "Lead",
@@ -44,7 +44,7 @@ interface Props {
     | "referral-request"
     | "referral-pending"
     | "pending"
-    | "attorney"
+    | "mediator"
     | "paralegal"
     | "client"
     | "lead"

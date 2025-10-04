@@ -1,21 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.png" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta 
-      name="justlaw"
-      content="Justlaw"
-    />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/favicon.png" />
-    <!--
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="icon" href="%PUBLIC_URL%/favicon.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#000000" />
+  <meta name="justmediation" content="justmediation" />
+  <link rel="apple-touch-icon" href="%PUBLIC_URL%/favicon.png" />
+  <!--
       manifest.json provides metadata used when your web app is installed on a
       user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
     -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
+  <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+  <!--
       Notice the use of %PUBLIC_URL% in the tags above.
       It will be replaced with the URL of the `public` folder during the build.
       Only files inside the `public` folder can be referenced from the HTML.
@@ -24,107 +22,112 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
-    <title>Justlaw</title>
-    <style>
-      .video-chat .switch-mode label,
-      .video-chat .form-group label,
-      .video-chat .input-wrapper .input-value,
-      .video-chat .form-group .maxVideoForwardingValue {
-        color: black !important;
-      }
-      .video-chat .attendees-chat .chat-container-myself div img {
-        width: 22px;
-        height: 22px;
-      }
-      iframe {
-        display: none;
-      }
-      .hidden {
-        display: none !important;
-      }
-      .input__search {
-        border: 1px solid rgba(0, 0, 0, .25);
-        border-radius: 4px;
-        box-sizing: border-box;
-        color: #000;
-        display: flex;
-        font-size: 14px;
-        height: 26px;
-        line-height: 26px;
-        margin: auto;
-        padding: 12px;
-        transition: all .3s ease;
-        width: 100%;
-      }
-    </style>
-  </head>
-  <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-    <script>
+  <title>JustMediation</title>
+  <style>
+    .video-chat .switch-mode label,
+    .video-chat .form-group label,
+    .video-chat .input-wrapper .input-value,
+    .video-chat .form-group .maxVideoForwardingValue {
+      color: black !important;
+    }
 
-      function on(elSelector, eventName, selector, fn) {var element = document.querySelector(elSelector);element.addEventListener(eventName, function(event) {var possibleTargets = element.querySelectorAll(selector);var target = event.target;for (var i = 0, l = possibleTargets.length; i < l; i++) {var el = target;var p = possibleTargets[i];while (el && el !== element) {if (el === p) {return fn.call(p, event);}el = el.parentNode;}}});}
-      on('body', 'click', '.select-control__menu-item', function() {
-        this.parentElement.style.opacity = "0";
-        this.parentElement.style.visibility = "hidden";
-        this.parentElement.previousElementSibling.classList.remove("active");
-      })
+    .video-chat .attendees-chat .chat-container-myself div img {
+      width: 22px;
+      height: 22px;
+    }
 
-      on('body', 'click', '.select-control__main', function() {
-        block = this.nextElementSibling;
-        if (this.classList.contains("active")) {
-          this.classList.remove("active");
-          this.style.color = "black";
-          this.nextElementSibling.style.opacity = "0";
-          this.nextElementSibling.style.visibility = "hidden";
-          block.querySelector(".input__search").value = "";
-        }
-        else {
-          this.classList.add("active");
-          this.nextElementSibling.style.opacity = "1";
-          this.nextElementSibling.style.visibility = "unset";
-          this.style.color = "black";
-        }
-          if (this.parentElement.querySelector(".input__search")) {
-            null
-          }
-          else {
-            $input = document.createElement("input");
-            $input.classList.add("input__search");
-            $input.setAttribute("placeholder", "Search here...");
-            block.prepend($input);
-            block.style.opacity = "1";
-            block.style.visibility = "unset";
-          }
+    iframe {
+      display: none;
+    }
 
-        console.log('click');
-      });
-      on('body', 'input', '.input__search', function() {
-        val = this.value;
-        blockList = this.parentElement.querySelectorAll(".select-control__menu-item");
-        for (var i = 0; i < blockList.length; i++) {
-          blockList[i].classList.remove("hidden");
+    .hidden {
+      display: none !important;
+    }
+
+    .input__search {
+      border: 1px solid rgba(0, 0, 0, .25);
+      border-radius: 4px;
+      box-sizing: border-box;
+      color: #000;
+      display: flex;
+      font-size: 14px;
+      height: 26px;
+      line-height: 26px;
+      margin: auto;
+      padding: 12px;
+      transition: all .3s ease;
+      width: 100%;
+    }
+  </style>
+</head>
+
+<body>
+  <noscript>You need to enable JavaScript to run this app.</noscript>
+  <div id="root"></div>
+  <script>
+
+    function on(elSelector, eventName, selector, fn) { var element = document.querySelector(elSelector); element.addEventListener(eventName, function (event) { var possibleTargets = element.querySelectorAll(selector); var target = event.target; for (var i = 0, l = possibleTargets.length; i < l; i++) { var el = target; var p = possibleTargets[i]; while (el && el !== element) { if (el === p) { return fn.call(p, event); } el = el.parentNode; } } }); }
+    on('body', 'click', '.select-control__menu-item', function () {
+      this.parentElement.style.opacity = "0";
+      this.parentElement.style.visibility = "hidden";
+      this.parentElement.previousElementSibling.classList.remove("active");
+    })
+
+    on('body', 'click', '.select-control__main', function () {
+      block = this.nextElementSibling;
+      if (this.classList.contains("active")) {
+        this.classList.remove("active");
+        this.style.color = "black";
+        this.nextElementSibling.style.opacity = "0";
+        this.nextElementSibling.style.visibility = "hidden";
+        block.querySelector(".input__search").value = "";
+      }
+      else {
+        this.classList.add("active");
+        this.nextElementSibling.style.opacity = "1";
+        this.nextElementSibling.style.visibility = "unset";
+        this.style.color = "black";
+      }
+      if (this.parentElement.querySelector(".input__search")) {
+        null
+      }
+      else {
+        $input = document.createElement("input");
+        $input.classList.add("input__search");
+        $input.setAttribute("placeholder", "Search here...");
+        block.prepend($input);
+        block.style.opacity = "1";
+        block.style.visibility = "unset";
+      }
+
+      console.log('click');
+    });
+    on('body', 'input', '.input__search', function () {
+      val = this.value;
+      blockList = this.parentElement.querySelectorAll(".select-control__menu-item");
+      for (var i = 0; i < blockList.length; i++) {
+        blockList[i].classList.remove("hidden");
+      }
+      if (this.value == "") {
+        return;
+      }
+
+      console.log("search value", val);
+      for (var i = 0; i < blockList.length; i++) {
+        span = blockList[i].querySelector("span");
+
+        //console.log("span value", span.innerHTML);
+        if (!span.innerHTML.includes(val)) {
+          blockList[i].classList.add("hidden");
         }
-        if (this.value == "") {
-          return; 
-        }
-        
-        console.log("search value", val);
-        for (var i = 0; i < blockList.length; i++) {
-          span = blockList[i].querySelector("span");
-          
-          //console.log("span value", span.innerHTML);
-          if (!span.innerHTML.includes(val)) {
-            blockList[i].classList.add("hidden");
-          }
-        }
-      })
-      on('body', 'click', '.input__search', function(e) {
-        this.parentElement.previousElementSibling.classList.add("active");
-        return
-      })
-    </script>
-    <!--
+      }
+    })
+    on('body', 'click', '.input__search', function (e) {
+      this.parentElement.previousElementSibling.classList.add("active");
+      return
+    })
+  </script>
+  <!--
     
     <script>
       window.intercomSettings = {
@@ -151,6 +154,7 @@
       
     });
     -->
-    </script>
-  </body>
+  </script>
+</body>
+
 </html>

@@ -160,9 +160,9 @@ export default function TableRow({ matter, onUpdate = () => {} }) {
         </span>
       </div>
       <div className="matters-page__table-row-item">
-        <User avatar={matter?.attorney_data?.avatar} />
+        <User avatar={matter?.mediator_data?.avatar} />
         <Name className="ml-1">
-          {`${matter?.attorney_data?.first_name} ${matter?.attorney_data?.last_name}`}
+          {`${matter?.mediator_data?.first_name} ${matter?.mediator_data?.last_name}`}
         </Name>
       </div>
       <div className="matters-page__table-row-item">

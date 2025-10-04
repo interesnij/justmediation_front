@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { AttorneyLayout } from "apps/attorney/layouts";
+import { MediatorLayout } from "apps/mediator/layouts";
 import { RouteComponentProps } from "@reach/router";
 import "./style.scss";
 
@@ -15,8 +15,8 @@ export const ChatLayout = ({ children, userType }: Props) => {
   }, []);
 
   return (
-    <AttorneyLayout title="Chats" userType={userType}>
+    <MediatorLayout title="Chats" userType={userType}>
       <div className="chat-page">{children}</div>
-    </AttorneyLayout>
+    </MediatorLayout>
   );
 };

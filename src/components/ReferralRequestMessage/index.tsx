@@ -25,7 +25,7 @@ export const ReferralRequestMessage = ({
     <Container className={className}>
       <Referral className="my-auto">REFERRAL</Referral>
       <div className="ml-1 my-auto">
-        {getUserName(data?.attorney_data)} referred this matter to you.
+        {getUserName(data?.mediator_data)} referred this matter to you.
       </div>
       <View className="ml-auto my-auto" onClick={handleView}>
         View Message

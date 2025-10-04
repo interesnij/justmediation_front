@@ -20,7 +20,7 @@ import {
 } from "contexts";
 import { onboardUser, uploadFiles } from "api";
 import { Formik, Form } from "formik";
-import { AttorneyRegisterDto } from "types";
+import { MediatorRegisterDto } from "types";
 import * as Yup from "yup";
 import ArrowIcon from "assets/icons/arrow-drop-down.svg";
 import "./../style.scss";
@@ -50,7 +50,7 @@ const validationSchema = Yup.object().shape({
 
 interface Props {
   onBack(): void;
-  initData: AttorneyRegisterDto;
+  initData: MediatorRegisterDto;
 }
 
 export const ProfileForm4 = ({ onBack, initData }: Props) => {

@@ -1,7 +1,7 @@
-/** Class with Attorney's login information */
+/** Class with Mediator's login information */
 export interface Login {
-  /** Attorney's email */
+  /** Mediator's email */
   email: string;
-  /** Attorney's password */
+  /** Mediator's password */
   password: string;
 }

@@ -6,7 +6,7 @@ export interface MatterPost {
   id: number;
   /** Topic identifier */
   topic: number;
-  /** Author as attorney or client */
+  /** Author as mediator or client */
   author: Author;
   /** Text */
   text: string;

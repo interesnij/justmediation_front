@@ -1,4 +1,4 @@
-export * from "./Attorney";
+export * from "./Mediator";
 export * from "./SearchCheckbox";
 export * from "./MatterRepresentation";
 export * from "./Post";

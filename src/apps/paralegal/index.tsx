@@ -14,9 +14,9 @@ import {
   ContactsDashboardPage,
   InvoiceDetailPage,
   ChatsPage,
-} from "../attorney/pages";
-import { ForumsRouter, NewsRouter, DocumentsRouter } from "apps/attorney/layouts";
-import { MatterMessageDetailPage } from "apps/attorney/pages/Matters/MatterDetail/MessageDetail";
+} from "../mediator/pages";
+import { ForumsRouter, NewsRouter, DocumentsRouter } from "apps/mediator/layouts";
+import { MatterMessageDetailPage } from "apps/mediator/pages/Matters/MatterDetail/MessageDetail";
 import { ChatProvider } from "contexts";
 import { VideoChat } from "components";
 

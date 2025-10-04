@@ -189,7 +189,7 @@ export const SettingsPage: React.FunctionComponent<RouteComponentProps> =
           </div>
         ) : currentTab.value === tabData[2].tab ? (
           <div className="settings-page">
-            <Folder label="JustLaw Dashboard">
+            <Folder label="JustMediation Dashboard">
               <FolderItem>
                 <div className="row">
                   <div className="col-md-6">

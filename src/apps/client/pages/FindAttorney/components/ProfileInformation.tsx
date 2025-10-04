@@ -19,9 +19,9 @@ const tabData = [
 
 export const ProfileInformation = ({ data }) => {
   const currentTab = useInput(tabData[0].tab);
-  const param = data?.type === 'attorney' ?
+  const param = data?.type === 'mediator' ?
     {
-      attorney: data?.id
+      mediator: data?.id
     }
     :
     {

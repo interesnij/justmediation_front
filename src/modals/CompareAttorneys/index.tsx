@@ -11,17 +11,17 @@ interface Props {
   setOpen(param: boolean): void;
   removeFromCompare(id:number): void;
   toggleFavorite(id:number, value:boolean): void;
-  attorneys: any[];
+  mediators: any[];
   favoriteIds: number[];
   onChat(id:number): void;
   onCall(id:number): void;
 }
 
-export const CompareAttorneysModal = ({
+export const CompareMediatorsModal = ({
   open,
   setOpen,
   removeFromCompare,
-  attorneys,
+  mediators,
   favoriteIds,
   toggleFavorite = () => {},
   onChat = () => {},
@@ -37,7 +37,7 @@ export const CompareAttorneysModal = ({
 
   return (
     <Modal
-      title="Compare Up to 7 Selected Attorneys"
+      title="Compare Up to 7 Selected Mediators"
       open={open}
       setOpen={(param) => {
         setOpen(param);
@@ -47,7 +47,7 @@ export const CompareAttorneysModal = ({
         <div className="compare-table">
             <div className="compare-table__head">
             <div></div>
-            {attorneys.map(a => (
+            {mediators.map(a => (
               <div key={`row1-a-${a.id}`}>
                 <div className="d-flex">
                   <User2
@@ -56,10 +56,10 @@ export const CompareAttorneysModal = ({
                       userName={`${a?.first_name} ${a?.last_name}`}
                       desc={a?.firm_name}
                       avatar={a?.avatar}
-                      onClick={() => navigate(`/client/find/attorneys/${a.id}`)}
+                      onClick={() => navigate(`/client/find/mediators/${a.id}`)}
                   />
                   <img
-                      className="find-compare-page__attorney-close"
+                      className="find-compare-page__mediator-close"
                       src={CloseIcon}
                       alt="close"
                       onClick={() => removeFromCompare(a.id)}
@@ -83,7 +83,7 @@ export const CompareAttorneysModal = ({
             <div className="compare-table__body">
             <div className="d-flex">
                 <div>Pratice Areas</div>
-                {specialties?.length && attorneys.map(a => (
+                {specialties?.length && mediators.map(a => (
                   <div key={`row2-a-${a.id}`}>
                     <div className="d-flex flex-wrap">
                       {a?.specialities?.length && a.specialities.map(item => (
@@ -97,7 +97,7 @@ export const CompareAttorneysModal = ({
             </div>
             <div className="d-flex">
                 <div>Pricing / Payment</div>
-                {attorneys.map(a => (
+                {mediators.map(a => (
                   <div key={`row3-a-${a.id}`}>
                     <div className="d-flex flex-wrap">
                       {a?.fee_types_data.map(item => (
@@ -111,7 +111,7 @@ export const CompareAttorneysModal = ({
             </div>
             <div className="d-flex">
               <div>Experience</div>
-              {attorneys.map(a => (
+              {mediators.map(a => (
                 <div key={`row4-a-${a.id}`}>
                   {a?.years_of_experience ? `${a.years_of_experience} Years` : 'N/A'}
                 </div>
@@ -119,7 +119,7 @@ export const CompareAttorneysModal = ({
             </div>
             <div className="d-flex">
                 <div>Languages</div>
-                {attorneys.map(a => (
+                {mediators.map(a => (
                   <div key={`row5-a-${a.id}`}>
                     <div className="d-flex flex-wrap">
                       {a?.spoken_language_data.map(item => (
@@ -133,7 +133,7 @@ export const CompareAttorneysModal = ({
             </div>
             <div className="d-flex">
               <div>Website</div>
-              {attorneys.map(a => (
+              {mediators.map(a => (
                 <div key={`row6-a-${a.id}`}>
                   {a?.website ? (
                     <a className="with-link-icon" target="_blank" href={a.website}>
@@ -145,7 +145,7 @@ export const CompareAttorneysModal = ({
             </div>
             <div className="d-flex">
                 <div>Location(s)</div>
-                {attorneys.map(a => (
+                {mediators.map(a => (
                   <div key={`row7-a-${a.id}`}>
                     <div className="d-flex flex-wrap">
                       {a?.firm_locations.slice(0,5).map(item => (
@@ -163,7 +163,7 @@ export const CompareAttorneysModal = ({
             </div>
             <div className="d-flex">
               <div></div>
-              {attorneys.map(a => (
+              {mediators.map(a => (
                 <div className="flex-column" key={`row7-a-${a.id}`}>
                   <Button 
                     onClick={() => onCall(a.id)}

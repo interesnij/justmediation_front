@@ -2,12 +2,12 @@ import {useBasicDataContext} from "../BasicData";
 import {useState} from "react";
 import {navigate} from "@reach/router";
 
-export const forbiddenAttorneyUnsubscribedRoutes = [
-  "/attorney/matters",
-  "/attorney/chats",
-  "/attorney/billing",
-  "/attorney/engagement",
-  "/attorney/forums"
+export const forbiddenMediatorUnsubscribedRoutes = [
+  "/mediator/matters",
+  "/mediator/chats",
+  "/mediator/billing",
+  "/mediator/engagement",
+  "/mediator/forums"
 ]
 
 
@@ -25,7 +25,7 @@ export const useSubscriptionAccess = () => {
   //const hasSubscription = !unsubscribed;
   const hasSubscription = true; 
 
-  const isDisabledUrl = (url?: string) => (forbiddenAttorneyUnsubscribedRoutes.some(key => {
+  const isDisabledUrl = (url?: string) => (forbiddenMediatorUnsubscribedRoutes.some(key => {
     return url?.includes(key) || pathname.includes(key)
   })) 
 

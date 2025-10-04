@@ -23,11 +23,11 @@ interface Props {
   tab?: string;
   className?: string;
 }
-export const AttorneyFindLayout = ({ children, tab, className = '' }: Props) => {
+export const MediatorFindLayout = ({ children, tab, className = '' }: Props) => {
   const currentTab = useInput(tab || tabData[0].tab);
 
   return (
-    <ClientLayout title="Find an Attorney">
+    <ClientLayout title="Find an Mediator">
       <div className={`find-page ${className}`}>
         <Tab data={tabData} {...currentTab} />
         <div className="find-page__main">{children}</div>

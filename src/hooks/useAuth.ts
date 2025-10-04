@@ -5,7 +5,7 @@ import { getCurrentClientProfile, getCurrentProfile } from "api";
 import { useQuery } from "react-query";
 
 export const useAuth = (
-  param: "attorney" | "paralegal" | "client" | "enterprise" | "other"
+  param: "mediator" | "paralegal" | "client" | "enterprise" | "other"
 ) => {
   const { userId, isLogined, userType, avatar, planId, setProfile } = useAuthContext();
   const { isLoading, data } = useQuery<any, Error>(
@@ -39,7 +39,7 @@ export const useAuth = (
     if (!isLogined || userType !== param) {
       navigate("/");
     } else {
-      if (userType === "attorney") {
+      if (userType === "mediator") {
         if (!planId) {
           navigate(`/auth/onboarding/subscription/${userType}`);
         } else if (!avatar && planId) {

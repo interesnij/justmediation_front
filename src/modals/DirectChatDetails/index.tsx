@@ -42,12 +42,12 @@ export const DirectChatDetailModal = ({
 
   const handleProfileView = () => {
     if (userType === 'client'){
-      navigate(`/client/find/attorneys/${opponent.id}`);
+      navigate(`/client/find/mediators/${opponent.id}`);
       return;
     }
     if (!opponent?.user_type) return;
     switch (opponent.user_type) {
-      case 'attorney':
+      case 'mediator':
         navigate(`/${opponent.user_type}/contacts/${opponent.id}`); break;
       case 'paralegal':
       case 'other':

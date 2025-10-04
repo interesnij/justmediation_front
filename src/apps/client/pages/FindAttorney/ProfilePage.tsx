@@ -4,7 +4,7 @@ import { ProfileInformation } from "./components";
 import { RouteComponentProps, useParams, navigate, useLocation } from "@reach/router";
 import { ClientLayout } from "apps/client/layouts";
 import { useAuthContext, useChatContext } from "contexts";
-import { getAttorneyById, getParalegalById, createChat } from "api";
+import { getMediatorById, getParalegalById, createChat } from "api";
 import { useQuery } from "react-query";
 import { CallStartModal } from "modals";
 import { useModal } from "hooks";
@@ -16,11 +16,11 @@ export const ProfilePage: React.FunctionComponent<RouteComponentProps> = () => {
   const [chat, setChat] = useState<any>(null)
   const { onStartCall } = useChatContext();
   const callStartModal = useModal();
-  const type = window.location.pathname.includes('attorney') ? 'Attorney' : 'Paralegal';
+  const type = window.location.pathname.includes('mediator') ? 'Mediator' : 'Paralegal';
 
   const { isFetching: isLoading, isError, error, data } = useQuery<any, Error>(
     ["get-profile-by-id"],
-    () => type === 'Attorney' ? getAttorneyById(params.id, params.id) : getParalegalById(params.id),
+    () => type === 'Mediator' ? getMediatorById(params.id, params.id) : getParalegalById(params.id),
     {
       keepPreviousData: true,
     }

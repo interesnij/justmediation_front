@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { Folder, FolderItem, RiseLoader, Pagination } from "components";
 import { RouteComponentProps } from "@reach/router";
 import { useInput } from "hooks";
-import { AttorneyLayout, EngagementLayout } from "apps/attorney/layouts";
+import { MediatorLayout, EngagementLayout } from "apps/mediator/layouts";
 import { ActivePost, InactivePost } from "./components";
 import { getEngagements } from "api";
 import { useQuery } from "react-query";
@@ -60,7 +60,7 @@ export const EngagementSubmittedPage: React.FunctionComponent<RouteComponentProp
     }, [inactivesPage.value])
 
     return (
-      <AttorneyLayout title="Potential Engagement" showButtons={false} userType={userType}>
+      <MediatorLayout title="Potential Engagement" showButtons={false} userType={userType}>
         <EngagementLayout tab="Submitted Engagements" userType={userType}>
           <div className="forums-page__topic submitted-page">
             <Folder label="Active Engagement">
@@ -135,6 +135,6 @@ export const EngagementSubmittedPage: React.FunctionComponent<RouteComponentProp
             )}
           </div>
         </EngagementLayout>
-      </AttorneyLayout>
+      </MediatorLayout>
     );
   };

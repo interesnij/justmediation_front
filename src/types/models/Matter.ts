@@ -1,5 +1,5 @@
 import {
-  Attorney,
+  Mediator,
   City,
   Client,
   Stage,
@@ -21,8 +21,8 @@ export interface Matter {
   lead: Lead;
   /** Client data */
   client: Client;
-  /** Attorney data */
-  attorney: Attorney;
+  /** Mediator data */
+  mediator: Mediator;
   /** Code */
   code: string;
   /** Title */
@@ -59,6 +59,6 @@ export interface Matter {
   completed: Date;
   /** E-sign envelop of documents. */
   eSignEnvelop?: ESignEnvelop;
-  /** List of attorneys the matter is shared with. */
+  /** List of mediators the matter is shared with. */
   sharedWith: User[];
 }

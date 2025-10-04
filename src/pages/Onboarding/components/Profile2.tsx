@@ -11,7 +11,7 @@ import {
 } from "components";
 import { isEqual } from "lodash";
 import { Formik, Form } from "formik";
-import { AttorneyRegisterDto } from "types";
+import { MediatorRegisterDto } from "types";
 import { last } from "lodash";
 import styled from "styled-components";
 import * as Yup from "yup";
@@ -44,8 +44,8 @@ const validationSchema = Yup.object().shape({
 
 interface Props {
   onBack(): void;
-  onNext(params: AttorneyRegisterDto): void;
-  initData: AttorneyRegisterDto;
+  onNext(params: MediatorRegisterDto): void;
+  initData: MediatorRegisterDto;
 }
 
 export const ProfileForm2 = ({ onNext, onBack, initData }: Props) => {
@@ -123,7 +123,7 @@ export const ProfileForm2 = ({ onNext, onBack, initData }: Props) => {
                 <div className="heading col-12 mt-3 mb-2">
                   Office Address
                   <span className="heading__desc ml-4">
-                    JustLaw will use this address to match you with potential
+                    JustMediation will use this address to match you with potential
                     clients in your proximity
                   </span>
                 </div>

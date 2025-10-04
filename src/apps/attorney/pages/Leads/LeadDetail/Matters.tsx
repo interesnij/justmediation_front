@@ -77,7 +77,7 @@ export const Matters: React.FC<IProps> = ({userData}) => {
         search: search.value,
         client: params.id,
         status: filter.value,
-        attorney: ownership.value === "mine" ? userId : "",
+        mediator: ownership.value === "mine" ? userId : "",
         shared_with: ownership.value === "other" ? userId : "",
         ordering: sorting,
       }),

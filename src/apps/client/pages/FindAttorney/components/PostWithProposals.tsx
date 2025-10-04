@@ -65,19 +65,19 @@ export const PostWithProposals = (props: Props) => {
     await acceptProposal(pid);
     // find proposal
     const currentProposal = post.proposals.find(p => p.id === pid);
-    handleChat(currentProposal?.attorney_data?.id, false);
+    handleChat(currentProposal?.mediator_data?.id, false);
     // get firebase channel id
-    //const { id, chat_channel } = await handleChat(currentProposal?.attorney_data?.id, true);
+    //const { id, chat_channel } = await handleChat(currentProposal?.mediator_data?.id, true);
     //setIsLoading(false);
     //if (chat_channel)
     //  sendProposalMessage(chat_channel, {
     //    postId: post.id,
     //    postTitle: post.title,
     //    practiceArea: post?.practice_area_data?.title,
-    //    attorney: currentProposal?.attorney_data,
+    //    mediator: currentProposal?.mediator_data,
     //  })
     //// 
-    //const message = `${profile?.first_name} ${profile?.last_name} has accepted ${currentProposal?.attorney_data?.first_name} ${currentProposal?.attorney_data?.last_name}'s proposal for ${post?.title} ${post?.practice_area_data?.title} at $${currentProposal?.rate}${currentProposal?.rate_type==='hourly' ? '/hr' : ' '+currentProposal?.rate_type}! Start your discussion and create a new matter`;
+    //const message = `${profile?.first_name} ${profile?.last_name} has accepted ${currentProposal?.mediator_data?.first_name} ${currentProposal?.mediator_data?.last_name}'s proposal for ${post?.title} ${post?.practice_area_data?.title} at $${currentProposal?.rate}${currentProposal?.rate_type==='hourly' ? '/hr' : ' '+currentProposal?.rate_type}! Start your discussion and create a new matter`;
     //console.log('message', message);
   }
 
@@ -91,7 +91,7 @@ export const PostWithProposals = (props: Props) => {
   const handleOpenProfile = (e, id: number) => {
     e.preventDefault();
     e.stopPropagation();
-    navigate(`/client/find/posts/${post?.id}/attorneys/${id}`)
+    navigate(`/client/find/posts/${post?.id}/mediators/${id}`)
   }
 
   const proposals = !isLoading && post?.proposals?.length && post.proposals.sort(
@@ -212,15 +212,15 @@ export const PostWithProposals = (props: Props) => {
                       >
                         <div className="w-100">
                           <div className="justify-content-between">
-                            <Link className="profile-link" to={`/client/find/attorneys/${proposal?.attorney_data?.id}`}>
+                            <Link className="profile-link" to={`/client/find/mediators/${proposal?.mediator_data?.id}`}>
                               <div className="d-flex">
                                 <User
                                   className="cursor-pointer"
                                   size="normal"
-                                  avatar={proposal?.attorney_data?.avatar}
+                                  avatar={proposal?.mediator_data?.avatar}
                                 />
                                 <div className="ml-2">
-                                  <div className="name mt-auto name">{proposal?.attorney_data?.first_name} {proposal?.attorney_data?.last_name}</div>
+                                  <div className="name mt-auto name">{proposal?.mediator_data?.first_name} {proposal?.mediator_data?.last_name}</div>
                                   <div className="date mb-auto">
                                     {proposal?.created
                                       ? 'Submitted ' + format(new Date(proposal.created), "MM/dd/yy")
@@ -239,7 +239,7 @@ export const PostWithProposals = (props: Props) => {
                                       setProposalId(id)
                                       confirmRevokeModal.setOpen(true)
                                     }}
-                                    onGotoChat={() => handleChat(proposal?.attorney_data?.id)}
+                                    onGotoChat={() => handleChat(proposal?.mediator_data?.id)}
                                   />
                                 ) : (
                                   <>
@@ -252,7 +252,7 @@ export const PostWithProposals = (props: Props) => {
                                       </Button>
                                     </div>
                                     <div className="mt-2">
-                                      <Button widthFluid theme="white" onClick={e => handleChat(proposal?.attorney_data?.id)}>
+                                      <Button widthFluid theme="white" onClick={e => handleChat(proposal?.mediator_data?.id)}>
                                         Start Chat
                                       </Button>
                                     </div>

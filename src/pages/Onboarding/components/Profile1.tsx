@@ -13,7 +13,7 @@ import {
 import { validatePhone } from "helpers";
 import { isEqual } from "lodash";
 import { Formik, Form } from "formik";
-import { AttorneyRegisterDto } from "types";
+import { MediatorRegisterDto } from "types";
 import * as Yup from "yup";
 import "./../style.scss";
 
@@ -27,8 +27,8 @@ const validationSchema = Yup.object().shape({
 });
 
 interface Props {
-  onNext(params: AttorneyRegisterDto): void;
-  initData: AttorneyRegisterDto;
+  onNext(params: MediatorRegisterDto): void;
+  initData: MediatorRegisterDto;
   role?: string
 }
 
@@ -108,7 +108,7 @@ export const ProfileForm1 = ({ onNext, initData, role }: Props) => {
               </div>
             </Card>
             <SignupBar>
-              {role === 'Attorney' && <LinkButton onClick={() => navigate(-1)}>Go Back</LinkButton>}
+              {role === 'Mediator' && <LinkButton onClick={() => navigate(-1)}>Go Back</LinkButton>}
               {hasErrors ? (
                 <div className="error-text ml-auto">{Object.values(errors)[0]}</div>
               ) : (

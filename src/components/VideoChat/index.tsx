@@ -34,7 +34,7 @@ export const VideoChat = () => {
     }
   }, [callsList])
 
-  const audioPath = 'https://app.justlaw.com/sounds/voxeet_notif.mp3'; 
+  const audioPath = 'https://app.jusmediation.com/sounds/voxeet_notif.mp3'; 
   const audio = new Audio(audioPath);
   //audio.play();
 

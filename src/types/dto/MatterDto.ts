@@ -1,7 +1,7 @@
 import { MatterStatus } from "./../enum/MatterStatus";
 import { Role } from "./../enum";
 
-// import { AttorneyDto } from "./AttorneyDto";
+// import { MediatorDto } from "./MediatorDto";
 import { AuthorDto } from "./AuthorDto";
 import { CityDto } from "./CityDto";
 import { ClientDto } from "./ClientDto";
@@ -28,10 +28,10 @@ export interface MatterDto {
   client: number;
   /** Client data */
   client_data?: ClientDto;
-  /** Attorney */
-  attorney?: number;
-  /** Attorney data */
-  // attorney_data?: AttorneyDto;
+  /** Mediator */
+  mediator?: number;
+  /** Mediator data */
+  // mediator_data?: MediatorDto;
   /** Code */
   code: string;
   /** Title */

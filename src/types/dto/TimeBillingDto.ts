@@ -1,4 +1,4 @@
-// import { AttorneyDto } from "./AttorneyDto";
+// import { MediatorDto } from "./MediatorDto";
 import { MatterDto } from "./MatterDto";
 
 /** Time billing dto model. */
@@ -25,8 +25,8 @@ export interface TimeBillingDto {
   modified?: string;
   /** ID of user who made a bill */
   created_by?: number;
-  /** Attorney data. */
-  // created_by_data?: Partial<AttorneyDto>;
+  /** Mediator data. */
+  // created_by_data?: Partial<MediatorDto>;
   /** Is billing log available for editing/ */
   available_for_editing: boolean;
 }

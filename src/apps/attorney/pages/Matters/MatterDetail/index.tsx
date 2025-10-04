@@ -12,7 +12,7 @@ import {
 } from "components";
 import { useInput, useModal } from "hooks";
 import { FaEllipsisH } from "react-icons/fa";
-import { AttorneyLayout } from "apps/attorney/layouts";
+import { MediatorLayout } from "apps/mediator/layouts";
 import {closeMatter, getMatterById, openMatter, updateMatter} from "api";
 import {
   NewMatterNoteModal,
@@ -289,7 +289,7 @@ export const MatterDetailPage: React.FunctionComponent<RouteComponentProps> =
       if (!matterData) return;
       const currentParticipants: any[] = [
         getPerson(matterData?.client_data),
-        getPerson(matterData?.attorney_data),
+        getPerson(matterData?.mediator_data),
       ]
         .concat(matterData.shared_with_data)
         .filter((person) => person.id !== +userId);
@@ -319,23 +319,23 @@ export const MatterDetailPage: React.FunctionComponent<RouteComponentProps> =
     };
 
     /**
-     * Filter out actions allowed only to attorney/enterprise type users
+     * Filter out actions allowed only to mediator/enterprise type users
      */
     const filterActions = (menu: {
       label: string;
       action: string;
     }[]) => {
-      const attorneyOnlyActions = [
+      const mediatorOnlyActions = [
         'share',
         'delete'
       ]; 
       return userType && ['paralegal', 'other'].indexOf(userType) !== -1
-        ? menu.filter(item => attorneyOnlyActions.indexOf(item.action) === -1) 
+        ? menu.filter(item => mediatorOnlyActions.indexOf(item.action) === -1) 
         : menu;
     }
 
     return (
-      <AttorneyLayout 
+      <MediatorLayout 
         title="Back to Matters" 
         backUrl={`/${userType}/matters`}
         userType={userType}
@@ -384,7 +384,7 @@ export const MatterDetailPage: React.FunctionComponent<RouteComponentProps> =
                   data={
                     !matterData?.is_shared
                       ? filterActions(actionData)
-                      : +userId === +matterData?.attorney
+                      : +userId === +matterData?.mediator
                       ? actionData3
                       : filterActions(actionData2)
                   }
@@ -536,6 +536,6 @@ export const MatterDetailPage: React.FunctionComponent<RouteComponentProps> =
             />
           </>
         )}
-      </AttorneyLayout>
+      </MediatorLayout>
     );
   };

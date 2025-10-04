@@ -16,7 +16,7 @@ import {
   removeShareWithDocument,
   addShareWithFolder,
   addShareWithDocument,
-  getAttorneysAndParalegals,
+  getMediatorsAndParalegals,
 } from "api";
 import {useAuthContext, useContextSubscriptionAccess} from "contexts";
 import { getUserName } from "helpers";
@@ -64,12 +64,12 @@ export const DocumentDetailModal = ({
   const {
     isLoading,
     isFetching,
-    data: attorneyData,
-    refetch: fetchAttorney,
+    data: mediatorsData,
+    refetch: fetchMediator,
   } = useQuery<any[], Error>(
-    ["attorneys_paralegals", debouncedSearchTerm],
+    ["mediators_paralegals", debouncedSearchTerm],
     () =>
-      getAttorneysAndParalegals({
+      getMediatorsAndParalegals({
         search: debouncedSearchTerm,
         sharable: true,
       }),
@@ -100,7 +100,7 @@ export const DocumentDetailModal = ({
     () => {
       if (debouncedSearchTerm) {
         setShowMenu(true);
-        fetchAttorney();
+        fetchMediator();
       } else {
         setShowMenu(false);
       }
@@ -291,10 +291,10 @@ export const DocumentDetailModal = ({
                       color={"rgba(0, 0, 0, 0.8)"}
                     />
                   </div>
-                ) : attorneyData &&
-                  attorneyData.filter((a) => !data?.shared_with.includes(a.id))
+                ) : mediatorData &&
+                  mediatorData.filter((a) => !data?.shared_with.includes(a.id))
                     .length > 0 ? (
-                  attorneyData
+                  mediatorData
                     .filter((a) => !data?.shared_with.includes(a.id))
                     .map((item, index: number) => {
                       return (

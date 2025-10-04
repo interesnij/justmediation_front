@@ -20,7 +20,7 @@ interface Props {
     | "referral-request"
     | "referral-pending"
     | "pending"
-    | "attorney"
+    | "mediator"
     | "paralegal"
     | "client"
     | "lead"

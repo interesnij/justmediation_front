@@ -1,5 +1,5 @@
 /**
- * Attorney Register.
+ * Mediator Register.
  */
 export interface ParalegalOnboardingDto {
   /**

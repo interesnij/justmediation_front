@@ -2,7 +2,7 @@ import { Lead, ChatInfo, User } from "./";
 
 /**
  * Lead chat info.
- * Describes a chat between attorney and client in the context of lead.
+ * Describes a chat between mediator and client in the context of lead.
  */
 export interface LeadChatInfo extends ChatInfo {
   /**

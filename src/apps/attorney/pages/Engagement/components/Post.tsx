@@ -9,7 +9,7 @@ export const Post = ({ post, userType }) => {
   const { profile } = useAuthContext();
 
   const proposal = post?.proposals?.length 
-    ? post.proposals.find(p => p?.attorney_data?.id === profile.id)
+    ? post.proposals.find(p => p?.mediator_data?.id === profile.id)
     : {};
 
   const linkUrl = proposal && Object.keys(proposal).length 

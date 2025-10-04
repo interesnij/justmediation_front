@@ -4,7 +4,7 @@ import { getChatTabs, sortChatData } from "config";
 import { Folder, FolderItem, RiseLoader, RecentActivity } from "components";
 import { useQuery } from "react-query";
 import numeral from "numeral";
-import { AttorneyLayout } from "apps/attorney/layouts";
+import { MediatorLayout } from "apps/mediator/layouts";
 import OpenMatters from "./components/OpenMatters";
 import { getProfileOverview } from "api";
 import { useAuthContext, useMatterContext, useContextSubscriptionAccess } from "contexts";
@@ -69,7 +69,7 @@ export const HomePage: React.FunctionComponent<RouteComponentProps> = (
   }, [createdId]);
 
   return (
-    <AttorneyLayout title="Overview" userType={userType}>
+    <MediatorLayout title="Overview" userType={userType}>
       <div className="home-page">
         <Folder label="Billing" className="billing-block">
           <FolderItem>
@@ -112,10 +112,10 @@ export const HomePage: React.FunctionComponent<RouteComponentProps> = (
           </FolderItem>
         </Folder>
         <div className="row mt-4">
-          {(userType !== "attorney" || hasSubscription) &&
+          {(userType !== "mediator" || hasSubscription) &&
             <div className="col-md-8">
            <Folder label="Chat" viewAll={`/${userType}/chats`}>
-           {(userType === "attorney" || profile.role==="Attorney") &&  <ChatSection
+           {(userType === "mediator" || profile.role==="Mediator") &&  <ChatSection
                 type="opportunities"
                 userType={userType}
                 isLoading={isOverviewLoading}
@@ -190,6 +190,6 @@ export const HomePage: React.FunctionComponent<RouteComponentProps> = (
           {...welcomeModal}
         />
       }
-    </AttorneyLayout>
+    </MediatorLayout>
   );
 };

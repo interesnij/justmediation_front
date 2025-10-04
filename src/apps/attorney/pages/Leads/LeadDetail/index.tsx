@@ -16,7 +16,7 @@ import {
   updateUserTypeClientLead,
 } from "api";
 import {useAuthContext, useChatContext, useContextSubscriptionAccess} from "contexts";
-import { AttorneyLayout } from "apps/attorney/layouts";
+import { MediatorLayout } from "apps/mediator/layouts";
 import { useQuery } from "react-query";
 import { parse } from "query-string";
 import {
@@ -206,23 +206,23 @@ export const LeadDetailPage: React.FunctionComponent<RouteComponentProps> =
     };
 
     /**
-     * Filter out actions allowed only to attorney/enterprise type users
+     * Filter out actions allowed only to mediator/enterprise type users
      */
      const filterActions = (menu: {
       label: string;
       action: string;
     }[]) => {
-      const attorneyOnlyActions = [
+      const mediatorOnlyActions = [
         'matter',
         'delete'
       ]; 
       return userType && ['paralegal', 'other'].indexOf(userType) !== -1
-        ? menu.filter(item => attorneyOnlyActions.indexOf(item.action) === -1) 
+        ? menu.filter(item => mediatorOnlyActions.indexOf(item.action) === -1) 
         : menu;
     }
 
     return (
-      <AttorneyLayout 
+      <MediatorLayout 
         title="Back to Leads & Clients" 
         backUrl={`/${userType}/leads`}
         userType={userType}
@@ -375,6 +375,6 @@ export const LeadDetailPage: React.FunctionComponent<RouteComponentProps> =
             />
           </>
         )}
-      </AttorneyLayout>
+      </MediatorLayout>
     );
   };

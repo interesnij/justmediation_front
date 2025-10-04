@@ -13,7 +13,7 @@ import {
 import { last } from "lodash";
 import styled from "styled-components";
 import { useGraduationYears } from "hooks";
-import { AttorneyRegisterDto } from "types";
+import { MediatorRegisterDto } from "types";
 import { useBasicDataContext, useAuthContext } from "contexts";
 import { isEqual } from "lodash";
 import { Formik, Form } from "formik";
@@ -25,8 +25,8 @@ import "./../style.scss";
 
 interface Props {
   onBack(): void;
-  onNext(params: AttorneyRegisterDto): void;
-  initData: AttorneyRegisterDto;
+  onNext(params: MediatorRegisterDto): void;
+  initData: MediatorRegisterDto;
 }
 
 export const ProfileForm3 = ({ onNext, onBack, initData }: Props) => {
@@ -38,7 +38,7 @@ export const ProfileForm3 = ({ onNext, onBack, initData }: Props) => {
 
   const validationSchema = Yup.object().shape({
     practice_jurisdictions:
-      userType === "attorney"
+      userType === "mediator"
         ? Yup.array().of(
             Yup.object().shape({
               country: Yup.string().required("Country is required"),
@@ -209,7 +209,7 @@ export const ProfileForm3 = ({ onNext, onBack, initData }: Props) => {
                           label="Country"
                           name={`practice_jurisdictions[${index}].country`}
                           placeholder="Select a Country"
-                          isRequired={userType === "attorney"}
+                          isRequired={userType === "mediator"}
                         />
                         <FormStateSelect
                           className="col-md-3 mt-2"
@@ -224,21 +224,21 @@ export const ProfileForm3 = ({ onNext, onBack, initData }: Props) => {
                                 ].country.toString()
                               : ""
                           }
-                          isRequired={userType === "attorney"}
+                          isRequired={userType === "mediator"}
                         />
                         <FormInput
                           className="col-md-3 mt-2"
                           label="Registration Number"
                           name={`practice_jurisdictions[${index}].number`}
                           placeholder="Enter Registration Number"
-                          isRequired={userType === "attorney"}
+                          isRequired={userType === "mediator"}
                         />
                         <FormInput
                             className="col-md-3 mt-2"
                             label="Year Admitted"
                             name={`practice_jurisdictions[${index}].year`}
                             placeholder="Select a year"
-                            isRequired={userType === "attorney"}
+                            isRequired={userType === "mediator"}
                         />
                       </div>
                     </div>

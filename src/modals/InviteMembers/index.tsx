@@ -5,7 +5,7 @@ import * as Yup from "yup";
 import { FormMultiEmails } from "./FormMultiEmails";
 import { useAuthContext, useCommonUIContext } from "contexts";
 import { useQuery } from "react-query";
-import { enterpriseInviteTeamMembers, getAttorneysAndParalegals } from "api";
+import { enterpriseInviteTeamMembers, getMediatorsAndParalegals } from "api";
 import "./style.scss";
 
 const validationSchema = Yup.object().shape({
@@ -15,8 +15,8 @@ const validationSchema = Yup.object().shape({
 
 const userTypeData = [
   {
-    title: "Attorney",
-    id: "attorney",
+    title: "Mediator",
+    id: "mediator",
   },
   {
     title: "Paralegal",
@@ -39,8 +39,8 @@ export const InviteMembersModal = ({ open, setOpen, seatsAvailable }: Props) => 
   let reset = () => {};
 
   const { isLoading: isSharesLoading, data } = useQuery<any[], Error>(
-    ["attorneys_paralegals"],
-    () => getAttorneysAndParalegals({}),
+    ["mediators_paralegals"],
+    () => getMediatorsAndParalegals({}),
     {
       keepPreviousData: true,
       enabled: open,

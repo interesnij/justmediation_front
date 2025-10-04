@@ -27,9 +27,9 @@ export interface Statistic {
 }
 
 /**
- * Attorney statistic.
+ * Mediator statistic.
  */
-export interface AttorneyStatistic {
+export interface MediatorStatistic {
   /**
    * Opportunities.
    */

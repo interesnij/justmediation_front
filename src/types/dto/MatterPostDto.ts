@@ -6,7 +6,7 @@ export interface MatterPostDto {
   id: number;
   /** Topic identifier */
   topic: number;
-  /** Author as attorney or client */
+  /** Author as mediator or client */
   author: AuthorDto;
   /** Text */
   text: string;

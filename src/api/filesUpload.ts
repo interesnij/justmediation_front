@@ -10,9 +10,9 @@ export const uploadFiles = async (
     | "documents"
     | "esign"
     | "chats_images"
-    | "attorney_registration_attachments"
+    | "mediator_registration_attachments"
     | "voice_consents"
-    | "attorney_posts"
+    | "mediator_posts"
     | "team_logo"
     | "other"
   ,
@@ -35,7 +35,7 @@ export const uploadFiles = async (
     const res = await fetch(_url, {
       headers: { 
         //'Accept': 'application/json, application/xml, text/plain, text/html, *.*',
-        //Origin: "https://app.justlaw.com",
+        //Origin: "https://app.jusmediation.com",
       },
       method: 'POST',
       mode: "cors",

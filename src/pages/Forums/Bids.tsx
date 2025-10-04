@@ -41,7 +41,7 @@ export const BidsPage: React.FunctionComponent<RouteComponentProps> = () => {
   return (
     <ForumsLayout tab="My Posts for Bids">
       <div className="forums-page__my-posts">
-        <Folder label="My Posts for Attorney Bids">
+        <Folder label="My Posts for Mediator Bids">
           <div className="folder__filter d-flex">
             <Select data={filterData} {...filterBy} label="Filter by" />
             <Select

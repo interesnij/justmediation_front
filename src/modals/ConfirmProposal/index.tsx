@@ -34,13 +34,13 @@ export const ConfirmProposalModal = ({ open, setOpen, onAccept, proposalId }: Pr
       <div className="new-post-modal">
         <Content>
           <div className="title mt-3">
-            Are you sure you want to choose this attorney and accept this
+            Are you sure you want to choose this mediator and accept this
             proposal?
           </div>
           <div className="mt-2">
             Acceptance of a proposal will deactive all other bids. If you would
             like to change your mind, you may do so before any agreement happens
-            between you and the attorney.
+            between you and the mediator.
           </div>
         </Content>
         <div className="d-flex mt-3">

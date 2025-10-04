@@ -1,6 +1,6 @@
 import React from "react";
 import { RouteComponentProps, Router } from "@reach/router";
-import { AttorneyLayout } from "apps/attorney/layouts";
+import { MediatorLayout } from "apps/mediator/layouts";
 import { useAuthContext } from "contexts";
 import {
   AllPostsPage,
@@ -14,7 +14,7 @@ import {
 export const ForumsRouter: React.FC<RouteComponentProps> = () => {
   const { userType } = useAuthContext();
   return (
-    <AttorneyLayout showButtons={false} title="Forums" userType={userType}>
+    <MediatorLayout showButtons={false} title="Forums" userType={userType}>
       <Router>
         <AllPostsPage path="/" />
         <AllPostsPage path="all-posts" />
@@ -25,6 +25,6 @@ export const ForumsRouter: React.FC<RouteComponentProps> = () => {
         <PostPage path="my-posts/:id" />
         <SearchPage path="search" />
       </Router>
-    </AttorneyLayout>
+    </MediatorLayout>
   );
 };

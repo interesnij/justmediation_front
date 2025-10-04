@@ -11,7 +11,7 @@ import { Formik, Form } from "formik";
 import {
   createNewFolder,
   getLeadClients,
-  getAttorneysAndParalegals,
+  getMediatorsAndParalegals,
   getMatters,
 } from "api";
 import { useCommonUIContext, useAuthContext } from "contexts";
@@ -79,10 +79,10 @@ export const NewDocumentFolderModal = ({
     }
   );
 
-  const { isLoading: isSharesLoading, data: attorneyData } = useQuery<
+  const { isLoading: isSharesLoading, data: mediatorData } = useQuery<
     any[],
     Error
-  >(["attorneys_paralegals"], () => getAttorneysAndParalegals({}), {
+  >(["mediators_paralegals"], () => getMediatorsAndParalegals({}), {
     keepPreviousData: true,
     enabled: open,
   });
@@ -174,7 +174,7 @@ export const NewDocumentFolderModal = ({
                 />
 
                 <FormContactMultiSelect
-                  values={(attorneyData || []).filter(
+                  values={(mediatorData || []).filter(
                     (item) =>
                       +item?.id !== +userId && shareData.includes(item?.id)
                   )}

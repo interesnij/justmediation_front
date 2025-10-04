@@ -2,8 +2,8 @@
 export enum NotificationsRecipientType {
   /** Client */
   Client = "client",
-  /** Attorney */
-  Attorney = "attorney",
+  /** Mediator */
+  Mediator = "mediator",
   /** All */
   All = "all",
 }

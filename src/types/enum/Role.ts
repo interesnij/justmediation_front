@@ -3,8 +3,8 @@ export enum Role {
   /** The subject of matters. */
   Client = "client",
   /** Has ability to change, create, delete matters and communicate with Client.  */
-  Attorney = "attorney",
-  /** Has a subset of Attorney's functionality. */
+  Mediator = "mediator",
+  /** Has a subset of Mediator's functionality. */
   Staff = "support",
   /** Non-authorized user. */
   Unauthorized = "unauthorized",
@@ -12,7 +12,7 @@ export enum Role {
 
 // export namespace Role {
 //   const READABLE_ROLE_MAP: Record<Role, string> = {
-//     [Role.Attorney]: "Attorney",
+//     [Role.Mediator]: "Mediator",
 //     [Role.Client]: "Client",
 //     [Role.Staff]: "Paralegal",
 //     [Role.Unauthorized]: "Unauthorized user",

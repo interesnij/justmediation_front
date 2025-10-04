@@ -1,4 +1,4 @@
-// import { AttorneyDto } from "./AttorneyDto";
+// import { MediatorDto } from "./MediatorDto";
 
 /** Group chat DTO. */
 export interface NetworkDto {
@@ -11,9 +11,9 @@ export interface NetworkDto {
   /** Creator id. */
   creator?: number;
   /** Creator. */
-  // creator_data?: AttorneyDto;
+  // creator_data?: MediatorDto;
   /** participants */
   participants: number[];
   /** Participants objects. */
-  // participants_data?: AttorneyDto[];
+  // participants_data?: MediatorDto[];
 }

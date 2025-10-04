@@ -40,11 +40,11 @@ export const ClientRouter: React.FC<RouteComponentProps> = () => {
           <MatterMessageDetailPage path="/overview/matter/:matter/message/:id" />
           <RepresentationPage path="/find" />
           <RepresentationPage path="/find/posts/:id" />
-          <ProfilePage path="/find/posts/:post/attorneys/:id" />
+          <ProfilePage path="/find/posts/:post/mediators/:id" />
           <FavoritesPage path="/find/favorites" />
           <SearchOverviewPage path="/find/search" />
           <SearchResultsPage path="/find/results" />
-          <ProfilePage path="/find/attorneys/:id" />
+          <ProfilePage path="/find/mediators/:id" />
 	        <ProfilePage path="/find/paralegals/:id" />
           <SearchResultsPage path="/find/results/:type" />
           <ChatsPage path="/chats" />

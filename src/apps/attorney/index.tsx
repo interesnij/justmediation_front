@@ -25,13 +25,13 @@ import {
   ForumsRouter,
   NewsRouter,
   DocumentsRouter,
-} from "apps/attorney/layouts";
+} from "apps/mediator/layouts";
 import { MatterMessageDetailPage } from "./pages/Matters/MatterDetail/MessageDetail";
 import { ChatProvider } from "contexts";
 import { VideoChat } from "components";
 
-export const AttorneyRouter: React.FC<RouteComponentProps> = () => {
-  useAuth("attorney");
+export const MediatorRouter: React.FC<RouteComponentProps> = () => {
+  useAuth("mediator");
   return (
     <div>
       <ChatProvider>

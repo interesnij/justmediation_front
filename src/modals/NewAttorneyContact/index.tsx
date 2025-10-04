@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Modal, Button, AttorneyContactSearch, InfoText } from "components";
+import { Modal, Button, MediatorContactSearch, InfoText } from "components";
 import { validate } from "email-validator";
 import { useInput } from "hooks"; 
 import { useAuthContext, useCommonUIContext } from "contexts";
@@ -15,7 +15,7 @@ interface Props {
 }
 
 const headings = ["Create New Contact", "Invite New User"];
-export const NewAttorneyContactModal = ({
+export const NewMediatorContactModal = ({
   open,
   setOpen,
   onAdd = () => {},
@@ -28,7 +28,7 @@ export const NewAttorneyContactModal = ({
   const { userId, userType, profile } = useAuthContext();
   const [contact, setContact] = useState<any>({});
   const [isLoading, setIsLoading] = useState(false);
-  console.log("NewAttorneyContactModal");
+  console.log("NewMediatorContactModal");
   //console.log("bingo");
   useEffect(() => {
     if (open) {
@@ -82,7 +82,7 @@ export const NewAttorneyContactModal = ({
       <div className="new-post-modal">
         {step === 0 ? (
           <>
-            <AttorneyContactSearch
+            <MediatorContactSearch
               {...userEmail}
               id={contact?.id}
               onSelect={setContact}

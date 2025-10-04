@@ -30,7 +30,7 @@ type DocumentActionsForRole = Record<
   DocumentActionsByType
 >;
 
-const ATTORNEY_DOCUMENT_RULES: DocumentActionsByType = {
+const MEDIATOR_DOCUMENT_RULES: DocumentActionsByType = {
   Default: {
     Document: [
       FileAction.Download,
@@ -65,11 +65,11 @@ const ATTORNEY_DOCUMENT_RULES: DocumentActionsByType = {
 };
 
 export const DOCUMENT_RULES: DocumentActionsForRole = {
-  [Role.Attorney]: {
-    ...ATTORNEY_DOCUMENT_RULES,
+  [Role.Mediator]: {
+    ...MEDIATOR_DOCUMENT_RULES,
   },
   [Role.Staff]: {
-    ...ATTORNEY_DOCUMENT_RULES,
+    ...MEDIATOR_DOCUMENT_RULES,
   },
   [Role.Client]: {
     Default: {

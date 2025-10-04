@@ -1,7 +1,7 @@
-/** Dto for attorney login model */
+/** Dto for mediator login model */
 export interface LoginDto {
-  /** Attorney's email */
+  /** mediator's email */
   email: string;
-  /** Attorney's password */
+  /** mediator's password */
   password: string;
 }

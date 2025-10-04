@@ -1,7 +1,7 @@
 import { API } from "helpers";
 
 /**
- * Get attorney by id
+ * Get mediator by id
  * @param param0 id.
  */
 export const getParalegalById = async (id) => {

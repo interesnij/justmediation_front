@@ -6,7 +6,7 @@ import { useDebounce, useOnClickOutside } from "hooks";
 import { useField, FieldHookConfig } from "formik";
 import { User } from "components";
 import { useQuery } from "react-query";
-import { getAttorneysAndParalegals } from "api";
+import { getMediatorsAndParalegals } from "api";
 import { getUserName } from "helpers";
 import SearchIcon from "assets/icons/search.svg";
 import CloseIcon from "assets/icons/close.svg";
@@ -46,9 +46,9 @@ export const FormShareSearch: React.FC<Props> = ({
     data,
     refetch: fetchClients,
   } = useQuery<any[], Error>(
-    ["attorneys_paralegals", debouncedSearchTerm],
+    ["mediators_paralegals", debouncedSearchTerm],
     () =>
-      getAttorneysAndParalegals({
+      getMediatorsAndParalegals({
         search: debouncedSearchTerm
       }),
     {

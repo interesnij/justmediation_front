@@ -27,11 +27,11 @@ export const Recentmatter = ({ data }) => {
           </div>
         </div>
         <div className="d-flex ml-auto fit-height">
-          <Link className="profile-link" to={`/client/find/attorneys/${data?.attorney_id}`}>          
+          <Link className="profile-link" to={`/client/find/mediators/${data?.mediator_id}`}>          
             <User
-              userName={data?.attorney_name}
+              userName={data?.mediator_name}
               direction="toLeft"
-              avatar={data?.attorney_avatar}
+              avatar={data?.mediator_avatar}
             />
           </Link>
         </div>

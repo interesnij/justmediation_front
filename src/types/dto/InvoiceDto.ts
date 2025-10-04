@@ -23,7 +23,7 @@ export interface InvoiceDto {
   status?: "pending" | "sent";
   /** Title which describes current invoice */
   title: string;
-  /** A note left by attorney */
+  /** A note left by mediator */
   note: string;
   /** Created at */
   created?: string;
@@ -33,8 +33,8 @@ export interface InvoiceDto {
   can_be_paid?: boolean;
   /** Payment status. */
   payment_status?: InvoicePaymentStatus;
-  /** Attorney id. */
-  attorney: number;
-  /** Attorney data. */
-  // attorney_data?: AttorneyDto;
+  /** Mediator id. */
+  mediator: number;
+  /** mediator data. */
+  // mediator_data?: MediatorDto;
 }

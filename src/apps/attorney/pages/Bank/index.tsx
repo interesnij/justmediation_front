@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Button } from "components";
-import { AttorneyLayout } from "apps/attorney/layouts";
+import { MediatorLayout } from "apps/mediator/layouts";
 import { RouteComponentProps } from "@reach/router";
 import { getFinanceAuthUrl } from "api";
 import { useAuthContext } from "contexts";
@@ -16,7 +16,7 @@ export const BankPage: React.FunctionComponent<RouteComponentProps> = () => {
     setIsLoading(false);
   };
   return (
-    <AttorneyLayout title="Bank Accounts" userType={userType}>
+    <MediatorLayout title="Bank Accounts" userType={userType}>
       <div className="bank-page">
         <div className="my-auto">
           <div className="text-gray text-center">
@@ -31,6 +31,6 @@ export const BankPage: React.FunctionComponent<RouteComponentProps> = () => {
           </Button>
         </div>
       </div>
-    </AttorneyLayout>
+    </MediatorLayout>
   );
 };

@@ -1,19 +1,19 @@
-export const attorneyForumsTabs = [
+export const mediatorForumsTabs = [
   {
     tab: "Home",
-    path: "/attorney/forums",
+    path: "/mediator/forums",
   },
   {
     tab: "My Posts",
-    path: "/attorney/forums/my-posts",
+    path: "/mediator/forums/my-posts",
   },
   // {
   //   tab: "My Posts for Bids",
-  //   path: "/attorney/forums/bids",
+  //   path: "/mediator/forums/bids",
   // },
   {
     tab: "Following",
-    path: "/attorney/forums/following",
+    path: "/mediator/forums/following",
   },
 ];
 

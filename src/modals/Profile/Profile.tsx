@@ -250,7 +250,7 @@ export const Profile: FC<IProps> = ({handleCancel}) => {
       })
     ),
     practice_jurisdictions:
-      userType === "attorney"
+      userType === "mediator"
         ? Yup.array().of(
           Yup.object().shape({
             country: Yup.number()
@@ -474,7 +474,7 @@ export const Profile: FC<IProps> = ({handleCancel}) => {
                     <div className="heading col-12 mt-3 mb-2">
                       Office Address
                       <span className="heading__desc text-gray ml-4">
-                        JustLaw will use this address to match you with potential
+                        JustMediation will use this address to match you with potential
                         clients in your proximity
                       </span>
                     </div> 
@@ -635,14 +635,14 @@ export const Profile: FC<IProps> = ({handleCancel}) => {
                             label="Country"
                             name={`practice_jurisdictions[${index}].country`}
                             placeholder="Select a Country"
-                            isRequired={userType === "attorney"}
+                            isRequired={userType === "mediator"}
                           />
                           <FormStateSelect
                             className="col-md-3 mt-2"
                             placeholder="Select a state"
                             label="State"
                             name={`practice_jurisdictions[${index}].state`}
-                            isRequired={userType === "attorney"}
+                            isRequired={userType === "mediator"}
                             country={values.practice_jurisdictions[index].country}
                             selectedState={values.practice_jurisdictions[index].state}
                           />
@@ -651,14 +651,14 @@ export const Profile: FC<IProps> = ({handleCancel}) => {
                             label="Registration Number"
                             name={`practice_jurisdictions[${index}].number`}
                             placeholder="Enter Registration Number"
-                            isRequired={userType === "attorney"}
+                            isRequired={userType === "mediator"}
                           />
                           <FormInput
                             className="col-md-3 mt-2"
                             label="Year Admitted"
                             name={`practice_jurisdictions[${index}].year`}
                             placeholder="Select a year"
-                            isRequired={userType === "attorney"}
+                            isRequired={userType === "mediator"}
                           />
                         </div>
                       </div>
@@ -830,7 +830,7 @@ export const Profile: FC<IProps> = ({handleCancel}) => {
                     />
                   </div>
                   <div className="col-12 mt-3">
-                    *The amount shown under Fee Type is equivalent to the “composite rate.” Composite Rate = Attorney Legal Fees + Separate and Standalone 5% JustLaw Management Fee. This formula applies to hourly, flat, hourly, contingency, and other rates on our platform.
+                    *The amount shown under Fee Type is equivalent to the “composite rate.” Composite Rate = Mediator Legal Fees + Separate and Standalone 5% JustMediation Management Fee. This formula applies to hourly, flat, hourly, contingency, and other rates on our platform.
                   </div>
                 </div>
               </FolderExpandable>

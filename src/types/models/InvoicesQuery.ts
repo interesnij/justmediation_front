@@ -26,7 +26,7 @@ export namespace InvoiceQuery {
    *
    * @description
    * Contains of combination of two statuses:
-   *  * invoice status - depends on whether the status is sent by attorney or still pending,
+   *  * invoice status - depends on whether the status is sent by mediator or still pending,
    *  * payment status - shows the status of payment (mostly regulated by client)
    */
   export interface InvoiceStatusQuery {

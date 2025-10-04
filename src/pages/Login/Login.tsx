@@ -5,7 +5,7 @@ import { useAuthContext } from "contexts/Auth";
 import { useBasicDataContext, useTimerContext } from "contexts";
 import {
   login as loginApi,
-  getAttorneyById,
+  getMediatorById,
   getParalegalById,
   check2FA,
   validateLogin,
@@ -88,9 +88,9 @@ export const LoginPage: React.FC<RouteComponentProps> = () => {
         return getParalegalById(id);
       case 'enterprise':
         return getEnterpriseAccountById(id);
-      case 'attorney':
+      case 'mediator':
       default: 
-        return getAttorneyById(id);
+        return getMediatorById(id);
     }
   }
 
@@ -254,7 +254,7 @@ export const LoginPage: React.FC<RouteComponentProps> = () => {
                       </Link>
                     </div>
                     <FormCheckbox name="keep" className="mt-2">
-                      Keep me signed into JustLaw
+                      Keep me signed into JustMediation
                     </FormCheckbox>
                     {error && (
                       <Error className="mt-3 text-center">{error}</Error>

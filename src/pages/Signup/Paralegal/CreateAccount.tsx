@@ -41,8 +41,8 @@ export const CreateAccountPage = ({ onNext, initData }: Props) => {
       feature="Features"
       features={[
         "For paralegals, assistants, associates, and any other matter related role",
-        "Work efficiently and collaboratively with attorneys directly on matters",
-        "Help attorneys manage their practice using lead generation, invoicing, time tracking, and document management",
+        "Work efficiently and collaboratively with mediators directly on matters",
+        "Help mediators manage their practice using lead generation, invoicing, time tracking, and document management",
       ]}
       backRoute="/auth/register"
     >

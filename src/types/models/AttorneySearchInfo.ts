@@ -1,8 +1,8 @@
 
 /**
- * Attorney search data.
+ * Mediator search data.
  */
-export interface AttorneySearchInfo {
+export interface MediatorSearchInfo {
   /**
    * Latitude
    */

@@ -1,4 +1,4 @@
-export * from "./attorney";
+export * from "./mediator";
 export * from "./client";
 export * from "./paralegal";
 export * from "./enterprise";

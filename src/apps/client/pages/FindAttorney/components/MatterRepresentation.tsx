@@ -35,8 +35,8 @@ export const MatterRepresentation = ({
       <div className="representation-page-container">
         <div className="title">Post Your Matter for Representation</div>
         <div className="desc">
-          Match with attorneys that fit your legal needs. Compare prices, fees,
-          proposals and attorney profiles.
+          Match with mediators that fit your legal needs. Compare prices, fees,
+          proposals and mediator profiles.
         </div>
         {isMore && (
           <>
@@ -58,7 +58,7 @@ export const MatterRepresentation = ({
                     Get Proposals
                   </div>
                   <div className="representation-page--item-desc">
-                    JustLaw matches you with attorneys most qualified to handle
+                    JustLaw matches you with mediators most qualified to handle
                     your specific legal matter. Collect and compare prices,
                     fees, proposals, and profiles.
                   </div>
@@ -66,11 +66,11 @@ export const MatterRepresentation = ({
                 <div className="representation-page--item">
                   <img src={AcceptHireImg} alt="post matter" />
                   <div className="representation-page--item-title">
-                    Accept and Hire your Attorney
+                    Accept and Hire your Mediator
                   </div>
                   <div className="representation-page--item-desc">
                     When you’re ready, accept their proposal and hire the
-                    attorney that’s right for you.
+                    mediator that’s right for you.
                   </div>
                 </div>
               </div>
@@ -80,7 +80,7 @@ export const MatterRepresentation = ({
               className="text-black text-center mt-4"
               style={{ fontSize: 18 }}
             >
-              Post your matter and have attorneys submit their proposals to you.
+              Post your matter and have mediators submit their proposals to you.
             </div>
           </>
         )}

@@ -1,6 +1,6 @@
 import { API } from "helpers";
 import {
-  AttorneyRegisterDto,
+  MediatorRegisterDto,
   ParalegalRegisterDto,
   ClientRegisterDto,
   EnterpriseRegisterDto,
@@ -8,29 +8,29 @@ import {
 } from "types";
 
 /**
- * Register a user as an attorney.
- * @param registerData Attorney Registration data.
+ * Register a user as an Mediator.
+ * @param registerData Mediator Registration data.
  * @param invite_uuid
  */
-export const registerAttorney = async (registerData: AttorneyRegisterDto, invite_uuid) => {
-  await API().post("users/attorneys/", registerData, {params: {invite_uuid}});
+export const registerMediator = async (registerData: MediatorRegisterDto, invite_uuid) => {
+  await API().post("users/mediators/", registerData, {params: {invite_uuid}});
 };
 
 /**
- * Onboard attorney.
- * @param userId Attorney user id.
+ * Onboard Mediator.
+ * @param userId Mediator user id.
  * @param userType
- * @param onboardingData attorney onboarding data.
+ * @param onboardingData Mediator onboarding data.
  */
 export const onboardUser = async (
   userId: string,
   userType: string,
-  onboardingData: AttorneyRegisterDto
+  onboardingData: MediatorRegisterDto
 ) => {
   await API().post(
     `users/${
-      userType === "attorney"
-        ? "attorneys"
+      userType === "mediator"
+        ? "mediators"
         : userType === "paralegal"
         ? "paralegals"
         : userType === "enterprise" ? "enterprises"

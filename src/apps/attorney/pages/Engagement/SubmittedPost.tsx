@@ -10,7 +10,7 @@ import {
 import { RouteComponentProps, useParams, navigate } from "@reach/router";
 import { getPostedMatterById, getProposalById, createChat, createOpportunity } from "api";
 import { useModal } from "hooks";
-import { AttorneyLayout, EngagementLayout } from "apps/attorney/layouts";
+import { MediatorLayout, EngagementLayout } from "apps/mediator/layouts";
 import { Proposal, WithdrawProposal, DeleteProposal } from "modals";
 import { useQuery } from "react-query";
 import { format } from "date-fns";
@@ -93,7 +93,7 @@ export const EngagementSubmittedPostPage: React.FunctionComponent<RouteComponent
         if (!client?.opportunity_id) {
           await createOpportunity({
             client: clientId,
-            attorney: profile.id
+            mediator: profile.id
           })
         }
         startCreatingChat(false)  
@@ -104,7 +104,7 @@ export const EngagementSubmittedPostPage: React.FunctionComponent<RouteComponent
     const isLongDescription = !!(postData?.description && postData?.description.length > 220);
 
     return (
-      <AttorneyLayout title="Potential Engagement" showButtons={false} userType={userType}>
+      <MediatorLayout title="Potential Engagement" showButtons={false} userType={userType}>
         <EngagementLayout tab="Submitted Engagements" userType={userType}>
           <div className="forums-page__topic submitted-engagement-page">
             {isPostLoading ? (
@@ -194,9 +194,9 @@ export const EngagementSubmittedPostPage: React.FunctionComponent<RouteComponent
                         <div className="justify-content-between">
                           <div>
                           <div className="d-flex">
-                            <User size="normal" avatar={proposalData?.attorney_data?.avatar} />
+                            <User size="normal" avatar={proposalData?.mediator_data?.avatar} />
                             <div className="ml-2">
-                              <div className="name mt-auto">{proposalData?.attorney_data?.first_name} {proposalData?.attorney_data?.last_name}</div>
+                              <div className="name mt-auto">{proposalData?.mediator_data?.first_name} {proposalData?.mediator_data?.last_name}</div>
                               <div className="date mb-auto">
                                 {proposalData?.created
                                   ? 'Submitted ' + format(new Date(proposalData.created), "MM/dd/yy")
@@ -243,7 +243,7 @@ export const EngagementSubmittedPostPage: React.FunctionComponent<RouteComponent
             callback={() => navigate(`/${userType}/engagement/submitted`)}  
           />
         }
-      </AttorneyLayout>
+      </MediatorLayout>
     );
   };
 

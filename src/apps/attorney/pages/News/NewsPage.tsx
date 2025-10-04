@@ -1,7 +1,7 @@
 import React from "react";
 import { useQuery } from "react-query";
 import { RouteComponentProps } from "@reach/router";
-import { AttorneyLayout } from "apps/attorney/layouts";
+import { MediatorLayout } from "apps/mediator/layouts";
 import { useParams } from "@reach/router";
 import { getNewsById } from "api";
 import { css } from "@emotion/react";
@@ -22,7 +22,7 @@ export const NewsPage: React.FunctionComponent<RouteComponentProps> = () => {
   );
 
   return (
-    <AttorneyLayout showButtons={false} userType={userType}>
+    <MediatorLayout showButtons={false} userType={userType}>
       <div className="news-page">
         {isLoading ? (
           <div className="my-4 d-flex">
@@ -50,7 +50,7 @@ export const NewsPage: React.FunctionComponent<RouteComponentProps> = () => {
               <div className="news-page__content">
                 <div className="news-page__title">{data?.title}</div>
                 <div className="d-flex justify-content-between mt-2">
-                  <div className="news-page__date">JustLaw</div>
+                  <div className="news-page__date">JustMediation</div>
                   <div className="news-page__date">
                     {format(new Date(data?.created ?? ""), "MM/dd/yyy")}
                   </div>
@@ -63,6 +63,6 @@ export const NewsPage: React.FunctionComponent<RouteComponentProps> = () => {
           </>
         )}
       </div>
-    </AttorneyLayout>
+    </MediatorLayout>
   );
 };

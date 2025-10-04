@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from "react";
 import { OnboardingLayout } from "layouts";
 import { RouteComponentProps, navigate } from "@reach/router";
-import { AttorneyRegisterDto } from "types";
+import { MediatorRegisterDto } from "types";
 import { useAuthContext } from "contexts";
 
 import {
@@ -37,7 +37,7 @@ export const OnboardingProfilePage: React.FC<RouteComponentProps> = ({
 
   const data = initData.role ? initData.admin_user_data : initData;
   const state = location?.state as LocationStateProps;
-  const [profile, setProfile] = useState<AttorneyRegisterDto>({
+  const [profile, setProfile] = useState<MediatorRegisterDto>({
     first_name: data?.first_name || "",
     last_name: data?.last_name || "",
     middle_name: data?.middle_name || "", 
@@ -98,7 +98,7 @@ export const OnboardingProfilePage: React.FC<RouteComponentProps> = ({
     return () => {};
   }, [data]);
 
-  const handleNext = (params: AttorneyRegisterDto) => {
+  const handleNext = (params: MediatorRegisterDto) => {
     if (step < 4) {
       setProfile({ ...profile, ...params });
       setStep((state) => state + 1);
@@ -122,7 +122,7 @@ export const OnboardingProfilePage: React.FC<RouteComponentProps> = ({
     <OnboardingLayout>
       <div className="onboarding-page">
         <div className="onboarding-page__container mt-4 d-flex flex-column">
-          <div className="subscription-title">Welcome to JustLaw</div>
+          <div className="subscription-title">Welcome to JustMediation</div>
           <div className="text-gray text-center">
             Set up your profile so clients can easily find you
           </div>

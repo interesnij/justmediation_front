@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import {Map, GoogleApiWrapper, GoogleAPI } from 'google-maps-react';
 
-interface Attorney {
+interface Mediator {
   first_name: string;
   last_name: string;
   specialities: number[];
@@ -22,8 +22,8 @@ interface Attorney {
 }
 
 interface iMapComponent {
-  data: Attorney[]
-  attorney: Attorney|null
+  data: Mediator[]
+  mediator: Mediator|null
   google: GoogleAPI
   address?: string
   query?: string
@@ -31,7 +31,7 @@ interface iMapComponent {
 // Connecticut 2
 // Arkansas 2
 
-const MapComponent = ({data, attorney, google, address, query }: iMapComponent) => {
+const MapComponent = ({data, mediator, google, address, query }: iMapComponent) => {
 
   const searchLocationCity: string | null = query ? new URLSearchParams(query).get("firm_locations__city") : "";
   const specialtyUser: string | null = query ? new URLSearchParams(query).get("user__specialities") : "";
@@ -48,13 +48,13 @@ const MapComponent = ({data, attorney, google, address, query }: iMapComponent) 
     let isFirstMarker: boolean = false;
     const list: any[] = [];
     let index = 0;
-    // iterate attorneys
-    for(const attorney of data) {
-      if (!attorney?.firm_locations?.length) {
+    // iterate mediators
+    for(const mediator of data) {
+      if (!mediator?.firm_locations?.length) {
         continue;
       } 
       // iterate firms
-      for(const firm of attorney.firm_locations) {
+      for(const firm of mediator.firm_locations) {
         if (!firm.latitude || !firm.longitude){
           continue;
         } 
@@ -63,12 +63,12 @@ const MapComponent = ({data, attorney, google, address, query }: iMapComponent) 
           lat: +firm.latitude,
           lng: +firm.longitude
         }
-       // console.log(attorney?.specialities.find(item => item === Number(specialtyUser)) )
-        if((specialtyUser && attorney?.specialities?.find(item => item === Number(specialtyUser))) || (searchLocationCity && firm?.city === Number(searchLocationCity) && !list.find(item => item.id === firm.id))) {
+       // console.log(mediator?.specialities.find(item => item === Number(specialtyUser)) )
+        if((specialtyUser && mediator?.specialities?.find(item => item === Number(specialtyUser))) || (searchLocationCity && firm?.city === Number(searchLocationCity) && !list.find(item => item.id === firm.id))) {
           list.push(createMarker(
             map,
             position,
-            `${attorney?.first_name} ${attorney?.last_name} | ${addressString}`,
+            `${mediator?.first_name} ${mediator?.last_name} | ${addressString}`,
             ++index,
             firm.id
           ));
@@ -132,24 +132,24 @@ const MapComponent = ({data, attorney, google, address, query }: iMapComponent) 
         color: '#fff', 
         fontSize: '11px', 
         fontWeight: '600',
-        text: ''+label // label number one per attorney
+        text: ''+label // label number one per mediator
       },
       id
     }
   }
 
   useEffect(() => {
-    if (!mapObject || !attorney?.firm_locations?.length) {
+    if (!mapObject || !mediator?.firm_locations?.length) {
       return;
     }
-    updateCenter(attorney)
+    updateCenter(mediator)
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [attorney])
+  }, [mediator])
 
-  const updateCenter = (attorney) => {
+  const updateCenter = (mediator) => {
 
-    if (!attorney?.firm_locations?.length) return;
-    const firm = findMatchingFirm(attorney.firm_locations);
+    if (!mediator?.firm_locations?.length) return;
+    const firm = findMatchingFirm(mediator.firm_locations);
     if (!firm) return;
     mapObject.setOptions({ zoom: 17 })
     mapObject.setCenter({

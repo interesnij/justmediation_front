@@ -6,7 +6,7 @@ import styled from "styled-components";
 import { renderBudget } from "helpers";
 
 export const RecentPost = ({ data, userId, userType }) => {
-  const link = data?.proposals?.length && data?.proposals.find(p => p?.attorney_data?.id === userId) 
+  const link = data?.proposals?.length && data?.proposals.find(p => p?.mediator_data?.id === userId) 
     ? `/${userType}/engagement/submitted_post/${data.id}`
     : `/${userType}/engagement/post/${data?.id}`;
   return (

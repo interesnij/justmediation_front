@@ -4,15 +4,15 @@ import { API } from "helpers";
  *
  */
 interface GetEventsParams {
-  attorney?: string;
+  mediator?: string;
   paralegal?: string;
   ordering?: string;
 }
 
-export const getEvents = async ({ attorney, paralegal, ordering }: GetEventsParams) => {
+export const getEvents = async ({ mediator, paralegal, ordering }: GetEventsParams) => {
   const params = {
     ordering,
-    attorney,
+    mediator,
     paralegal,
   };
   try {

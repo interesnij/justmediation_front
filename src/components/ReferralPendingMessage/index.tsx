@@ -13,7 +13,7 @@ export const ReferralPendingMessage = ({ data, className }: Props) => {
     <Container className={className}>
       <Referral className="my-auto">PENDING</Referral>
       <div className="ml-1 my-auto">
-        You have referred this matter to {getUserName(data?.attorney_data)}.
+        You have referred this matter to {getUserName(data?.mediator_data)}.
       </div>
       <View className="ml-auto my-auto" onClick={handleResend}>
         RESEND

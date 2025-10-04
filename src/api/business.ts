@@ -1,9 +1,9 @@
 import { API } from "helpers";
 
-export const getStages = async (attorney) => {
+export const getStages = async (mediator) => {
   try {
     const response = await API().get("business/stages/", {
-      params: { attorney },
+      params: { mediator },
     });
     return response.data;
   } catch (error) {

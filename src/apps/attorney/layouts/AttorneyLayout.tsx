@@ -1,6 +1,6 @@
 import React from "react";
 import { MainLayout } from "layouts";
-import { ATTORNEY_MENU } from "config";
+import { MEDIATOR_MENU } from "config";
 import { useAuthContext } from "contexts";
 interface Props {
   title?: string;
@@ -9,7 +9,7 @@ interface Props {
   showButtons?: boolean;
   userType:string;
 }
-export const AttorneyLayout = ({
+export const MediatorLayout = ({
   title,
   children,
   backUrl,
@@ -17,7 +17,7 @@ export const AttorneyLayout = ({
   userType
 }: Props) => {
   const { profile } = useAuthContext();
-  const menu = ATTORNEY_MENU(userType, profile.role);
+  const menu = MEDIATOR_MENU(userType, profile.role);
   return (
     <MainLayout
       title={title}

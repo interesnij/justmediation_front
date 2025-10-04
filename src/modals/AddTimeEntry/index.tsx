@@ -121,7 +121,7 @@ export const AddTimeEntry = ({
   useEffect(() => {
     if(!formData!.matter || !matterData) return;
     let matter = matterData && matterData.results.find(({id}) => Number(id) === Number(formData!.matter));
-    let billed = matter ? [...matter.shared_with_data, matter.attorney_data] : []
+    let billed = matter ? [...matter.shared_with_data, matter.mediator_data] : []
     setBilledData(billed);
   }, [formData, matterData]);
   

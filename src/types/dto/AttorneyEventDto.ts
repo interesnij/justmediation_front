@@ -1,9 +1,9 @@
-/** Attorney event dto. */
-export interface AttorneyEventDto {
+/** Mediator event dto. */
+export interface MediatorEventDto {
   /** Id */
   id: number;
-  /** Attorney */
-  attorney: number;
+  /** Mediator */
+  mediator: number;
   /** Title */
   title: string;
   /** Description */

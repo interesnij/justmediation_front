@@ -1,5 +1,5 @@
 /**
- * Attorney Onboarding.
+ * Mediator Onboarding.
  */
 export interface AttOnboardingDto {
   /**

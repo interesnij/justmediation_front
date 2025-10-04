@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { getChatTabs, sortChatData } from "config";
 import { ChatSidebar, Tab, ChatHeader, RiseLoader, ChatContent, OverlaySpinner } from "components";
-import { ChatLayout } from "apps/attorney/layouts";
+import { ChatLayout } from "apps/mediator/layouts";
 import { RouteComponentProps, useParams, useLocation, navigate } from "@reach/router";
 import { useInput, useChatLists } from "hooks";
 import { useQuery } from "react-query";
@@ -131,7 +131,7 @@ export const ChatsPage: React.FunctionComponent<RouteComponentProps> = () => {
 
   const handleConvertToLeads = async (clientId: number, opportunityId: number) => {
     // create lead object 
-    await createBusinessLeads({ client: clientId, attorney: profile.id })
+    await createBusinessLeads({ client: clientId, mediator: profile.id })
     // create contact 
     await addContact(userType, profile.role, userId, clientId);
     // delete opportunity object 

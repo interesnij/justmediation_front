@@ -63,7 +63,7 @@ export * from "./Attachment";
 export * from "./Message";
 export * from "./StripeElement";
 export * from "./ContactSearch";
-export * from "./AttorneyContactSearch";
+export * from "./MediatorContactSearch";
 export * from "./DropdownButton";
 export * from "./RiseLoader";
 export * from "./InputEdit";

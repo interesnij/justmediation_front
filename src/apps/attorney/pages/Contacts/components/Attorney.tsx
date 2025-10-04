@@ -17,7 +17,7 @@ const tabData = [
   },
 ];
 
-export const Attorney = ({ data }) => {
+export const Mediator = ({ data }) => {
   const currentTab = useInput(tabData[0].tab);
 
   const {
@@ -26,8 +26,8 @@ export const Attorney = ({ data }) => {
     error: eventsError,
     data: eventsData,
   } = useQuery<{ results: any[]; count: number }, Error>(
-    ["events-attorney", data?.personal_details?.user_id],
-    () => getEvents({ attorney: data?.personal_details?.user_id }),
+    ["events-mediator", data?.personal_details?.user_id],
+    () => getEvents({ mediator: data?.personal_details?.user_id }),
     {
       keepPreviousData: true,
       enabled: !!data?.personal_details?.user_id,

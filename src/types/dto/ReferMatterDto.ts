@@ -11,5 +11,5 @@ export interface ReferMatterDto {
   /** List of users emails to share with. */
   emails: string[];
   /** User type. */
-  user_type: 'attorney' | 'support';
+  user_type: 'mediator' | 'support';
 }

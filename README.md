@@ -1,4 +1,4 @@
-## JustLaw Frontend
+## justmediation Frontend
 
 App build on [React](https://github.com/facebook/react) library with [CRA](https://github.com/facebook/create-react-app).
 
@@ -40,9 +40,3 @@ npm start
 - Currently app has 3 live environments: `dev`, `staging`, `production`.
 - Deployment is done by GitHub Actions and ran automatically by commiting updates to associated branches (`dev`, `staging`, `master`).
 - All secrets for deployment located on repository secrets section (Settings > Secrets > Actions).
-
-### Links:
-
-- https://app.dev.jus-law.com/
-- https://app.staging.jus-law.com/
-- https://www.justlaw.com/

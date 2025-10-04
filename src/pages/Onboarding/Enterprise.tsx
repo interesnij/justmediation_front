@@ -27,9 +27,9 @@ export const EnterpriseOnboardingPage: React.FC<RouteComponentProps> = () => {
   });
 
   const handleNext = async (params: EnterpriseOnboardingDto) => {
-    if (data.role === "Attorney") {
+    if (data.role === "Mediator") {
       try {
-        navigate("/auth/onboarding/profile/attorney", { state: params });
+        navigate("/auth/onboarding/profile/mediator", { state: params });
       } catch (error: any) {
         showErrorModal("Error", error);
       }
@@ -56,8 +56,8 @@ export const EnterpriseOnboardingPage: React.FC<RouteComponentProps> = () => {
     <OnboardingLayout>
       <div className="onboarding-page">
         <div className="onboarding-page__container mt-4 d-flex flex-column">
-          <div className="subscription-title">Welcome to JustLaw</div>
-          {data.role !== "Attorney" && <div className="mt-4 text-gray text-center">Step {step + 1} of 2</div>}
+          <div className="subscription-title">Welcome to JustMediation</div>
+          {data.role !== "Mediator" && <div className="mt-4 text-gray text-center">Step {step + 1} of 2</div>}
           <div className="subscription-heading mt-1 mb-4">
             {titleData[step]}
           </div>

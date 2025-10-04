@@ -6,7 +6,7 @@ import { isRegistered } from "api";
 import * as Yup from "yup";
 // import { isEqual } from "lodash";
 import styled from "styled-components";
-import { AttorneyRegisterDto } from "types";
+import { MediatorRegisterDto } from "types";
 
 const validationSchema = Yup.object().shape({
   email: Yup.string()
@@ -25,8 +25,8 @@ const validationSchema = Yup.object().shape({
 });
 
 interface Props {
-  onNext(param: AttorneyRegisterDto): void;
-  initData: AttorneyRegisterDto;
+  onNext(param: MediatorRegisterDto): void;
+  initData: MediatorRegisterDto;
 }
 
 export const CreateAccountPage = ({ onNext, initData }: Props) => {
@@ -37,13 +37,13 @@ export const CreateAccountPage = ({ onNext, initData }: Props) => {
 
   return (
     <CreateAccountLayout
-      title="Attorney"
+      title="Mediator"
       label="I am an"
       feature="Features"
       features={[
         "Powerful and user-friendly tools for lead generation, lead management and conversion",
         "Open forum where legal professionals answer people’s questions about the law",
-        "Constant, secure attorney/client communication on open matters",
+        "Constant, secure mediator/client communication on open matters",
       ]}
       backRoute="/auth/register"
     >

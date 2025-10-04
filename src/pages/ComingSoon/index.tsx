@@ -12,11 +12,11 @@ export const ComingSoon: React.FunctionComponent<RouteComponentProps> = () => {
         Mobile browser is not supported
       </h2>
       <h4 style={{textAlign:'center'}}>
-        Please install the application to use Justlaw on your mobile device.
+        Please install the application to use JustMediation on your mobile device.
         <br /><br />
-        <a target="_blank" style={{color:'white'}} href="https://apps.apple.com/us/app/juslaw/id1608960459">IOS</a>
+        <a target="_blank" style={{color:'white'}} href="">IOS</a>
         &nbsp;&nbsp;
-        <a target="_blank" style={{color:'white'}} href="https://play.google.com/store/apps/details?id=com.jusglobal.juslaw.android">Android</a>
+        <a target="_blank" style={{color:'white'}} href="">Android</a>
       </h4> 
     </div>
   );

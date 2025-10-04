@@ -3,16 +3,16 @@ import { RouteComponentProps, useLocation, navigate } from "@reach/router";
 import { useQuery } from "react-query";
 import { Card, SearchBar, Button, Folder, FolderItem, Breadcrumb } from "components";
 import BooksImg from "assets/images/find_attorney_books.jpg";
-import { AttorneyFindLayout } from "apps/client/layouts";
+import { MediatorFindLayout } from "apps/client/layouts";
 import { useBasicDataContext } from "contexts";
 import { AllAreas, TopCities } from "./components";
 import { practiceAreasList } from "./helpers";
 import { useSearch } from "./useSearch";
 import { useModal } from "hooks";
-import {NewAttorneyContactModal} from "modals";
+import {NewMediatorContactModal} from "modals";
 
 /**
- * Find Attorney | Search Overview
+ * Find Mediator | Search Overview
  * 
  */
 export const SearchOverviewPage: React.FunctionComponent<RouteComponentProps> = () => {
@@ -46,7 +46,7 @@ export const SearchOverviewPage: React.FunctionComponent<RouteComponentProps> = 
   }, [location.search])
   
   const isBaseView = !isAllAreas;
-  const newAttorneyContactModal = useModal();
+  const newMediatorContactModal = useModal();
 
   const handleSearch = () => {
     const q = queryOnSearch();
@@ -56,7 +56,7 @@ export const SearchOverviewPage: React.FunctionComponent<RouteComponentProps> = 
   }
 
   return (
-    <AttorneyFindLayout tab="Search" className={isBaseView ? '' : 'no-background'}>
+    <MediatorFindLayout tab="Search" className={isBaseView ? '' : 'no-background'}>
       <div className="find-search-page">
         {isAllAreas ? (
           <Breadcrumb
@@ -127,7 +127,7 @@ export const SearchOverviewPage: React.FunctionComponent<RouteComponentProps> = 
               )}
             </div>
             <Button className="ml-3" onClick={handleSearch}>
-              {isBaseView ? "Search for an Attorney" : "Search"}
+              {isBaseView ? "Search for an Mediator" : "Search"}
             </Button>
           </div>
         </Card>
@@ -168,19 +168,19 @@ export const SearchOverviewPage: React.FunctionComponent<RouteComponentProps> = 
         </div> 
 
         <div className="py-4 find-search-page-bottom">
-          <h2>Invite Your Attorney</h2>
+          <h2>Invite Your Mediator</h2>
           <FolderItem className="mt-4">
-            Add lawyers to your contacts. If the Lawyer is not registered in Justlaw, send him an invitation.
-            <Button className="mt-2 green" theme="white" onClick={() => newAttorneyContactModal.setOpen(true)}>
+            Add lawyers to your contacts. If the Lawyer is not registered in JustMediation, send him an invitation.
+            <Button className="mt-2 green" theme="white" onClick={() => newMediatorContactModal.setOpen(true)}>
               Get started
             </Button> 
           </FolderItem>
         </div>
         {
-          newAttorneyContactModal?.open &&
-          <NewAttorneyContactModal {...newAttorneyContactModal} />
+          newMediatorContactModal?.open &&
+          <NewMediatorContactModal {...newMediatorContactModal} />
         }
       </div>
-    </AttorneyFindLayout>
+    </MediatorFindLayout>
   );
 };

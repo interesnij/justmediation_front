@@ -1,8 +1,8 @@
 import { ChatInfo } from "./ChatInfo";
 import { Network } from "./Network";
 
-/** Group chat between attorneys. */
+/** Group chat between mediators. */
 export interface NetworkChatInfo extends ChatInfo {
-  /** Corresponding attorney network. */
+  /** Corresponding mediator network. */
   network: Network;
 }

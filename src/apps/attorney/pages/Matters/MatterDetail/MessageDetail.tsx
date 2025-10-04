@@ -2,7 +2,7 @@ import React from "react";
 import {navigate, RouteComponentProps, useParams} from "@reach/router";
 import styled from "styled-components";
 import {RiseLoader, Message, Dropdown} from "components";
-import { AttorneyLayout } from "apps/attorney/layouts";
+import { MediatorLayout } from "apps/mediator/layouts";
 import { useAuthContext} from "contexts";
 import { useQuery } from "react-query";
 import {getMatterPosts, getMatterTopicById, deleteMatterTopic} from "api";
@@ -93,7 +93,7 @@ export const MatterMessageDetailPage: React.FunctionComponent<RouteComponentProp
     };
 
     return (
-      <AttorneyLayout
+      <MediatorLayout
         title="Back to Message"
         backUrl={`/${userType}/matters/${params.matter}?tab=messages`}
         userType={userType}
@@ -154,7 +154,7 @@ export const MatterMessageDetailPage: React.FunctionComponent<RouteComponentProp
             )}
           </Content>
         </Main>
-      </AttorneyLayout>
+      </MediatorLayout>
     );
   };
 

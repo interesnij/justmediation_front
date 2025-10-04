@@ -14,8 +14,8 @@ export const ProfileModal = ({ open, setOpen, userType }: Props) => {
   
   const getTabData = () => {
     const menu = [{ tab: "Profile Information" }]
-    // add only attorney tabs
-    if (['enterprise', 'attorney'].indexOf(userType) !== -1) {
+    // add only mediator tabs
+    if (['enterprise', 'mediator'].indexOf(userType) !== -1) {
       menu.push({ tab: "My Events" })
     }
     return menu;

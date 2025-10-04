@@ -10,7 +10,7 @@ interface Props {
       | "title"
       | "client__user__first_name"
       | "start_date"
-      | "attorney__user__first_name",
+      | "mediator__user__first_name",
     state: "up" | "down" | "normal"
   ): void;
   sortData: ISortData;
@@ -50,9 +50,9 @@ export const TableHeader = ({ onSort, sortData }: Props) => {
       </div>
       <div className="matters-page__table-header-item sortable">
         <SortIcon
-          state={sortData.attorney__user__first_name}
+          state={sortData.mediator__user__first_name}
           label="Principle"
-          onClick={(state) => onSort("attorney__user__first_name", state)}
+          onClick={(state) => onSort("mediator__user__first_name", state)}
         />
       </div>
       <div className="matters-page__table-header-item">

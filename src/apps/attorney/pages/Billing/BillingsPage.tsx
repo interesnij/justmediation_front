@@ -13,7 +13,7 @@ import { useInput, useModal } from "hooks";
 import { AddTimeEntry, AddExpenseEntry, InvoiceModal } from "modals";
 import { BillingsTable } from "./components/BillingsTable";
 import { getBillings } from "api";
-import { AttorneyLayout } from "apps/attorney/layouts";
+import { MediatorLayout } from "apps/mediator/layouts";
 import CloseImg from "assets/icons/close_white.svg";
 import { useQuery } from "react-query";
 import { subDays, format } from "date-fns";
@@ -153,7 +153,7 @@ export const BillingsPage: React.FunctionComponent<RouteComponentProps> =
     );
 
     return (
-      <AttorneyLayout title="Billing Items" userType={userType}>
+      <MediatorLayout title="Billing Items" userType={userType}>
         <div className="billings-page__bar">
           <div className="d-flex mt-3">
             <div className="billings-page__bar-input">
@@ -300,7 +300,7 @@ export const BillingsPage: React.FunctionComponent<RouteComponentProps> =
             onCreate={() => navigate(`/${userType}/invoices`)}
           />
         }
-      </AttorneyLayout>
+      </MediatorLayout>
     );
   };
 

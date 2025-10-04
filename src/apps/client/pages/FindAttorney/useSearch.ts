@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from "react";
 import { useInput } from "hooks";
-import { findAttorneys } from "api"; 
+import { findMediators } from "api"; 
 import { useQuery } from "react-query";
 import { parse, stringify } from "query-string";
 import { useBasicDataContext } from "contexts";
@@ -28,7 +28,7 @@ export const useSearch = (
   const [searchQuery, setSearchQuery] = useState<string>(location.search);
 
   const { isFetching, data, refetch } = useQuery(
-    ["search-results"], () => findAttorneys(q.value), {
+    ["search-results"], () => findMediators(q.value), {
       keepPreviousData: true,
       enabled: isResultsPage
     }

@@ -1,4 +1,4 @@
-/** Describe attorney education */
+/** Describe mediator education */
 export interface Education {
   /** Education id */
   id: number;

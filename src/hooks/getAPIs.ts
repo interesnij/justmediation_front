@@ -65,13 +65,13 @@ export const useGetFirmSizes = () => {
 };
 
 /**
- * Get attorneys by search
+ * Get mediators by search
  */
-export const useGetAttorneys = (search?: string) => {
+export const useGetMediators = (search?: string) => {
   const token = localStorage.getItem("key");
   return useAxios(
     {
-      url: `users/attorneys/?search=${search}`,
+      url: `users/mediators/?search=${search}`,
       headers: {
         Authorization: `Token ${token}`,
       },

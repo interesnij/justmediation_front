@@ -92,7 +92,7 @@ export const getLastModifiedTopics = (limit: number) => {
 };
 
 /**
- * Get attorney's opportunities
+ * Get mediator's opportunities
  */
 export const getOpportunities = (reqParams: DefaultRequestParams) => {
   return API().get("opportunities/", { params: reqParams });

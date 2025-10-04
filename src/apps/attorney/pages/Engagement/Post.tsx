@@ -3,7 +3,7 @@ import { Breadcrumb, Button, User, RiseLoader } from "components";
 import { RouteComponentProps, useParams, navigate } from "@reach/router";
 import { getPostedMatterById } from "api";
 import { useModal } from "hooks";
-import { AttorneyLayout, EngagementLayout } from "apps/attorney/layouts";
+import { MediatorLayout, EngagementLayout } from "apps/mediator/layouts";
 import { Proposal } from "modals";
 import { useQuery } from "react-query";
 import { format } from "date-fns";
@@ -30,7 +30,7 @@ export const EngagementInquiryPostPage: React.FunctionComponent<RouteComponentPr
     };
 
     return (
-      <AttorneyLayout showButtons={false} userType={userType}>
+      <MediatorLayout showButtons={false} userType={userType}>
         <EngagementLayout tab="Browse Inquiries" userType={userType}>
           <div className="forums-page__topic">
             {isLoading ? (
@@ -94,6 +94,6 @@ export const EngagementInquiryPostPage: React.FunctionComponent<RouteComponentPr
           </div>
         </EngagementLayout>
         <Proposal {...submitModal} post={data} onCreate={onCreate} />
-      </AttorneyLayout>
+      </MediatorLayout>
     );
   };

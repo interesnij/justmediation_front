@@ -1,9 +1,9 @@
-import { Attorney, Client, Topic } from "./";
+import { Mediator, Client, Topic } from "./";
 import { LeadPriority } from "../enum";
 
 /**
  * Lead model.
- * Provides ability to chatting between Attorney and Client.
+ * Provides ability to chatting between Mediator and Client.
  */
 export interface Lead {
   /**
@@ -12,9 +12,9 @@ export interface Lead {
   id: number;
 
   /**
-   * Attorney ID.
+   * Mediator ID.
    */
-  attorney: Attorney;
+  mediator: Mediator;
 
   /**
    * Topic data.

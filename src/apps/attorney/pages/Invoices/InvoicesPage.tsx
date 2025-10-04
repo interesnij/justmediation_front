@@ -9,7 +9,7 @@ import {
   DatePicker,
   RiseLoader,
 } from "components";
-import { AttorneyLayout } from "apps/attorney/layouts";
+import { MediatorLayout } from "apps/mediator/layouts";
 import { InvoiceModal } from "modals";
 import { useInput, useModal } from "hooks";
 import { InvoicesTable } from "./components/InvoicesTable";
@@ -128,7 +128,7 @@ export const InvoicesPage: React.FunctionComponent<RouteComponentProps> =
     }, [location.search])
 
     return (
-      <AttorneyLayout title="Invoices" userType={userType}>
+      <MediatorLayout title="Invoices" userType={userType}>
         <div className="invoices-page__bar">
           <div className="d-flex flex-wrap justify-content-between mt-3 mb-2">
             <div className="d-flex flex-wrap ">
@@ -212,6 +212,6 @@ export const InvoicesPage: React.FunctionComponent<RouteComponentProps> =
             invoiceId={invoiceId} 
           />
         }
-      </AttorneyLayout>
+      </MediatorLayout>
     );
   };

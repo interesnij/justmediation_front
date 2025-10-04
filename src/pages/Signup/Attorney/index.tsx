@@ -2,13 +2,13 @@ import React, { useState } from "react";
 import {RouteComponentProps, navigate} from "@reach/router";
 import { CreateAccountPage } from "./CreateAccount";
 import { VerificationForm } from "./VerificationForm";
-import { AttorneyRegisterDto } from "types";
+import { MediatorRegisterDto } from "types";
 
 import "./../style.scss";
 
-export const AttorneyRegisterPage: React.FC<RouteComponentProps> = () => {
+export const MediatorRegisterPage: React.FC<RouteComponentProps> = () => {
   const [step, setStep] = useState(1);
-  const [userInfo, setUserInfo] = useState<AttorneyRegisterDto>({
+  const [userInfo, setUserInfo] = useState<MediatorRegisterDto>({
     email: "",
     password1: "",
     password2: "",

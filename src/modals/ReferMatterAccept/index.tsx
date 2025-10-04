@@ -41,7 +41,7 @@ export const ReferMatterAcceptModal = ({
 
   return (
     <Modal
-      title={`Referral from ${getUserName(data?.attorney_data)}`}
+      title={`Referral from ${getUserName(data?.mediator_data)}`}
       open={open}
       setOpen={(param) => {
         setOpen(param);
@@ -53,7 +53,7 @@ export const ReferMatterAcceptModal = ({
           <div className="ml-1 flex-1">
             <div className="text-green">ATTENTION:</div>
             <div className="text-dark">
-              Once you accept this request, the original attorney will no longer
+              Once you accept this request, the original mediator will no longer
               have access to this matter and it’s details unless you share it.
             </div>
           </div>
