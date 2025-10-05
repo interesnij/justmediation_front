@@ -291,10 +291,10 @@ export const DocumentDetailModal = ({
                       color={"rgba(0, 0, 0, 0.8)"}
                     />
                   </div>
-                ) : mediatorData &&
-                  mediatorData.filter((a) => !data?.shared_with.includes(a.id))
+                ) : mediatorsData &&
+                  mediatorsData.filter((a) => !data?.shared_with.includes(a.id))
                     .length > 0 ? (
-                  mediatorData
+                  mediatorsData
                     .filter((a) => !data?.shared_with.includes(a.id))
                     .map((item, index: number) => {
                       return (
