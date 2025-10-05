@@ -12,7 +12,7 @@ export const ComingSoon: React.FunctionComponent<RouteComponentProps> = () => {
         Mobile browser is not supported
       </h2>
       <h4 style={{textAlign:'center'}}>
-        Please install the application to use JustMediation on your mobile device.
+        Please install the application to use JustMediationHub on your mobile device.
         <br /><br />
         <a target="_blank" style={{color:'white'}} href="">IOS</a>
         &nbsp;&nbsp;

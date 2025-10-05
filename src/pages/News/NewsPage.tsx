@@ -46,7 +46,7 @@ export const NewsPage: React.FunctionComponent<RouteComponentProps> = () => {
             <div className="news-page__content">
               <div className="news-page__title">{data?.title}</div>
               <div className="d-flex justify-content-between mt-2">
-                <div className="news-page__date">JustMediation</div>
+                <div className="news-page__date">JustMediationHub</div>
                 <div className="news-page__date">
                   {format(new Date(data?.created ?? ""), "MM/dd/yyy")}
                 </div>

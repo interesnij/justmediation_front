@@ -122,7 +122,7 @@ export const OnboardingProfilePage: React.FC<RouteComponentProps> = ({
     <OnboardingLayout>
       <div className="onboarding-page">
         <div className="onboarding-page__container mt-4 d-flex flex-column">
-          <div className="subscription-title">Welcome to JustMediation</div>
+          <div className="subscription-title">Welcome to JustMediationHub</div>
           <div className="text-gray text-center">
             Set up your profile so clients can easily find you
           </div>

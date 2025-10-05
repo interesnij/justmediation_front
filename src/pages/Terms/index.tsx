@@ -7,29 +7,29 @@ export const TermsPage: React.FC<RouteComponentProps> = () => {
     <PolicyLayout>
       <h1 className="mb-2 mt-0">Terms of Use</h1>
       <div className="d-flex flex-column flex-1 overflow-auto px-2">
-        <h2>JUSTMEDIATION AGREEMENT TERMS OF USE</h2>
+        <h2>JUSTMEDIATIONHUB AGREEMENT TERMS OF USE</h2>
         <p> 
-          These JustMediation Terms of Use, together with JustMediation's Privacy Policy and, where 
-          applicable, JustMediation's Customer Subscription Agreement(collectively referred to as the 
+          These JustMediationHub Terms of Use, together with JustMediationHub's Privacy Policy and, where 
+          applicable, JustMediationHub's Customer Subscription Agreement(collectively referred to as the 
           “Agreement”), constitute a legally binding agreement made between you, whether 
-          personally or on behalf of an entity (“you”) and JustMediation (JustMediation,” “we,” “us” or 
-          “our”), concerning your access to and use of the https://JustMediation.com website 
-          (the “Site”) and the JustMediation application (the “Service”). You agree that by accessing 
+          personally or on behalf of an entity (“you”) and JustMediationHub (JustMediationHub,” “we,” “us” or 
+          “our”), concerning your access to and use of the https://JustMediationHub.com website 
+          (the “Site”) and the JustMediationHub application (the “Service”). You agree that by accessing 
           the Site and/or Service, you have read, understood, and agree to be bound by all of the 
           terms of the Agreement, including as they may be updated from time to time. If you do 
           not agree with all such terms, then you are expressly prohibited from using the Site 
           and Service and you must discontinue use immediately. Supplemental terms and 
           conditions that may be posted on the Site or within the Service from time to time are 
           hereby expressly incorporated herein by reference. We reserve the right, in our sole 
-          discretion, to make changes or modifications to these JustMediation Terms of Use or to impose 
+          discretion, to make changes or modifications to these JustMediationHub Terms of Use or to impose 
           additional terms and conditions at any time and for any reason. We will make 
           reasonable efforts to alert you about any material changes, including (but not 
           limited to) by posting a notice to our website, and you waive any right to receive 
           specific notice of each such change. It is your responsibility to periodically review 
-          these JustMediation Terms of Use to stay informed of updates. You will be subject to, and 
+          these JustMediationHub Terms of Use to stay informed of updates. You will be subject to, and 
           will be deemed to have been made aware of and to have accepted, the changes in any 
-          revised JustMediation Terms of Use by your continued use of the Site or Service after the 
-          date such revised JustMediation Terms of Use are posted. The information provided on the 
+          revised JustMediationHub Terms of Use by your continued use of the Site or Service after the 
+          date such revised JustMediationHub Terms of Use are posted. The information provided on the 
           Site and Service is not intended for distribution to or use by any person or entity in 
           any jurisdiction or country where such distribution or use would be contrary to law or 
           regulation or which would subject us to any registration requirement within such 
@@ -50,7 +50,7 @@ export const TermsPage: React.FC<RouteComponentProps> = () => {
           unfair competition laws of the United States, foreign jurisdictions, and international 
           conventions. The Content and the Marks are provided on the Site and Service “ASIS” for 
           your information and personal, non-commercial use only. Except as expressly provided 
-          in these JustMediation Terms of Use, no part of the Site or Service and no Content or Marks 
+          in these JustMediationHub Terms of Use, no part of the Site or Service and no Content or Marks 
           may be copied, reproduced, aggregated, republished, uploaded, posted, publicly 
           displayed, encoded, translated, transmitted, distributed, sold, licensed, or otherwise 
           exploited for any commercial purpose whatsoever without our express prior written 
@@ -67,7 +67,7 @@ export const TermsPage: React.FC<RouteComponentProps> = () => {
           You may be required to register to take advantage of certain services. You agree 
           to keep your password confidential and will be responsible for all use of your 
           account and password. If you have reason to believe that your account is no longer 
-          secure, you must immediately notify us at info@JustMediation.com. We reserve the right 
+          secure, you must immediately notify us at info@JustMediationHub.com. We reserve the right 
           to remove, reclaim, or change a username you select if we determine, in our sole 
           discretion, that such username is inappropriate, obscene, or otherwise objectionable. 
           By registering or otherwise using the Site or Service, you represent and warrant that 
@@ -77,9 +77,9 @@ export const TermsPage: React.FC<RouteComponentProps> = () => {
         </p>
         <h2>FEES AND PAYMENT</h2>
         <p> 
-          JustMediation may offer the JustMediation product and services for purchase through iTunes, 
+          JustMediationHub may offer the JustMediationHub product and services for purchase through iTunes, 
           Google Play or other software application stores or markets. We may also offer the 
-          JustMediation product and services for purchase by payment card. We accept the following 
+          JustMediationHub product and services for purchase by payment card. We accept the following 
           forms of payment:<br /><br />
             • Visa<br />
             • Mastercard<br />
@@ -104,40 +104,40 @@ export const TermsPage: React.FC<RouteComponentProps> = () => {
 
         <h2>APP STORE</h2>
         <p>
-          You may download the JustMediation application from Apple’s app store, Google Play, or 
+          You may download the JustMediationHub application from Apple’s app store, Google Play, or 
           other software application stores or markets. Each app store may have its own terms 
           and conditions to which you must agree before downloading an app from the store. If 
-          you choose to download the JustMediation application from an app store or market, you 
+          you choose to download the JustMediationHub application from an app store or market, you 
           acknowledge that you have reviewed and accepted the terms of service applicable to 
-          such store or market. If you download the JustMediation application from Apple’s app store, 
+          such store or market. If you download the JustMediationHub application from Apple’s app store, 
           you acknowledge and agree that:
           <br /><br />
             • The Agreement is concluded between you and JustMediation, and as between Apple and 
-            JustMediation, JustMediation l (not Apple) is solely responsible for the JustMediation application and 
-            its content. Your use of JustMediation must comply with the Apple App Store Terms of 
+            JustMediationHub, JustMediationHub l (not Apple) is solely responsible for the JustMediationHub application and 
+            its content. Your use of JustMediationHub must comply with the Apple App Store Terms of 
             Service, which are available here:https://www.apple.com/legal/internet-services/itunes/us/terms.html .
             <br /><br />
-            • You will use the JustMediation application only on an Apple-branded product that you 
+            • You will use the JustMediationHub application only on an Apple-branded product that you 
             own or control and as permitted by the “Usage Rules” set forth in the Apple App 
             Store Terms of Service.
             <br /><br />
-            • JustMediation is responsible for any maintenance and support services with respect to 
-            JustMediation. Apple has no obligation whatsoever to furnish any maintenance and support 
-            services related to JustMediation.
+            • JustMediationHub is responsible for any maintenance and support services with respect to 
+            JustMediationHub. Apple has no obligation whatsoever to furnish any maintenance and support 
+            services related to JustMediationHub.
             <br /><br />
-            • In the event of any failure of the JustMediation application to conform to any applicable warranty, you may notify Apple and Apple will refund the purchase price of the application. To the maximum extent permitted by applicable law, Apple will have no other warranty obligation whatsoever with respect to the JustMediation application and as between Apple and JustMediation, any other claims, losses, liabilities, damages, costs, or expenses attributable to any failure to conform to any warranty will be JustMediation's sole responsibility.
+            • In the event of any failure of the JustMediationHub application to conform to any applicable warranty, you may notify Apple and Apple will refund the purchase price of the application. To the maximum extent permitted by applicable law, Apple will have no other warranty obligation whatsoever with respect to the JustMediation application and as between Apple and JustMediation, any other claims, losses, liabilities, damages, costs, or expenses attributable to any failure to conform to any warranty will be JustMediation's sole responsibility.
             <br /><br />
-            • As between JustMediation and Apple, JustMediation (not Apple) is responsible for addressing 
-            any claims asserted by you or any third party relating to the JustMediation application 
+            • As between JustMediationHub and Apple, JustMediationHub (not Apple) is responsible for addressing 
+            any claims asserted by you or any third party relating to the JustMediationHub application 
             or your possession and/or use of that application, including (but not limited to): 
             (i)product liability claims; 
-            (ii) any claim that the JustMediation application fails to conform to any applicable 
+            (ii) any claim that the JustMediationHub application fails to conform to any applicable 
             legal or regulatory requirement, and (iii) claims arising under consumer protection, 
             privacy, or similar legislation.
             <br /><br />
-            • As between Apple and JustMediation, in the event of any third party claim that the 
-            JustMediation application or your possession and use of that application infringes that 
-            third party’s intellectual property rights, JustMediation l (not Apple) will be solely 
+            • As between Apple and JustMediationHub, in the event of any third party claim that the 
+            JustMediationHub application or your possession and use of that application infringes that 
+            third party’s intellectual property rights, JustMediationHub l (not Apple) will be solely 
             responsible for the investigation, defense, settlement and discharge of any such 
             intellectual property infringement claim.
             <br /><br />
@@ -145,13 +145,13 @@ export const TermsPage: React.FC<RouteComponentProps> = () => {
             or that has been designated by the U.S. Government as a “terrorist supporting” 
             country; and(ii) you are not listed on any U.S. Government list of prohibited or 
             restricted parties. • Without limitation, you must comply with all applicable 
-            third party terms of agreement when using the JustMediation application. Apple, and 
+            third party terms of agreement when using the JustMediationHub application. Apple, and 
             Apple’s subsidiaries, are third party beneficiaries of the Agreement, and, upon 
             your acceptance of the Agreement, Apple will have the right (and will be deemed 
             to have accepted the right) to enforce the Agreement against you as a third party 
             beneficiary thereof. CANCELLATION You can cancel your subscription at any time by 
             logging into your account or contacting us using the contact information provided 
-            below. If you cancel, you will continue to have access to JustMediation until the end of 
+            below. If you cancel, you will continue to have access to JustMediationHub until the end of 
             your subscription term.
         </p>
 
@@ -171,7 +171,7 @@ export const TermsPage: React.FC<RouteComponentProps> = () => {
           Service.
           <br /><br />
           • Use the Site or Service to advertise or offer to sell goods and services, unless 
-          specifically authorized by JustMediation.
+          specifically authorized by JustMediationHub.
           <br /><br />
           • Circumvent, disable, or otherwise interfere with security-related features of the 
           Site or Service or measures designed to prevent or restrict access to the Site or 
@@ -198,7 +198,7 @@ export const TermsPage: React.FC<RouteComponentProps> = () => {
           <br /><br />
           • Use the Site or Service or any information obtained from the Site or Service in 
           order to harass, abuse, annoy, intimidate, threaten, disparage or harm another 
-          person, JustMediation, or the Site or Service.
+          person, JustMediationHub, or the Site or Service.
           <br /><br />
           • Use the Site or Service as part of any effort to compete with us or otherwise use 
           the Site or Service and/or the Content for any revenue-generating endeavor or 
@@ -301,20 +301,20 @@ export const TermsPage: React.FC<RouteComponentProps> = () => {
           As described in our Privacy Policy, Mediator-Client Communications (information, 
           including Contributions, exchanged with any mediator that you choose to engage 
           (or whom you are considering engaging) through private chat functions) will not be 
-          accessed, used or disclosed by JustMediation except as expressly set forth in the Privacy 
+          accessed, used or disclosed by JustMediationHub except as expressly set forth in the Privacy 
           Policy. You are responsible for evaluating whether these uses or disclosures have any 
           implications for any claim of privilege, including mediator-client and work product 
           privilege, regarding such information in your jurisdiction. You acknowledge and accept 
-          that JustMediation is not a provider of legal services, advice, or counseling and no 
-          mediator-client relationship exists between you and JustMediation. JustMediation is not 
+          that JustMediationHub is not a provider of legal services, advice, or counseling and no 
+          mediator-client relationship exists between you and JustMediationHub. JustMediationHub is not 
           responsible for any opinions, advice, or other legal communications that may 
           be provided, shared, or otherwise communicated via the Site or Service or any 
           consequences thereof. Mediators registered to use the Site or Service are not 
-          employees or agents of JustMediation and JustMediation makes no representation concerning 
+          employees or agents of JustMediationHub and JustMediationHub makes no representation concerning 
           the qualifications, competency, or skills of those mediators. Should you choose 
           to engage an mediator, you do so at your own risk and any terms or agreements you 
           may enter with such mediator, including relating to fee arrangements, are between 
-          you and your mediator and do not involve JustMediation in any way.
+          you and your mediator and do not involve JustMediationHub in any way.
         </p>
 
         <h2>THIRD-PARTY WEBSITES AND CONTENT</h2>
@@ -333,7 +333,7 @@ export const TermsPage: React.FC<RouteComponentProps> = () => {
           any Third Party Websites (including the advertising, products, services or other 
           material offered thereon) or Third Party Content that may be included, linked to, 
           used or installed on the Site or through the Service. You agree and acknowledge 
-          that JustMediation is not responsible for the legality, accuracy, or appropriateness of 
+          that JustMediationHub is not responsible for the legality, accuracy, or appropriateness of 
           such Third Party Websites or Third Party Content and shall not be responsible or 
           liable, directly or indirectly, for any harm, damage, or loss caused or alleged 
           to be caused by or in connection with the use of any such Third Party Websites 
@@ -343,7 +343,7 @@ export const TermsPage: React.FC<RouteComponentProps> = () => {
           the intellectual property rights of others. If you believe that any material available 
           on or through the Site or Service infringes upon any intellectual property right 
           owned or controlled by you, please immediately notify our Designated Copyright Agent 
-          in writing using the contact information provided below (a “Notification”). JustMediation 
+          in writing using the contact information provided below (a “Notification”). JustMediationHub 
           responds expeditiously to Notifications. If we remove content in response to your 
           Notification, a copy of your Notification will be sent to the person who posted or 
           stored the material addressed in the Notification. Please be advised that pursuant 
@@ -377,9 +377,9 @@ export const TermsPage: React.FC<RouteComponentProps> = () => {
           (6) a statement that the information in the Notification is accurate, and under 
           penalty of perjury, that the complaining party is the owner or authorized to act on 
           behalf of the owner of an exclusive right that is allegedly infringed upon. 
-          JustMediation has adopted and implements a policy that provides for termination in 
+          JustMediationHub has adopted and implements a policy that provides for termination in 
           appropriate circumstances of accounts of users who repeatedly infringe copyright or 
-          other intellectual property rights of JustMediation or others.
+          other intellectual property rights of JustMediationHub or others.
           <br /><br />
           Counter Notification
           <br /><br />
@@ -446,7 +446,7 @@ export const TermsPage: React.FC<RouteComponentProps> = () => {
           appropriate legal action, including without limitation pursuing civil, criminal, and 
           injunctive redress. After your account is terminated, information and content 
           previously provided by you will no longer be accessible through your account, but 
-          certain content may remain available and JustMediation may continue to use and store such 
+          certain content may remain available and JustMediationHub may continue to use and store such 
           information and content and it may also be used and stored by third parties to whom 
           it has been transferred through your use of the Site or Service.
         </p>  
@@ -654,11 +654,11 @@ export const TermsPage: React.FC<RouteComponentProps> = () => {
           information regarding use of the Site or Service, please contact us at:
           <br /><br />
           JusGlobal LLC d/b/a<br />
-          JustMediation One World Trade Center<br />
+          JustMediationHub One World Trade Center<br />
           285 Fulton Street 85th Floor | Suite 8500<br />
           New York City NY 10007 USA<br />
-          https://www.JustMediation.com<br />
-          mediator@JustMediation.com<br />
+          https://www.JustMediationHub.com<br />
+          mediator@JustMediationHub.com<br />
         </p>
       </div>
     </PolicyLayout>

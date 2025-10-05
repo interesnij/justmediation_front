@@ -254,7 +254,7 @@ export const LoginPage: React.FC<RouteComponentProps> = () => {
                       </Link>
                     </div>
                     <FormCheckbox name="keep" className="mt-2">
-                      Keep me signed into JustMediation
+                      Keep me signed into JustMediationHub
                     </FormCheckbox>
                     {error && (
                       <Error className="mt-3 text-center">{error}</Error>

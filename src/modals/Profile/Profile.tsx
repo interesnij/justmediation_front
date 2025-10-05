@@ -474,7 +474,7 @@ export const Profile: FC<IProps> = ({handleCancel}) => {
                     <div className="heading col-12 mt-3 mb-2">
                       Office Address
                       <span className="heading__desc text-gray ml-4">
-                        JustMediation will use this address to match you with potential
+                        JustMediationHub will use this address to match you with potential
                         clients in your proximity
                       </span>
                     </div> 
@@ -830,7 +830,7 @@ export const Profile: FC<IProps> = ({handleCancel}) => {
                     />
                   </div>
                   <div className="col-12 mt-3">
-                    *The amount shown under Fee Type is equivalent to the “composite rate.” Composite Rate = Mediator Legal Fees + Separate and Standalone 5% JustMediation Management Fee. This formula applies to hourly, flat, hourly, contingency, and other rates on our platform.
+                    *The amount shown under Fee Type is equivalent to the “composite rate.” Composite Rate = Mediator Legal Fees + Separate and Standalone 5% JustMediationHub Management Fee. This formula applies to hourly, flat, hourly, contingency, and other rates on our platform.
                   </div>
                 </div>
               </FolderExpandable>

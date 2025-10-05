@@ -20,12 +20,12 @@ export const ApplicationReceiveModal = ({ open, setOpen }: Props) => {
     >
       <div className="pb-4" style={{ width: 600 }}>
         <div className="text-black" style={{ fontSize: 18 }}>
-          JustMediation has received your application.
+          JustMediationHub has received your application.
         </div>
         <br />
         <div className="text-dark">
           The verification process of your application will take up to 5 days.
-          Please check your inbox for an email from JustMediation to verify your email
+          Please check your inbox for an email from JustMediationHub to verify your email
           in the meantime. If your application is approved, our team will guide
           you to set up your account.
         </div>

@@ -61,7 +61,7 @@ export const ChooseSubscription = ({
       <div className="col-md-6 d-flex">
         <img src={CheckImg} alt="hidden fees" />
         <span className="ml-2 my-auto">
-          No hidden fees – every JustMediation feature included
+          No hidden fees – every JustMediationHub feature included
         </span>
       </div>
       <div className="col-md-6 d-flex">
@@ -126,16 +126,16 @@ export const ChooseSubscription = ({
       <div className="col-12 mt-4">
         <div className="choose-subscription">
           <FeeDescription className="row ">
-            JustMediation clients are charged a composite rate for projects initiated on our platform.
+            JustMediationHub clients are charged a composite rate for projects initiated on our platform.
             <br />
             <br />
-            The composite rate is displayed on our platform at all times and is comprised of two separate fees: 1. Your legal fees and 2. a 5% JustMediation management fee payable by the client for the use of our platform.
+            The composite rate is displayed on our platform at all times and is comprised of two separate fees: 1. Your legal fees and 2. a 5% JustMediationHub management fee payable by the client for the use of our platform.
             <br />
             <br />
-            Composite Rate = Mediator Legal Fees + Separate and Standalone 5% JustMediation Management Fee.
+            Composite Rate = Mediator Legal Fees + Separate and Standalone 5% JustMediationHub Management Fee.
             <br />
             <br />
-            When a client receives a proposal on our platform and a lawyer's profile has a listed rate of $250 per hour, that is the composite rate that the client would be charged if the client engaged the lawyer for the project. It is comprised of the lawyer's legal fee and a separate and standalone JustMediation management fee. The same formula applies to flat, hourly, contingency, and other rates on our platform.
+            When a client receives a proposal on our platform and a lawyer's profile has a listed rate of $250 per hour, that is the composite rate that the client would be charged if the client engaged the lawyer for the project. It is comprised of the lawyer's legal fee and a separate and standalone JustMediationHub management fee. The same formula applies to flat, hourly, contingency, and other rates on our platform.
           </FeeDescription>
         </div>
       </div>

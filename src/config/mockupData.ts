@@ -213,7 +213,7 @@ export const chatMessageMockup: IChatMessage[] = [
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam at commodo orci, id elementum mauris. Vivamus eu justo non lacus convallis pulvinar. Sed volutpat eros sagittis arcu sagittis semper. ",
     attachments: [
       {
-        name: "JustMediation doc.pdf",
+        name: "JustMediationHub doc.pdf",
         type: "doc",
         source:
           "https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf",
@@ -221,7 +221,7 @@ export const chatMessageMockup: IChatMessage[] = [
         size: "2.1MB",
       },
       {
-        name: "JustMediation doc.mp3",
+        name: "JustMediationHub doc.mp3",
         source:
           "https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf",
         fileType: "MP3",
@@ -248,7 +248,7 @@ export const chatMessageMockup: IChatMessage[] = [
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam at commodo orci, id elementum mauris. Vivamus eu justo non lacus convallis pulvinar. Sed volutpat eros sagittis arcu sagittis semper. ",
     attachments: [
       {
-        name: "JustMediation doc.pdf",
+        name: "JustMediationHub doc.pdf",
         type: "doc",
         source:
           "https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf",
@@ -256,7 +256,7 @@ export const chatMessageMockup: IChatMessage[] = [
         size: "2.1MB",
       },
       {
-        name: "JustMediation doc.mp3",
+        name: "JustMediationHub doc.mp3",
         source:
           "https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf",
         fileType: "MP3",

@@ -56,7 +56,7 @@ export const EnterpriseOnboardingPage: React.FC<RouteComponentProps> = () => {
     <OnboardingLayout>
       <div className="onboarding-page">
         <div className="onboarding-page__container mt-4 d-flex flex-column">
-          <div className="subscription-title">Welcome to JustMediation</div>
+          <div className="subscription-title">Welcome to JustMediationHub</div>
           {data.role !== "Mediator" && <div className="mt-4 text-gray text-center">Step {step + 1} of 2</div>}
           <div className="subscription-heading mt-1 mb-4">
             {titleData[step]}

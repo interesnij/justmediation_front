@@ -97,7 +97,7 @@ export const VerificationForm = ({
       <div className="label">Step 2 of 2</div>
       <div className="title">Verification Form</div>
       <div className="desc mx-auto mt-3">
-        To become a verified mediator on JustMediation, we need to validate the
+        To become a verified mediator on JustMediationHub, we need to validate the
         following information. Everything you share is confidential.
       </div>
       <Formik

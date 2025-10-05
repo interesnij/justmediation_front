@@ -5,20 +5,20 @@ import { PolicyLayout } from "layouts";
 export const PolicyPage: React.FC<RouteComponentProps> = () => {
   return (
     <PolicyLayout>
-      <h1 className="mb-2 mt-0">JustMediation Privacy Policy</h1>
+      <h1 className="mb-2 mt-0">JustMediationHub Privacy Policy</h1>
       <div className="mt-0 text-center">Effective Date: April 28, 2023</div>
       <div className="d-flex flex-column flex-1 overflow-auto px-2">
         <h2>1) Introduction</h2>
         <p className="mt-0">
-          JustMediation (JustMediation,” “we,” or “us”) respects the privacy of our customers
+          JustMediationHub (JustMediationHub,” “we,” or “us”) respects the privacy of our customers
           and others who use our website, mobile applications, products, and
           services. This Privacy Policy applies to your access and use of the
           &nbsp;
-          <a href="https://jusmediation.com">https://jusmediation.com</a> website (the
-          “Site”) and the JustMediation application (the “Service”). This Privacy
-          Policy is incorporated into and is subject to the JustMediation Terms of Use,
+          <a href="https://justmediationhub.com">https://justmediationhub.com</a> website (the
+          “Site”) and the JustMediationHub application (the “Service”). This Privacy
+          Policy is incorporated into and is subject to the JustMediationHub Terms of Use,
           which can be found at: <a href="/terms-of-use">Terms of Use</a>. This
-          Privacy Policy is also incorporated into and is subject to JustMediation's
+          Privacy Policy is also incorporated into and is subject to JustMediationHub's
           Customer Subscription Agreement, as applicable: [insert link, if
           agreement will be available online]. Within the Service, we may
           provide additional notices related to the privacy or protection of
@@ -32,13 +32,13 @@ export const PolicyPage: React.FC<RouteComponentProps> = () => {
           to or can be used to identify you personally and includes things like
           your full name, your street address, your phone number, and your email
           address, and also includes definitions for “personal information” or
-          similar terms provided by data privacy laws applicable to JustMediation.
+          similar terms provided by data privacy laws applicable to JustMediationHub.
           Other than as provided for in this Privacy Policy, we won’t share or
           disclose this kind of information unless we get your permission. For
           purposes of this Privacy Policy, Personal Information does not include
           aggregated information, anonymous information or any other
           non-personally identifiable information, to the extent such is not
-          protected by data privacy laws applicable to JustMediation.
+          protected by data privacy laws applicable to JustMediationHub.
         </p>
         <p className="mt-0">
           This Privacy Policy describes the information that we request or
@@ -95,7 +95,7 @@ export const PolicyPage: React.FC<RouteComponentProps> = () => {
             We will not access, use or disclose these Mediator-Client
             Communications except as expressly set forth in this Privacy Policy.
             For additional information regarding Mediator-Client Communications,
-            please see our JustMediation Terms of Use.
+            please see our JustMediationHub Terms of Use.
           </li>
           <li>
             <i> Public Contributions.</i> When you register to use the Site or
@@ -105,7 +105,7 @@ export const PolicyPage: React.FC<RouteComponentProps> = () => {
             other media. Examples may include unsolicited comments and
             suggestions, Personal Information, questions concerning your legal
             needs, or other questions or feedback related to the Service (as
-            defined in our JustMediation Terms of Use, “Public Contributions”). In
+            defined in our JustMediationHub Terms of Use, “Public Contributions”). In
             connection with using these features, you may be asked to enable
             settings that allow other access to your device, such as access to
             your camera, microphone, or photos. You should be cautious about
@@ -362,9 +362,9 @@ export const PolicyPage: React.FC<RouteComponentProps> = () => {
             defend ourselves against any third party claims or allegations;
           </li>
           <li>
-            to protect JustMediation from fraudulent, abusive, or unlawful uses or
+            to protect JustMediationHub from fraudulent, abusive, or unlawful uses or
             activity and to protect the security or integrity of the Service and
-            the rights, property, or safety of JustMediation, our customers and users,
+            the rights, property, or safety of JustMediationHub, our customers and users,
             or others.
           </li>
         </ul>
@@ -374,7 +374,7 @@ export const PolicyPage: React.FC<RouteComponentProps> = () => {
           court order we receive, or by applicable law, or (ii) we believe that
           providing notice would be futile, ineffective, create a risk of injury
           or bodily harm to an individual or group, or create or increase a risk
-          of fraud upon JustMediation property, its users, and the Site and Service. In
+          of fraud upon JustMediationHub property, its users, and the Site and Service. In
           instances where we comply with legal requests without notice for these
           reasons, we will attempt to notify that user about the request after
           the fact where appropriate and where we determine in good faith that
@@ -398,7 +398,7 @@ export const PolicyPage: React.FC<RouteComponentProps> = () => {
           </li>
           <li>
             as necessary to investigate or defend against any claims of
-            illegality or wrongdoing (whether those claims relate to JustMediation's
+            illegality or wrongdoing (whether those claims relate to JustMediationHub's
             actions or to your actions when using the Site or Service), in which
             case we may access or use your information and disclose it to law
             enforcement, regulators, governmental authorities, courts, tax
@@ -408,7 +408,7 @@ export const PolicyPage: React.FC<RouteComponentProps> = () => {
             as necessary to protect the security or integrity of the Service
             (including in connection with any information technology issue or
             instance of compromised security) or the rights, property, or safety
-            of JustMediation's our customers and users, or others, in which case we may
+            of JustMediationHub's our customers and users, or others, in which case we may
             access or use your information and disclose it to anyone reasonably
             necessary to assist us with these goals, including our IT providers;
           </li>
@@ -417,7 +417,7 @@ export const PolicyPage: React.FC<RouteComponentProps> = () => {
             in connection with their provision of data hosting services; and
           </li>
           <li>
-            in the event JustMediation undertakes or is involved in any merger,
+            in the event JustMediationHub undertakes or is involved in any merger,
             acquisition, reorganization, sale of assets, bankruptcy, or
             insolvency event, then we may sell, transfer or share some or all of
             our assets, including your information in connection with such
@@ -433,11 +433,11 @@ export const PolicyPage: React.FC<RouteComponentProps> = () => {
             You may, of course, decline to share certain information with us, in
             which case we may not be able to provide to you some of the features
             and functionality of the Site and Service. You can limit the
-            information you provide to JustMediation. Participation in and interaction
+            information you provide to JustMediationHub. Participation in and interaction
             with various Site & Service features is voluntary.
           </li>
           <li>
-            Once you have registered for a JustMediation account, you may update,
+            Once you have registered for a JustMediationHub account, you may update,
             correct, or delete your profile information and preferences at any
             time by accessing your account preferences page through the Site or
             Service.
@@ -445,13 +445,13 @@ export const PolicyPage: React.FC<RouteComponentProps> = () => {
           <li>
             If you have not created an account and you would like for us to
             delete your information, please send us a request at{" "}
-            <a href="mailto:info@jusmediation.com">info@jusmediation.com</a>
+            <a href="mailto:info@justmediationhub.com">info@justmediationhub.com</a>
           </li>
           <li>
             If you do not wish to receive promotional communications, you can
             opt-out through links provided in email messages, by updating your
             account preferences, or by contacting us at{" "}
-            <a href="mailto:info@jusmediation.com">info@jusmediation.com</a>. This opt-out
+            <a href="mailto:info@justmediationhub.com">info@justmediationhub.com</a>. This opt-out
             will not apply to emails related to the completion of your
             registration, correction of user data, change of password, and other
             similar communications essential to your transactions. Your changes
@@ -466,7 +466,7 @@ export const PolicyPage: React.FC<RouteComponentProps> = () => {
           1798.83 permits you to request certain information regarding our
           disclosure of Personal Information to third parties for their direct
           marketing purposes. To make such a request, please send an email to{" "}
-          <a href="mailto:info@JustMediation.com">info@JustMediation.com</a>, or you may
+          <a href="mailto:info@JustMediationHub.com">info@JustMediationHub.com</a>, or you may
           contact us via regular mail at: One World Trade Center 285 Fulton
           Street 85th Floor Suite 8500 New York City NY 10007 USA.
           <p>
@@ -474,7 +474,7 @@ export const PolicyPage: React.FC<RouteComponentProps> = () => {
             (CCPA) provides California residents with additional rights related
             to data privacy. If you have any questions about this section or
             whether it applies to you, please contact us at{" "}
-            <a href="mailto:info@JustMediation.com">info@JustMediation.com</a>.
+            <a href="mailto:info@JustMediationHub.com">info@JustMediationHub.com</a>.
           </p>
           <p>
             Pursuant to the CCPA, upon making a verifiable request, California
@@ -501,7 +501,7 @@ export const PolicyPage: React.FC<RouteComponentProps> = () => {
                 Please note that you must verify your identity and request
                 before further action is taken by us. To do so, we will notify
                 you of what we require via email on{" "}
-                <a href="mailto:info@JustMediation.com">info@JustMediation.com</a>
+                <a href="mailto:info@JustMediationHub.com">info@JustMediationHub.com</a>
               </li>
             </ul>
           </p>
@@ -510,7 +510,7 @@ export const PolicyPage: React.FC<RouteComponentProps> = () => {
           rights under the CCPA. Consistent with California law, you may
           designate an authorized agent to make a request on your behalf. In
           order to designate an authorized agent Please contact us via email at
-          <a href="mailto:info@JustMediation.com">info@JustMediation.com</a> or call us on + 1
+          <a href="mailto:info@JustMediationHub.com">info@JustMediationHub.com</a> or call us on + 1
           212 220 6580].
         </p>
         <h2>6) Security</h2>
@@ -533,8 +533,8 @@ export const PolicyPage: React.FC<RouteComponentProps> = () => {
           We retain your information for as long as it is reasonably necessary
           and relevant for our operations, and/or to comply with legal or
           regulatory requirements, prevent fraud, resolve disputes, troubleshoot
-          problems, assist with any investigation, or enforce our JustMediation Terms
-          of Use or other agreements (including the JustMediation Customer Subscription
+          problems, assist with any investigation, or enforce our JustMediationHub Terms
+          of Use or other agreements (including the JustMediationHub Customer Subscription
           Agreement, as applicable). After removal, copies of information that
           you have posted may remain viewable in cached and archived pages or if
           other users have copied or stored such information.
@@ -542,8 +542,8 @@ export const PolicyPage: React.FC<RouteComponentProps> = () => {
         <h2>7) Other Important Information</h2>
         <h3>7.1) Visitors from Outside the United States</h3>
         <p>
-          The Site and Service are controlled and operated by JustMediation in the
-          United States and JustMediation may disclose information to third party
+          The Site and Service are controlled and operated by JustMediationHub in the
+          United States and JustMediationHub may disclose information to third party
           service providers that are located in any country or jurisdiction
           across the globe. As such, your Personal Information may be
           transferred, stored and processed outside of your home jurisdiction.
@@ -564,8 +564,8 @@ export const PolicyPage: React.FC<RouteComponentProps> = () => {
           you exercise such rights this may affect our ability to provide our
           products and services. For inquiries about your Personal Information,
           please contact us by e-mail at{" "}
-          <a href="mailto:info@JustMediation.com">info@JustMediation.com</a>, or through any
-          of the contact information provided below. While JustMediation will make
+          <a href="mailto:info@JustMediationHub.com">info@JustMediationHub.com</a>, or through any
+          of the contact information provided below. While JustMediationHub will make
           reasonable efforts to accommodate your request, we also reserve the
           right to impose certain restrictions and requirements on such
           requests, if allowed or required by applicable laws. Please note that
@@ -593,12 +593,12 @@ export const PolicyPage: React.FC<RouteComponentProps> = () => {
         buttons) that may allow a third party to collect information about you
         through their browser Cookies, even when you do not interact with the
         button. Information collected by a third party in this manner is subject
-        to that third party’s own data policies. JustMediation does not control and is
+        to that third party’s own data policies. JustMediationHub does not control and is
         not responsible for the content or privacy and data protection practices
         of third-party websites, applications, services, goods, or
         advertisements that may be linked to or otherwise incorporated into the
         Site or Service. If you link to or otherwise interact with third-party
-        content, you do so at your own risk. JustMediation does not endorse, recommend,
+        content, you do so at your own risk. JustMediationHub does not endorse, recommend,
         or make any representations or warranties regarding websites,
         applications, services, goods, or advertisements that may be linked to
         or otherwise incorporated into the Site or Service.
@@ -623,8 +623,8 @@ export const PolicyPage: React.FC<RouteComponentProps> = () => {
           age and without verifiable parental consent, then we will take the
           appropriate steps to delete this information. If you are a parent or
           guardian and discover that your child under 13 years of age has
-          obtained a JustMediation account or provided us with information, please
-          alert us at <a href="mailto:info@JustMediation.com">info@JustMediation.com</a> to
+          obtained a JustMediationHub account or provided us with information, please
+          alert us at <a href="mailto:info@JustMediationHub.com">info@JustMediationHub.com</a> to
           request that we delete the information from our systems.
         </p>
         <h3>8) Changes to this Privacy Policy</h3>
@@ -645,7 +645,7 @@ export const PolicyPage: React.FC<RouteComponentProps> = () => {
           Please contact us with any questions or comments about this Privacy
           Policy, your Personal Information, our use and disclosure practices,
           or your consent choices by e-mail{" "}
-          <a href="mailto:info@JustMediation.com">info@JustMediation.com</a> or mail at:
+          <a href="mailto:info@JustMediationHub.com">info@JustMediationHub.com</a> or mail at:
         </p>
         <p>
           JusGlobal LLC <br />

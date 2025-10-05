@@ -170,7 +170,7 @@ export const SearchOverviewPage: React.FunctionComponent<RouteComponentProps> = 
         <div className="py-4 find-search-page-bottom">
           <h2>Invite Your Mediator</h2>
           <FolderItem className="mt-4">
-            Add lawyers to your contacts. If the Lawyer is not registered in JustMediation, send him an invitation.
+            Add lawyers to your contacts. If the Lawyer is not registered in JustMediationHub, send him an invitation.
             <Button className="mt-2 green" theme="white" onClick={() => newMediatorContactModal.setOpen(true)}>
               Get started
             </Button> 

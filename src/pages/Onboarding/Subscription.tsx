@@ -14,7 +14,7 @@ const texts = [
   },
   {
     heading: "Set up your payment",
-    desc: "Access JustMediation dashboard as soon as you set up your payment.",
+    desc: "Access JustMediationHub dashboard as soon as you set up your payment.",
   },
 ];
 

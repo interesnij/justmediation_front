@@ -180,7 +180,7 @@ export const InvoiceDetailPage: React.FunctionComponent<RouteComponentProps> =
             </div>
             <FeeDescription>
               Notes:<br />
-              The total is equivalent to the “composite rate.” Composite Rate = Mediator Legal Fees + Separate and Standalone 5% JustMediation Management Fee.
+              The total is equivalent to the “composite rate.” Composite Rate = Mediator Legal Fees + Separate and Standalone 5% JustMediationHub Management Fee.
             </FeeDescription>
           </div>
         )}

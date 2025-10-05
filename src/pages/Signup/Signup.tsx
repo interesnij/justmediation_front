@@ -24,7 +24,7 @@ const accountData: AccountProps[] = [
   {
     title: "Law Firm",
     features: [
-      "No hidden fees – every JustMediation feature included",
+      "No hidden fees – every JustMediationHub feature included",
       "Safe & secure – only platform with patented blockchain technology",
       "End-to-end solution – only platform to provide an end-to-end solution for you & your clients",
       "Exceptional service for all – no tier-based service",
@@ -36,7 +36,7 @@ const accountData: AccountProps[] = [
 export const SignupPage: React.FC<RouteComponentProps> = () => {
   return (
     <CreateAccountLayout
-      title="JustMediation"
+      title="JustMediationHub"
       label="Sign Up with"
       desc="A legal practice management system for lawyers, paralegals and law firms who want an end-to-end solution that is easy to use and enhances their practice."
       feature="Features"

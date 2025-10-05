@@ -93,7 +93,7 @@ export const MEDIATOR_MENU = (userType: string, role?: string) =>{
     title: "Social",
     items: [
       {
-        label: "JustMediation News",
+        label: "JustMediationHub News",
         route: `/${userType}/news`,
         icon: NewsIco,
         activeIcon: NewsActiveIco,
@@ -166,7 +166,7 @@ export const PARALEGAL_MENU = [
     title: "Social",
     items: [
       {
-        label: "JustMediation News",
+        label: "JustMediationHub News",
         route: "/paralegal/news",
         icon: NewsIco,
         activeIcon: NewsActiveIco,
@@ -215,7 +215,7 @@ export const CLIENT_MENU = [
         activeIcon: ForumActiveIco,
       },
       {
-        label: "JustMediation News",
+        label: "JustMediationHub News",
         route: "/client/news",
         icon: NewsIco,
         activeIcon: NewsActiveIco,
@@ -314,7 +314,7 @@ export const SIGNUP_ACCOUNT_DATA = [
     label: "I am a",
     name: "Client",
     features: [
-      "Ask your legal questions on the JustMediation forum",
+      "Ask your legal questions on the JustMediationHub forum",
       "Get connected directly to qualified Mediators that fit your needs",
       "Targeted mediator searching yields precise results",
       "1-on-1 messaging with your mediator",

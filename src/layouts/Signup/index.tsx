@@ -13,7 +13,7 @@ export const SignupLayout = ({ children }: Props) => {
       <Link to="/">
         <img src={LogoImg} className="signup-page-layout__logo" alt="logo" />
       </Link>
-      <div className="signup-page-layout__title">Sign Up with JustMediation</div>
+      <div className="signup-page-layout__title">Sign Up with JustMediationHub</div>
       <div className="signup-page-layout__form">{children}</div>
     </div>
   );

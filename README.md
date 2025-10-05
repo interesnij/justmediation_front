@@ -1,4 +1,4 @@
-## justmediation Frontend
+## justmediationhub Frontend
 
 App build on [React](https://github.com/facebook/react) library with [CRA](https://github.com/facebook/create-react-app).
 

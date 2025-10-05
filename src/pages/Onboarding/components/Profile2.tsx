@@ -123,7 +123,7 @@ export const ProfileForm2 = ({ onNext, onBack, initData }: Props) => {
                 <div className="heading col-12 mt-3 mb-2">
                   Office Address
                   <span className="heading__desc ml-4">
-                    JustMediation will use this address to match you with potential
+                    JustMediationHub will use this address to match you with potential
                     clients in your proximity
                   </span>
                 </div>

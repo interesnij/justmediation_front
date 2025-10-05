@@ -35,7 +35,7 @@ export const uploadFiles = async (
     const res = await fetch(_url, {
       headers: { 
         //'Accept': 'application/json, application/xml, text/plain, text/html, *.*',
-        //Origin: "https://app.jusmediation.com",
+        //Origin: "https://app.justmediationhub.com",
       },
       method: 'POST',
       mode: "cors",
