@@ -41,8 +41,6 @@ export const SignupPage: React.FC<RouteComponentProps> = () => {
       desc="A legal practice management system for lawyers, paralegals and law firms who want an end-to-end solution that is easy to use and enhances their practice."
       feature="Features"
       features={[
-        "Practice management made easy",
-        "An end-to-end practice solution",
         "A means to grow your book and your practice",
       ]}
     >
