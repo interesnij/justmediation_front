@@ -34,24 +34,7 @@ const accountData: AccountProps[] = [
 ];
 
 export const SignupPage: React.FC<RouteComponentProps> = () => {
-  return (
-    <CreateAccountLayout
-      title="JustMediationHub"
-      label="Sign Up with"
-      desc="A legal practice management system for lawyers, paralegals and law firms who want an end-to-end solution that is easy to use and enhances their practice."
-      feature="Features"
-      features={[
-        "Practice management made easy",
-        "An end-to-end practice solution",
-        "A means to grow your book and your practice",
-      ]}
-    >
-      <div className="signup-page-account-type">Select Your Account Type</div>
-      {accountData.map((account, index) => (
-        <Account {...account} key={`${index}key`} />
-      ))}
-    </CreateAccountLayout>
-  );
+  
 };
 
 const Account = ({ label, title, features, route }: AccountProps) => (
