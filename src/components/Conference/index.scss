@@ -6,7 +6,7 @@
   top: 16px;
   right: 42%;
   padding: 12px 20px;
-  border-radius: 30px;
+  //border-radius: 30px;
   background: #26ad3a;
   color: #fff;
   cursor: pointer;
@@ -39,7 +39,7 @@
   
   .vxt-widget-fullscreen-on .vxt-conference-attendees .SidebarSpeaker .video-frame.screen-share{
     border-color: var(--grey-dark);
-    background: #111;
+    background: #171717;
   } 
 
   .vxt-conference-attendees .SidebarSpeaker .active-speaker .video-frame .fullscreen-screenshare{

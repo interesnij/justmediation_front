@@ -17,7 +17,7 @@
         background: var(--green-dark);
       }
       .SidebarTiles .tiles-list{
-        background: #111 !important;
+        background: #171717 !important;
       }
       .layout-container{
         display: none;
@@ -25,12 +25,12 @@
     }
     .attendees-list,
     .attendees-settings{
-      background-color: #111;
+      background-color: #171717;
       border-left: 2px solid var(--grey-dark);
     }
   
     .attendees-chat {
-      background-color: #111;
+      background-color: #171717;
       border-left: 2px solid var(--grey-dark);
       .chat-container-myself div{
         width: 100%;
@@ -54,7 +54,7 @@
   }
   .settings-preconfig{ 
     .content{
-      background: #111 !important;
+      background: #171717 !important;
       .video{
         border:none !important;
       }

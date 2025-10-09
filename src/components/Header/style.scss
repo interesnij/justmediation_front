@@ -1,7 +1,7 @@
 .header{
   display: flex;
   justify-content: space-between;
-  background: #111111;
+  background: #171717;
   color: white;
   height: 80px;
   padding: 0 40px;
@@ -45,7 +45,7 @@
     }
 
     .menu-button{
-      border-radius: 24px;
+      //border-radius: 24px;
       border: none;
       text-align: center;
       cursor: pointer;
@@ -117,7 +117,7 @@
     }
   }
   .start-timer{
-    border-radius: 24px;
+    //border-radius: 24px;
     border: none;
     text-align: center;
     cursor: pointer;
