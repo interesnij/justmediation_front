@@ -17,7 +17,6 @@ const accountData: AccountProps[] = [
     features: [
       "Powerful and user-friendly tools for lead generation, lead management and conversion",
       "Open forum where legal professionals answer people’s questions about the law",
-      "Constant, secure mediator/client communication on open matters",
     ],
     route: "/auth/register/mediator",
   },
@@ -25,7 +24,6 @@ const accountData: AccountProps[] = [
     title: "Law Firm",
     features: [
       "No hidden fees – every JustMediationHub feature included",
-      "Safe & secure – only platform with patented blockchain technology",
       "End-to-end solution – only platform to provide an end-to-end solution for you & your clients",
       "Exceptional service for all – no tier-based service",
     ],

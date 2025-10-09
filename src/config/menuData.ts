@@ -317,7 +317,6 @@ export const SIGNUP_ACCOUNT_DATA = [
       "Ask your legal questions on the JustMediationHub forum",
       "Get connected directly to qualified Mediators that fit your needs",
       "Targeted mediator searching yields precise results",
-      "1-on-1 messaging with your mediator",
     ],
     id: "client",
   },
@@ -327,7 +326,6 @@ export const SIGNUP_ACCOUNT_DATA = [
     features: [
       "Powerful and user-friendly tools for lead generation, lead management and conversion",
       "Open forum where legal professionals answer people’s questions about the law",
-      "Constant, secure mediator/client communication on open matters",
     ],
     id: "mediator",
   },
@@ -337,7 +335,6 @@ export const SIGNUP_ACCOUNT_DATA = [
     features: [
       "Team collaboration",
       "Selling point placeholder1",
-      "Selling point placeholder2",
     ],
     id: "enterprise",
   },

@@ -42,7 +42,6 @@ export const CreateAccountPage = ({ onNext, initData }: Props) => {
       feature="Features"
       features={[
         "Powerful and user-friendly tools for lead generation, lead management and conversion",
-        "Open forum where legal professionals answer people’s questions about the law",
         "Constant, secure mediator/client communication on open matters",
       ]}
       backRoute="/auth/register"
