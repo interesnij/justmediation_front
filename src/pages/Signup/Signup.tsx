@@ -34,7 +34,7 @@ const accountData: AccountProps[] = [
 ];
 
 export const SignupPage: React.FC<RouteComponentProps> = () => {
-  
+  return "";
 };
 
 const Account = ({ label, title, features, route }: AccountProps) => (
