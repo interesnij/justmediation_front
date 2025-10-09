@@ -23,7 +23,6 @@ const accountData: AccountProps[] = [
   {
     title: "Law Firm",
     features: [
-      "No hidden fees – every JustMediationHub feature included",
       "End-to-end solution – only platform to provide an end-to-end solution for you & your clients",
       "Exceptional service for all – no tier-based service",
     ],
