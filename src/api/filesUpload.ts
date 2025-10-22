@@ -30,7 +30,7 @@ export const uploadFiles = async (
       console.log("upload", files[i]);
       formData.append("file", files[i]);
     }
-    const _url = 'https://k.juslaw.site/classic_create/';
+    const _url = 'https://upload.justmediationhub.com/classic_create/';
     //const token = localStorage.getItem("key");
     const res = await fetch(_url, {
       headers: { 

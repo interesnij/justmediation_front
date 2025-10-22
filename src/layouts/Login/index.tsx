@@ -1,6 +1,6 @@
 import React from "react";
 import { Link, navigate } from "@reach/router";
-import LogoImg from "assets/images/logo.svg";
+import LogoImg from "assets/images/fulllogo.png";
 
 import "./style.scss";
 interface Props {

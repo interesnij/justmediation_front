@@ -1,6 +1,6 @@
 import React from "react";
 import { navigate } from "@reach/router";
-import LogoImg from "assets/images/logo.svg";
+import LogoImg from "assets/images/fulllogo.png";
 import styled, { css } from "styled-components";
 import {useAuthContext} from "../../contexts";
 import { isMobile } from 'react-device-detect';

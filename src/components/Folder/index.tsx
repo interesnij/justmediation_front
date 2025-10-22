@@ -22,10 +22,10 @@ export const Folder = ({
 }: Props) => {
   return (
     <div className={classNames("folder-control", className)}>
-      <div className="folder-control__header">
+      <div className="folder-control__header2">
         <div className="d-flex">
-          <div className="folder-control__heading">{label}</div>
-          <div className="folder-control__heading-after"></div>
+          <div className="folder-control__heading2">{label}</div>
+          <div className="folder-control__heading-after2"></div>
         </div>
         <div className="d-flex">
           {onPlus && (
