@@ -89,29 +89,29 @@ export const MEDIATOR_MENU = (userType: string, role?: string) =>{
     title: "dashboard",
     items: dashboardItems
   },
-  {
-    title: "Social",
-    items: [
-      {
-        label: "JustMediationHub News",
-        route: `/${userType}/news`,
-        icon: NewsIco,
-        activeIcon: NewsActiveIco,
-      },
-      {
-        label: "Forums",
-        route: `/${userType}/forums`,
-        icon: ForumIco,
-        activeIcon: ForumActiveIco,
-      },
-      {
-        label: "Industry Contacts",
-        route: `/${userType}/contacts`,
-        icon: IndustryIco,
-        activeIcon: IndustryActiveIco,
-      },
-    ],
-  },
+  //{
+  //  title: "Social",
+  //  items: [
+  //    {
+  //      label: "JustMediationHub News",
+  //      route: `/${userType}/news`,
+  //      icon: NewsIco,
+  //      activeIcon: NewsActiveIco,
+  //   },
+  //    {
+  //      label: "Forums",
+  //      route: `/${userType}/forums`,
+  //      icon: ForumIco,
+  //      activeIcon: ForumActiveIco,
+  //    },
+  //    {
+  //      label: "Industry Contacts",
+  //      route: `/${userType}/contacts`,
+  //      icon: IndustryIco,
+  //      activeIcon: IndustryActiveIco,
+  //    },
+  //  ],
+  //},
 ];}
 
 export const PARALEGAL_MENU = [
@@ -242,7 +242,7 @@ export const ACCOUNT_MENU = (userType: string) => [
     route: `/${userType}/help`,
   },
   {
-    label: "My vault",
+    label: "My Documents",
     route: `/${userType}/vault`,
   },
 ];

@@ -32,7 +32,7 @@ export const VaultNewFolderModal = ({
 
   return (
     <Modal
-      title="New folder (My Vault)"
+      title="New Documents folder"
       open={open}
       setOpen={(param) => {
         setOpen(param);

@@ -73,7 +73,7 @@ export const MyVaultModal = ({ open, setOpen }: Props) => {
     const [folders, setFolders] = useState<any[]>([
       {
         id: undefined,
-        title: "My Vault",
+        title: "My Documents",
       },
     ]);
   
@@ -161,7 +161,7 @@ export const MyVaultModal = ({ open, setOpen }: Props) => {
 
   return (
     <SideModal
-      title="My Vault"
+      title="My Documents"
       size="large"
       open={open}
       setOpen={setOpen}
@@ -170,7 +170,7 @@ export const MyVaultModal = ({ open, setOpen }: Props) => {
         <div className="documents-page__bar-input">
           <SearchBar
             icon="search"
-            placeholder={`Search in My Vault`}
+            placeholder={`Search in My Documents`}
             {...search}
           />
         </div>

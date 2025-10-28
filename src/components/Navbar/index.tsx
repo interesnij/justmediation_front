@@ -1,7 +1,7 @@
 import React from "react";
 import { Link, useLocation } from "@reach/router";
 import classNames from "classnames";
-import LogoImg from "assets/images/fulllogo.png";
+import LogoImg from "assets/images/111.jpg";
 import { NavMenuItem } from "types"; 
 import "./style.scss";
 import {useContextSubscriptionAccess} from "contexts";
@@ -51,19 +51,6 @@ export const Navbar = ({ menuData, baseUrl }: Props) => {
                   </Link>
                 ); 
               })}
-              <Link
-                    to="//justlaw.network/"
-                    key=""
-                    target={"_blank"}
-                    rel="noopener noreferrer"
-                    className={classNames(
-                      "navbar__item ripple-effect ripple-effect-to-right"
-                    )}
-                  > 
-                  <img src="/nav_clients.svg" alt="img" />
-                  <span>{"Network"}</span>
-              </Link>
-
             </div>
           </div>
         );

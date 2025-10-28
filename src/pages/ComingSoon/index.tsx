@@ -1,6 +1,6 @@
 import React from "react";
 import { RouteComponentProps } from "@reach/router";
-import LogoImg from "assets/images/fulllogo.png";
+import LogoImg from "assets/images/111.jpg";
 import "./style.scss";
 export const ComingSoon: React.FunctionComponent<RouteComponentProps> = () => {
   return (

@@ -30,7 +30,7 @@ const menuData = [
     id: "help",
   },
   {
-    title: "My Vault",
+    title: "My Documents",
     id: "vault",
   },
 ];

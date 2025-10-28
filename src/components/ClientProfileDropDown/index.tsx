@@ -14,7 +14,7 @@ const menuData = [
     id: "settings",
   },
   {
-    title: "My Vault",
+    title: "My Documents",
     id: "vault",
   },
   {
