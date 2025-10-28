@@ -158,7 +158,7 @@ export const SearchOverviewPage: React.FunctionComponent<RouteComponentProps> = 
         )}
 
         <div className="py-4 find-search-page-bottom">
-          <h2>Can't find a lawyer?</h2>
+          <h2>Can't find a mediator?</h2>
           <FolderItem className="mt-4">
             Find topics, answers, or even ask your own question in our Forums section.
             <Button className="mt-2 green" theme="white" onClick={() => navigate(`/client/forums`)}>

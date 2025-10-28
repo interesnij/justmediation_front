@@ -1,7 +1,7 @@
 import React from "react";
 import { Link, useLocation } from "@reach/router";
 import classNames from "classnames";
-import LogoImg from "assets/images/111.jpg";
+import LogoImg from "assets/images/grayscale_transparent.png";
 import { NavMenuItem } from "types"; 
 import "./style.scss";
 import {useContextSubscriptionAccess} from "contexts";

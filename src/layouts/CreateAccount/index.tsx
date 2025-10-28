@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "@reach/router";
 import { LinkButton } from "components";
-import LogoImg from "assets/images/111.jpg";
+import LogoImg from "assets/images/grayscale_transparent.png";
 import "./style.scss";
 
 interface Props {

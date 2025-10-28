@@ -113,7 +113,7 @@ export const FormSelect: React.FC<Props> = ({
           {isLoading ? (
             <ClipLoader
               size={40}
-              color="rgba(0,0,0,.6)"
+              color="#90ee90"
               css={css`
                 display: block;
                 margin: 20px auto;

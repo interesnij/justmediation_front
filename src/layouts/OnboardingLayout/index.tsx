@@ -2,7 +2,7 @@ import React from "react";
 import { Link, navigate } from "@reach/router";
 import classNames from "classnames";
 import { useAuthContext } from "contexts";
-import LogoImg from "assets/images/111.jpg";
+import LogoImg from "assets/images/grayscale_transparent.png";
 import UsersImg from "assets/icons/users.svg";
 import DropDownIcon from "assets/icons/profile_dropdown.svg";
 

@@ -288,7 +288,7 @@ export const DocumentDetailModal = ({
                         margin: auto;
                       `}
                       size={32}
-                      color={"rgba(0, 0, 0, 0.8)"}
+                      color={"#90ee90"}
                     />
                   </div>
                 ) : mediatorsData &&

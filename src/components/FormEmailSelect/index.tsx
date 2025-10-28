@@ -179,7 +179,7 @@ export const FormEmailSelect: React.FC<Props> = ({
                   margin: auto;
                 `}
                 size={32}
-                color={"rgba(0, 0, 0, 0.8)"}
+                color={"#90ee90"}
               />
             </div>
           ) : data && data?.length > 0 ? (
