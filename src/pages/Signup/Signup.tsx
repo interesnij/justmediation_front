@@ -65,14 +65,17 @@ export const SignupPage: React.FC<RouteComponentProps> = () => {
       ]}
     >
       <div className="signup-page-account-type">Select Your Account Type</div>
+      <div>
       {accountData.map((account, index) => (
         <Account {...account} key={`${index}key`} />
       ))}
+      </div>
     </CreateAccountLayout>
   );
 };
 
 const Account = ({ label, title, features, route }: AccountProps) => (
+  
   <a href={route} className="signup-page-account">
     <div className="signup-page-account__label">{label}</div>
     <div className="signup-page-account__title">{title}</div>
@@ -85,4 +88,5 @@ const Account = ({ label, title, features, route }: AccountProps) => (
       ))}
     </ul>
   </a>
+  
 );
