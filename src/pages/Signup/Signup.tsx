@@ -65,7 +65,7 @@ export const SignupPage: React.FC<RouteComponentProps> = () => {
       ]}
     >
       <div className="signup-page-account-type">Select Your Account Type</div>
-      <div display="flex">
+      <div className="d-flex">
       {accountData.map((account, index) => (
         <Account {...account} key={`${index}key`} />
       ))}
