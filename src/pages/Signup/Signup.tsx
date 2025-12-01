@@ -13,18 +13,41 @@ interface AccountProps {
 const accountData: AccountProps[] = [
   {
     label: "I am an",
-    title: "Mediator",
+    title: "Mediator / Arbitrator",
     features: [
-      "Powerful and user-friendly tools for lead generation, lead management and conversion",
-      "Open forum where legal professionals answer people’s questions about the law",
+      "Full-service platform to run the entire mediation or arbitration process",
+      "Patented AI-driven researh tools to prepare, analyted and structure matters",
+      "Secure professional environment for mamaging parties, documents; and outcomes",
     ],
     route: "/auth/register/mediator",
   },
   {
+    label: "We are a",
     title: "Law Firm",
     features: [
-      "End-to-end solution – only platform to provide an end-to-end solution for you & your clients",
-      "Exceptional service for all – no tier-based service",
+      "End-to-end solution for your practice and your clients",
+      "AI-driven researh and structured workflows to support mediation andiibror-matters",
+      "Exceptional, uniform service for all clients - no tiered limititions", 
+    ],
+    route: "/auth/register/enterprise",
+  },
+  {
+    label: "I am an",
+    title: "Attorney",
+    features: [
+      "A trusted environment where you and your clients feel fully supported",
+      "Purpose-build platform that incorporates mediation and arbitration workflows",
+      "Patented AI-driven researh tools to enhanse case preparation and streamline dispute resolution",
+    ],
+    route: "/auth/register/mediator",
+  },
+  {
+    label: "We are a",
+    title: "Corporate",
+    features: [
+      "Invite your prefered mediator or arbitrator to conduct internal or external dispute resolution",
+      "Secure, compilant environment failiored for organizational conflict management",
+      "AI supported insight and structured workflows to ensure clarity, consistency, and officietn outcomes", 
     ],
     route: "/auth/register/enterprise",
   },
