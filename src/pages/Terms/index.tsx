@@ -108,7 +108,7 @@ export const TermsPage: React.FC<RouteComponentProps> = () => {
           other software application stores or markets. Each app store may have its own terms 
           and conditions to which you must agree before downloading an app from the store. If 
           you choose to download the JustMediationHub application from an app store or market, you 
-          acknowledge that you have reviewed and accepted the terms of service applicable to 
+          acknowledge that you have reviewed and accepted the Terms of Use applicable to 
           such store or market. If you download the JustMediationHub application from Apple’s app store, 
           you acknowledge and agree that:
           <br /><br />
@@ -119,7 +119,7 @@ export const TermsPage: React.FC<RouteComponentProps> = () => {
             <br /><br />
             • You will use the JustMediationHub application only on an Apple-branded product that you 
             own or control and as permitted by the “Usage Rules” set forth in the Apple App 
-            Store Terms of Service.
+            Store Terms of Use.
             <br /><br />
             • JustMediationHub is responsible for any maintenance and support services with respect to 
             JustMediationHub. Apple has no obligation whatsoever to furnish any maintenance and support 

@@ -127,12 +127,8 @@ export const OtherForm = ({ onBack, initData }: Props) => {
                 <LinkButton onClick={onBack}>Go Back</LinkButton>
                 <div className="ml-auto">
                   By submitting, you acknowledge that you have read the{" "}
-                  <a href="/privacy-policy" target="_blank" rel="noreferrer">
-                    Privacy Policy
-                  </a>{" "}
-                  and agree to the{" "}
                   <a href="/terms-of-use" target="_blank" rel="noreferrer">
-                    Terms of Service
+                    Terms of Use
                   </a>
                   .
                 </div>

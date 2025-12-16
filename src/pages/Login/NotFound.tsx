@@ -33,12 +33,8 @@ export const NotFoundPage: React.FC<RouteComponentProps> = () => {
       </div>
       <div className="login-page__footer mb-auto">
         <span>Before logging in, you can read our</span>&nbsp;
-        <a href="/privacy-policy" target="_blank" rel="noreferrer">
-          Privacy Policy
-        </a>
-        &nbsp; <span>and</span> &nbsp;
         <a href="/terms-of-use" target="_blank" rel="noreferrer">
-          Terms of Service
+          Terms of Use
         </a>
       </div>
     </LoginLayout>
