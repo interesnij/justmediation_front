@@ -21,7 +21,7 @@ import {
   FormStateSelect,
   FormCitySelect,
 } from "components";
-import { validatePhone } from "helpers";
+import { acceptFileTypes, validatePhone } from "helpers";
 import { EnterpriseRegisterDto } from "types";
 import { useModal } from "hooks";
 import { registerEnterprise } from "api";
