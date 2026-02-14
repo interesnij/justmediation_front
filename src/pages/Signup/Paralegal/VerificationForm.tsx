@@ -263,7 +263,6 @@ export const VerificationForm = ({
                 <Button
                   buttonType="submit"
                   className="ml-auto"
-                  disabled={hasChanged || hasErrors}
                   isLoading={isSubmitting}
                 >
                   Next

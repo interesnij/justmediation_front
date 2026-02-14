@@ -218,7 +218,6 @@ export const AdditionalInfoPage = ({ onBack, initData }: Props) => {
                 <Button
                   className="ml-auto"
                   isLoading={isSubmitting}
-                  disabled={hasChanged || hasErrors}
                   buttonType="submit"
                 >
                   Sign Up

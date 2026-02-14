@@ -314,7 +314,6 @@ export const VerificationForm = ({ initData, onBack }: Props) => {
                 <Button
                   className="ml-auto"
                   isLoading={isSubmitting}
-                  disabled={hasChanged || hasErrors}
                   buttonType="submit"
                 >
                   Next

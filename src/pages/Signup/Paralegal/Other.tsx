@@ -134,7 +134,6 @@ export const OtherForm = ({ onBack, initData }: Props) => {
                 </div>
                 <Button
                   className="ml-auto"
-                  disabled={hasChanged || hasErrors}
                   isLoading={isSubmitting}
                   buttonType="submit"
                 >
