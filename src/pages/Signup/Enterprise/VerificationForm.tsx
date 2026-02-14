@@ -10,6 +10,7 @@ import {
   FormInput,
   Folder,
   FolderItem,
+  FormUpload,
   FormSelect,
   FormRadio,
   Button,
@@ -301,6 +302,22 @@ export const VerificationForm = ({ initData, onBack }: Props) => {
                       </div>
                     </div>
                 </div> 
+
+
+                <Folder
+                className="mt-4"
+                label="Attach your Bar Admission Document, Resume, and Client List for Verification"
+              >
+                <FolderItem>
+                  <FormUpload
+                    label=""
+                    buttonLabel="Select from computer"
+                    name="registration_attachments"
+                    isRequired
+                    acceptFileTypes={acceptFileTypes}
+                  />
+                </FolderItem>
+              </Folder>
 
               <SignupBar>
                 <LinkButton onClick={onBack}>Go Back</LinkButton>
