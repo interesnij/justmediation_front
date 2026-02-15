@@ -49,7 +49,7 @@ const accountData: AccountProps[] = [
       "Secure, compilant environment failiored for organizational conflict management",
       "AI supported insight and structured workflows to ensure clarity, consistency, and officietn outcomes", 
     ],
-    route: "/auth/register/enterprise",
+    route: "/auth/register/client",
   },
 ];
 
