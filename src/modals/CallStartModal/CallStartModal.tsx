@@ -52,7 +52,7 @@ export const CallStartModal = ({
           <Button
             buttonType="button"
             className={classNames("ml-auto link_to_conf")}
-            theme="white" 
+            theme="green" 
             size="large"
           >
             Start Call
