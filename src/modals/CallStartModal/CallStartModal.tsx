@@ -54,7 +54,6 @@ export const CallStartModal = ({
             to="//video.justmediationhub.com/"
             target={"_blank"}
             rel="noopener noreferrer"
-            size="large"
           >
             Start Call
           </Link>
