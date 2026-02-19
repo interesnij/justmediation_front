@@ -1,6 +1,7 @@
 import React from "react";
 import { Modal, Button } from "components";
 import "./style.scss"
+import Link from "@reach/router";
 
 interface Props {
   open: boolean;
