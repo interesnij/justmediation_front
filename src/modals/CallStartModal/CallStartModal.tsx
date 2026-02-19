@@ -42,7 +42,6 @@ export const CallStartModal = ({
         <div className="d-flex mt-2">
           <Button
             buttonType="button"
-            className="ml-auto"
             theme="white" 
             size="large"
             onClick={() => setOpen(false)}
