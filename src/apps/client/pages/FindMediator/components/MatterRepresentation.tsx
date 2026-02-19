@@ -58,7 +58,7 @@ export const MatterRepresentation = ({
                     Get Proposals
                   </div>
                   <div className="representation-page--item-desc">
-                    JustLaw matches you with mediators most qualified to handle
+                    JustMediationHub matches you with mediators most qualified to handle
                     your specific legal matter. Collect and compare prices,
                     fees, proposals, and profiles.
                   </div>
