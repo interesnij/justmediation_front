@@ -47,14 +47,16 @@ export const CallStartModal = ({
             onClick={() => setOpen(false)}
           >
             Cancel
-          </Button>
-          <Button
+          </Button> 
+          <Link
             className="ml-3"
-            onClick={handleConfirm}
+            to="//video.justmediationhub.com/"
+            target={"_blank"}
+            rel="noopener noreferrer"
             size="large"
           >
             Start Call
-          </Button>
+          </Link>
         </div>
       </div>
     </Modal>
