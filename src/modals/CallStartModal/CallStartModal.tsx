@@ -1,7 +1,7 @@
 import React from "react";
 import { Modal, Button } from "components";
 import "./style.scss"
-import { Link } from "@reach/router";
+import classNames from "classnames";
 
 interface Props {
   open: boolean;
@@ -43,7 +43,7 @@ export const CallStartModal = ({
           <Button
             buttonType="button"
             className="ml-auto"
-            theme="white"
+            theme="white" 
             size="large"
             onClick={() => setOpen(false)}
           >
@@ -52,7 +52,7 @@ export const CallStartModal = ({
           <Button
             buttonType="button"
             className={classNames("ml-auto link_to_conf")}
-            theme="white"
+            theme="white" 
             size="large"
           >
             Start Call
