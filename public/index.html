@@ -125,35 +125,15 @@
     on('body', 'click', '.input__search', function (e) {
       this.parentElement.previousElementSibling.classList.add("active");
       return
-    })
-  </script>
-  <!--
-    
-    <script>
-      window.intercomSettings = {
-        //rzwt6elb
-        app_id: "zgdkbiyq",
-        custom_launcher_selector: "#intercom-btn",
-      };
-    </script>
-    <script>
-    // We pre-filled your app ID in the widget URL: 'https://widget.intercom.io/widget/zgdkbiyq'
-    (function(){var w=window;var ic=w.Intercom;if(typeof ic==="function"){ic('reattach_activator');ic('update',w.intercomSettings);}else{var d=document;var i=function(){i.c(arguments);};i.q=[];i.c=function(args){i.q.push(args);};w.Intercom=i;var l=function(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://widget.intercom.io/widget/zgdkbiyq';var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);};if(document.readyState==='complete'){l();}else if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})();
-    function on(elSelector, eventName, selector, fn) {var element = document.querySelector(elSelector);element.addEventListener(eventName, function(event) {var possibleTargets = element.querySelectorAll(selector);var target = event.target;for (var i = 0, l = possibleTargets.length; i < l; i++) {var el = target;var p = possibleTargets[i];while (el && el !== element) {if (el === p) {return fn.call(p, event);}el = el.parentNode;}}});};
-
-    //cvc = document.getElementsByName('cvc')[0];
-    //cardnumber = document.getElementsByName('cardnumber')[0];
-    //exp_date = document.getElementsByName('exp-date')[0];
-    
-    on('body', 'click', ".InputElement", function(event) {
-      console.log(event);
-      console.log(this);
-      if (this.name == "cvc") {
-        this.style.color = "white"
-      }
-      
     });
-    -->
+
+    function openInNewTab(url) {
+      window.open(url, '_blank').focus();
+    }
+    on('body', 'click', '.link_to_conf', function (e) {
+      e.preventDefault();
+      openInNewTab("https://video.justmediationhub.com/");
+    });
   </script>
 </body>
 

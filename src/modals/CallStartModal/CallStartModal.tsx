@@ -49,14 +49,14 @@ export const CallStartModal = ({
           >
             Cancel
           </Button> 
-          <Link
-            className="ml-3"
-            to="//video.justmediationhub.com/"
-            target={"_blank"}
-            rel="noopener noreferrer"
+          <Button
+            buttonType="button"
+            className={classNames("ml-auto link_to_conf")}
+            theme="white"
+            size="large"
           >
             Start Call
-          </Link>
+          </Button>
         </div>
       </div>
     </Modal>
