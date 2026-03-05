@@ -19,7 +19,7 @@ const accountData: AccountProps[] = [
       "Patented AI-driven researh tools to prepare, analyted and structure matters",
       "Secure professional environment for mamaging parties, documents; and outcomes",
     ],
-    route: "/auth/register/mediator",
+    route: "#mediator_register",
   },
   {
     label: "We are a",
@@ -29,7 +29,7 @@ const accountData: AccountProps[] = [
       "AI-driven researh and structured workflows to support mediation andiibror-matters",
       "Exceptional, uniform service for all clients - no tiered limititions", 
     ],
-    route: "/auth/register/enterprise",
+    route: "#enterprise_register",
   },
   {
     label: "I am an",
@@ -39,7 +39,7 @@ const accountData: AccountProps[] = [
       "Purpose-build platform that incorporates mediation and arbitration workflows",
       "Patented AI-driven researh tools to enhanse case preparation and streamline dispute resolution",
     ],
-    route: "/auth/register/mediator",
+    route: "#mediator_register",
   },
   {
     label: "We are a",
@@ -49,7 +49,7 @@ const accountData: AccountProps[] = [
       "Secure, compilant environment failiored for organizational conflict management",
       "AI supported insight and structured workflows to ensure clarity, consistency, and officietn outcomes", 
     ],
-    route: "/auth/register/client",
+    route: "#client_register",
   },
 ];
 
