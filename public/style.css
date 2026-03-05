@@ -31,11 +31,13 @@
 .this_fullscreen_hide {
     cursor: pointer;
     position: absolute;
-    right: -17px;
+    right: 7%;
     margin: 10px;
-    top: 0;
+    top: 60px;
     z-index: 500;
     color: white;
+    width: 30px;
+    height: 30px;
 }
 
 #fullscreen_loader {
