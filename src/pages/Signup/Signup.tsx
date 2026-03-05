@@ -39,7 +39,7 @@ const accountData: AccountProps[] = [
       "Purpose-build platform that incorporates mediation and arbitration workflows",
       "Patented AI-driven researh tools to enhanse case preparation and streamline dispute resolution",
     ],
-    route: "#mediator_register",
+    route: "#attorney_register",
   },
   {
     label: "We are a",
