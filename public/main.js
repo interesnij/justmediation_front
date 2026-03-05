@@ -15,13 +15,13 @@ function on(elSelector, eventName, selector, fn) {
         }
     });
 }
-on('body', 'click', '.select-control__menu-item', function() {
+on('#root', 'click', '.select-control__menu-item', function() {
     this.parentElement.style.opacity = "0";
     this.parentElement.style.visibility = "hidden";
     this.parentElement.previousElementSibling.classList.remove("active");
 })
 
-on('body', 'click', '.select-control__main', function() {
+on('#root', 'click', '.select-control__main', function() {
     block = this.nextElementSibling;
     if (this.classList.contains("active")) {
         this.classList.remove("active");
@@ -48,7 +48,7 @@ on('body', 'click', '.select-control__main', function() {
 
     console.log('click');
 });
-on('body', 'input', '.input__search', function() {
+on('#root', 'input', '.input__search', function() {
     val = this.value;
     blockList = this.parentElement.querySelectorAll(".select-control__menu-item");
     for (var i = 0; i < blockList.length; i++) {
@@ -68,7 +68,7 @@ on('body', 'input', '.input__search', function() {
         }
     }
 })
-on('body', 'click', '.input__search', function(e) {
+on('#root', 'click', '.input__search', function(e) {
     this.parentElement.previousElementSibling.classList.add("active");
     return
 });
@@ -76,7 +76,7 @@ on('body', 'click', '.input__search', function(e) {
 function openInNewTab(url) {
     window.open(url, '_blank').focus();
 }
-on('body', 'click', '.link_to_conf', function(e) {
+on('#root', 'click', '.link_to_conf', function(e) {
     e.preventDefault();
     openInNewTab("https://video.justmediationhub.com/");
 });
@@ -158,12 +158,12 @@ function create_fullscreen(html) {
 };
 
 attorney_reg = '<form class="js_form"></form><div class="create-account-layout"><div class="create-account-layout__content"><div class="my-auto d-flex flex-column form_step_container" data-step="1"><div class="create-account-layout__form mx-auto"><div class="step mb-2">Step 1 of 10</div><div class="title mb-3">Account Registration</div><h3>Basic Information</h3><div class="input-control mt-1"><div class="d-flex justify-content-between align-items-center"><label for="id_first_name" class="input-control__label">First name</label></div><input name="first_name" id="id_first_name" placeholder="Enter your first name" type="text"><div class="input-control__footer"></div></div><div class="col-12 mt-2"><div class="text-dark">Select practice areas you want to follow:</div><div class="row"><div class="col-md-6 test my-1 d-flex justify-content-between practice-area-item"><div class=""><label class="checkbox-component">Corporate Disputes<input type="checkbox"><span></span></label></div></div><div class="col-md-6 test my-1 d-flex justify-content-between practice-area-item"><div class=""><label class="checkbox-component">Intellectual Property<input type="checkbox"><span></span></label></div></div></div></div><div class="signup-bar"><div class="link-button prev_step hidden" data-step="1"><img src="/static/images/arrow-left-green.svg" alt="icon">Go Back</div><button class="btn btn--green ripple-effect normal ml-auto next_step" type="button" data-step="2"><span>Next</span></button></div></div></div><div class="my-auto d-flex flex-column form_step_container hidden" data-step="2"><div class="create-account-layout__form mx-auto"><div class="step mb-2">Step 2 of 10</div><div class="title mb-3">STEP 2: Practice Profile Setup</div><h3>Basic Information</h3><div class="input-control mt-1"><div class="d-flex justify-content-between align-items-center"><label for="id_first_name" class="input-control__label">First name</label></div><input name="first_name" id="id_first_name" placeholder="Enter your first name" type="text"><div class="input-control__footer"></div></div><div class="signup-bar"><div class="link-button prev_step hidden" data-step="2"><img src="/static/images/arrow-left-green.svg" alt="icon">Go Back</div><button class="btn btn--green ripple-effect normal ml-auto next_step" type="button" data-step="3"><span>Next</span></button></div></div></div><div class="login-page__footer mb-3"><span class="mr-1">Already have an account?</span><a class="ajax" href="/">Log in here</a></div></div></form>';
-on('body', 'click', '#attorney_register', function(e) {
+on('#root', 'click', '#attorney_register', function(e) {
     e.preventDefault();
     create_fullscreen(attorney_reg);
 });
 
-on('body', 'click', '.this_fullscreen_hide', function(e) {
+on('#root', 'click', '.this_fullscreen_hide', function(e) {
     e.preventDefault();
     close_fullscreen();
 });
