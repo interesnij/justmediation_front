@@ -218,7 +218,7 @@
           //if (next_step_container) {
             next_step_container.classList.remove("hidden");
             current_step_container.classList.add("hidden");
-            next_step_container.previousElementSibling.classList.remove("hidden");
+            next_step_container.querySelector(".prev_step").classList.remove("hidden");
           //}
         });
         on('body', 'click', '.prev_step', function (e) {
