@@ -211,6 +211,7 @@
           steps_container = this.parentElement.parentElement.parentElement.parentElement;
           current_step_container = this.parentElement.parentElement.parentElement;
           next_step_container = steps_container.querySelector('[data-step=' + '"' + next_step + '"' + ']');
+          console.log("next_step_container", next_step_container);
           if (next_step_container) {
             next_step_container.classList.remove("hidden");
             current_step_container.classList.add("hidden");
@@ -223,6 +224,7 @@
             steps_container = this.parentElement.parentElement.parentElement.parentElement;
             current_step_container = this.parentElement.parentElement.parentElement;
             prev_step_container = steps_container.querySelector('[data-step=' + '"' + prev_step + '"' + ']');
+            console.log("prev_step_container", prev_step_container);
             if (prev_step_container) {
               prev_step_container.classList.remove("hidden");
               current_step_container.classList.add("hidden");
