@@ -238,9 +238,9 @@
   });
   on('body', 'click', '.radio_style', function (e) {
     checkbox_container = this.parentElement.parentElement.parentElement.parentElement;
-    checkboxs = checkbox_container.querySelectorAll("checkbox");
+    checkboxs = checkbox_container.querySelectorAll(".radio_style");
     for (var i = 0; i < checkboxs.length; i++) {
-      checkboxs[i].checked = "false";
+      checkboxs[i].checked = false;
     };
     this.checked = true;
   });
