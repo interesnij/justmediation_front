@@ -206,7 +206,7 @@
       });
 
       on('body', 'click', '.next_step', function (e) {
-          step = this.getAttribute("data-step");
+          step = this.getAttribute("data-step")*1;
           next_step = step + 1;
           console.log("next_step", next_step);
 
@@ -225,7 +225,7 @@
           }
         });
         on('body', 'click', '.prev_step', function (e) {
-            step = this.getAttribute("data-step");
+            step = this.getAttribute("data-step")*1;
             prev_step = step - 1;
             steps_container = this.parentElement.parentElement.parentElement.parentElement.parentElement;
             current_step_container = this.parentElement.parentElement.parentElement.parentElement;
