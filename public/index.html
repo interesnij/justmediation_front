@@ -207,8 +207,7 @@
 
       on('body', 'click', '.next_step', function (e) {
           step = this.getAttribute("data-step")*1;
-          next_step = step + 1;
-          console.log("next_step", next_step);
+          console.log("next_step", step);
 
           steps_container = this.parentElement.parentElement.parentElement.parentElement;
           console.log("steps_container", steps_container);
@@ -216,26 +215,25 @@
           current_step_container = this.parentElement.parentElement.parentElement;
           console.log("current_step_container", current_step_container);
 
-          next_step_container = steps_container.querySelector('[data-step=' + '"' + next_step + '"' + ']');
+          next_step_container = steps_container.querySelector('[data-step=' + '"' + step + '"' + ']');
           console.log("next_step_container", next_step_container);
           if (next_step_container) {
             next_step_container.classList.remove("hidden");
             current_step_container.classList.add("hidden");
-            this.previousElementSibling.classList.remove("hidden");
+            next_step_container.previousElementSibling.classList.remove("hidden");
           }
         });
         on('body', 'click', '.prev_step', function (e) {
             step = this.getAttribute("data-step")*1;
-            prev_step = step - 1;
             steps_container = this.parentElement.parentElement.parentElement.parentElement;
             current_step_container = this.parentElement.parentElement.parentElement;
-            prev_step_container = steps_container.querySelector('[data-step=' + '"' + prev_step + '"' + ']');
+            prev_step_container = steps_container.querySelector('[data-step=' + '"' + step + '"' + ']');
             console.log("prev_step_container", prev_step_container);
             if (prev_step_container) {
               prev_step_container.classList.remove("hidden");
               current_step_container.classList.add("hidden");
               if (prev_step == 1) {
-                this.previousElementSibling.classList.add("hidden");
+                prev_step_container.previousElementSibling.classList.add("hidden");
               }
             }
           });
