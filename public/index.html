@@ -210,10 +210,10 @@
           next_step = step + 1;
           console.log("next_step", next_step);
 
-          steps_container = this.parentElement.parentElement.parentElement.parentElement.parentElement;
+          steps_container = this.parentElement.parentElement.parentElement.parentElement;
           console.log("steps_container", steps_container);
 
-          current_step_container = this.parentElement.parentElement.parentElement.parentElement;
+          current_step_container = this.parentElement.parentElement.parentElement;
           console.log("current_step_container", current_step_container);
 
           next_step_container = steps_container.querySelector('[data-step=' + '"' + next_step + '"' + ']');
@@ -227,8 +227,8 @@
         on('body', 'click', '.prev_step', function (e) {
             step = this.getAttribute("data-step")*1;
             prev_step = step - 1;
-            steps_container = this.parentElement.parentElement.parentElement.parentElement.parentElement;
-            current_step_container = this.parentElement.parentElement.parentElement.parentElement;
+            steps_container = this.parentElement.parentElement.parentElement.parentElement;
+            current_step_container = this.parentElement.parentElement.parentElement;
             prev_step_container = steps_container.querySelector('[data-step=' + '"' + prev_step + '"' + ']');
             console.log("prev_step_container", prev_step_container);
             if (prev_step_container) {
