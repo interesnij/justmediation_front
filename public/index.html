@@ -215,17 +215,18 @@
 
           next_step_container = steps_container.querySelector('[data-step=' + '"' + (step + 1) + '"' + ']');
           console.log("next_step_container", next_step_container);
-          if (next_step_container) {
+          //if (next_step_container) {
             next_step_container.classList.remove("hidden");
             current_step_container.classList.add("hidden");
             next_step_container.previousElementSibling.classList.remove("hidden");
-          }
+          //}
         });
         on('body', 'click', '.prev_step', function (e) {
             steps_container = this.parentElement.parentElement.parentElement.parentElement;
             current_step_container = this.parentElement.parentElement.parentElement;
             step = current_step_container.getAttribute("data-step") * 1;
-            prev_step_container = steps_container.querySelector('[data-step=' + '"' + (step - 1) + '"' + ']');
+            prev_step = step - 1;
+            prev_step_container = steps_container.querySelector('[data-step=' + '"' + prev_step + '"' + ']');
             console.log("prev_step_container", prev_step_container);
             if (prev_step_container) {
               prev_step_container.classList.remove("hidden");
