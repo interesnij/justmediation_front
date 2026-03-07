@@ -208,8 +208,14 @@
       on('body', 'click', '.next_step', function (e) {
           step = this.getAttribute("data-step");
           next_step = step + 1;
+          console.log("next_step", next_step);
+
           steps_container = this.parentElement.parentElement.parentElement.parentElement.parentElement;
+          console.log("steps_container", steps_container);
+
           current_step_container = this.parentElement.parentElement.parentElement.parentElement;
+          console.log("current_step_container", current_step_container);
+
           next_step_container = steps_container.querySelector('[data-step=' + '"' + next_step + '"' + ']');
           console.log("next_step_container", next_step_container);
           if (next_step_container) {
