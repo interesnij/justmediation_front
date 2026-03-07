@@ -237,6 +237,7 @@
     this.previousElementSibling.previousElementSibling.click();
   });
   on('body', 'click', '.radio_style', function (e) {
+    e.preventDefault();
     if (this.checked == true) {
       this.checked = false;
     }
