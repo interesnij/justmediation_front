@@ -298,9 +298,21 @@ on('body', 'click', '.mediator_form_submit', function (e) {
   form = this.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement;
   validate_form(form)
 });
-  on('body', 'click', '.select_files', function (e) {
-    this.previousElementSibling.previousElementSibling.click();
+on('body', 'click', '.law_firm_form_submit', function (e) {
+    form = this.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement;
+    validate_form(form)
+});
+on('body', 'click', '.attorney_form_submit', function (e) {
+    form = this.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement;
+    validate_form(form)
+});
+  on('body', 'click', '.corporate_form_submit', function (e) {
+    form = this.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement;
+    validate_form(form)
   });
+on('body', 'click', '.select_files', function (e) {
+    this.previousElementSibling.previousElementSibling.click();
+});
   on('body', 'click', '.radio_style', function (e) {
     checkbox_container = this.parentElement.parentElement.parentElement.parentElement;
     checkboxs = checkbox_container.querySelectorAll(".radio_style");
