@@ -27,7 +27,9 @@
     width: 100%;
     overflow: auto;
 }
-
+.red {
+    color: #F00000;
+}
 .this_fullscreen_hide {
     cursor: pointer;
     position: absolute;
