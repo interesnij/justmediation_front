@@ -302,23 +302,14 @@ on('body', 'click', '.mediator_form_submit', function (e) {
     this.previousElementSibling.previousElementSibling.click();
   });
   on('body', 'click', '.radio_style', function (e) {
-    red_field = this.parentElement.parentElement.parentElement.parentElement.parentElement.querySelector(".required");
-    if (!red_field || !red_field.classList.contains("red")) {
-      console.log("no red field!");
-      return;
-    }
-    if (this.value == '') {
-      red_field.innerHTML = "This field is reuired";
-    }
-    else {
-      red_field.innerHTML = "";
-    }
     checkbox_container = this.parentElement.parentElement.parentElement.parentElement;
     checkboxs = checkbox_container.querySelectorAll(".radio_style");
     for (var i = 0; i < checkboxs.length; i++) {
         checkboxs[i].checked = false;
     };
     this.checked = true;
+    red_field = this.parentElement.parentElement.parentElement.parentElement.parentElement.querySelector(".input-control__footer");
+    red_field.innerHTML = "";
   });
 
   on('body', 'input', 'input', function (e) {
@@ -328,7 +319,7 @@ on('body', 'click', '.mediator_form_submit', function (e) {
         return;
       }
       if (this.value == '') {
-        red_field.innerHTML = "This field is reuired";
+        red_field.innerHTML = "This field is required";
       }
       else {
         red_field.innerHTML = "";
