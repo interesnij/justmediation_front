@@ -248,10 +248,11 @@ function validate_form(form) {
       input_lists = form.querySelectorAll(".required");
       is_first_step_found = false;
       for (var i = 0; i < input_lists.length; i++) {
+        console.log("required", input_lists[i].getAttribute("name"));
         if (
           input_lists[i].getAttribute("type") == "input" && input_lists[i].value == ''
         ) {
-          console.log("required" , input_lists[i]);
+          
           if (!is_first_step_found) {
             is_first_step_found = true;
             step = this.parentElement.parentElement.parentElement.parentElement.getAttribute("data-step");
