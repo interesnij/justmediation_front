@@ -255,12 +255,12 @@ function validate_form(form) {
           
           if (!is_first_step_found) {
             is_first_step_found = true;
-            step = this.parentElement.parentElement.parentElement.parentElement.getAttribute("data-step");
+            step = input_lists[i].parentElement.parentElement.parentElement.parentElement.getAttribute("data-step");
             if (!step) {
-              step = this.parentElement.parentElement.parentElement.parentElement.parentElement.getAttribute("data-step");
+              step = input_lists[i].parentElement.parentElement.parentElement.parentElement.parentElement.getAttribute("data-step");
             }
             if (!step) {
-              step = this.parentElement.parentElement.parentElement.getAttribute("data-step");
+              step = input_lists[i].parentElement.parentElement.parentElement.getAttribute("data-step");
             }
             console.log("step input", step);
             list_step(step);
@@ -268,8 +268,8 @@ function validate_form(form) {
           input_lists[i].nextElementSibling.innerHTML = "This field is required";
         }
         else if (input_lists[i].getAttribute("type") == "checkbox"){
-          console.log("this", this);
-          checkbox_container = this.parentElement.parentElement.parentElement.parentElement.parentElement;
+          console.log("this", input_lists[i]);
+          checkbox_container = input_lists[i].parentElement.parentElement.parentElement.parentElement.parentElement;
           is_checked = false;
           checkboxs = checkbox_container.querySelectorAll(".required");
           for (var a = 0; a < checkboxs.length; a++) {
@@ -283,12 +283,12 @@ function validate_form(form) {
           }
           if (!is_first_step_found) {
             is_first_step_found = true;
-            step = this.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.getAttribute("data-step");
+            step = input_lists[i].parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.getAttribute("data-step");
             if (!step) {
-              step = this.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.getAttribute("data-step");
+              step = input_lists[i].parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.getAttribute("data-step");
             }
             if (!step) {
-              step = this.parentElement.parentElement.parentElement.parentElement.parentElement.getAttribute("data-step");
+              step = input_lists[i].parentElement.parentElement.parentElement.parentElement.parentElement.getAttribute("data-step");
             }
             console.log("step checked", step);
             list_step(step);
