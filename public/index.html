@@ -230,7 +230,74 @@
           prev_step_container.querySelector(".prev_step").classList.add("hidden");
         }
       }
-    }); 
+  }); 
+function list_step(step) {
+  steps_container = form.querySelector(".create-account-layout__content");
+  steps = steps_container.querySelectorAll(".form_step_container");
+  for (var a = 0; a < steps.length; a++) {
+    if (steps[a].getAttribute("data-step") == step) {
+      steps[a].classList.remove("hidden");
+      break;
+    }
+    else {
+      steps[a].classList.add("hidden");
+    }
+  };
+}
+function validate_form(form) {
+      input_lists = form.querySelectorAll(".required");
+      is_first_step_found = false;
+      for (var i = 0; i < input_lists.length; i++) {
+        if (
+          input_lists[i].getAttribute("type") == "input" && input_lists[i].value == ''
+        ) {
+          console.log("required" , input_lists[i]);
+          if (!is_first_step_found) {
+            is_first_step_found = true;
+            step = this.parentElement.parentElement.parentElement.parentElement.getAttribute("data-step");
+            if (!step) {
+              step = this.parentElement.parentElement.parentElement.parentElement.parentElement.getAttribute("data-step");
+            }
+            if (!step) {
+              step = this.parentElement.parentElement.parentElement.getAttribute("data-step");
+            }
+            console.log("step input", step);
+            list_step(step);
+          }
+          input_lists[i].nextElementSibling.innerHTML = "This field is required";
+        }
+        else if (input_lists[i].getAttribute("type") == "checkbox"){
+          checkbox_container = this.parentElement.parentElement.parentElement.parentElement.parentElement;
+          is_checked = false;
+          checkboxs = checkbox_container.querySelectorAll(".required");
+          for (var a = 0; a < checkboxs.length; a++) {
+            if (a[i].checked == true) {
+              is_checked = true;
+              break;
+            }
+          }
+          if (!is_checked) {
+            checkbox_container.querySelector(".input-control__footer").innerHTML = "This field is required";
+          }
+          if (!is_first_step_found) {
+            is_first_step_found = true;
+            step = this.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.getAttribute("data-step");
+            if (!step) {
+              step = this.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.getAttribute("data-step");
+            }
+            if (!step) {
+              step = this.parentElement.parentElement.parentElement.parentElement.parentElement.getAttribute("data-step");
+            }
+            console.log("step checked", step);
+            list_step(step);
+          }
+        }
+      };
+  }
+on('body', 'click', '.mediator_form_submit', function (e) {
+  form = this.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement;
+  validate_form(form)
+});
   on('body', 'click', '.select_files', function (e) {
     this.previousElementSibling.previousElementSibling.click();
   });
@@ -253,6 +320,7 @@
     };
     this.checked = true;
   });
+
   on('body', 'input', 'input', function (e) {
       red_field = this.nextElementSibling;
       if (!red_field || !red_field.classList.contains("red")) {
