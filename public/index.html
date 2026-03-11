@@ -244,7 +244,7 @@ function list_step(step) {
   };
 }
 function validate_form(form) {
-      input_lists = form.querySelectorAll(".required");
+      
       is_first_step_found = false;
       if (form.querySelector("#client_individual")) {
         if (form.querySelector(".change_individual_client_type").checked == true) {
@@ -272,6 +272,7 @@ function validate_form(form) {
           }
         }
       };
+      input_lists = form.querySelectorAll(".required");
       for (var i = 0; i < input_lists.length; i++) {
         if (
           input_lists[i].getAttribute("type") == "text" && input_lists[i].value == ''
@@ -329,7 +330,7 @@ function validate_form(form) {
   }
 on('body', 'click', '.mediator_form_submit', function (e) {
   form = this.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement;
-  let is_err = validate_form(form);
+  is_err = validate_form(form);
   if (!is_err) {
     form_data = new FormData(form);
     console.log(form_data);
@@ -342,7 +343,7 @@ on('body', 'click', '.mediator_form_submit', function (e) {
 on('body', 'click', '.law_firm_form_submit', function (e) {
     form = this.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement;
     validate_form(form);
-    let is_err = validate_form(form);
+    is_err = validate_form(form);
     if (!is_err) {
       form_data = new FormData(form);
       console.log(form_data);
@@ -355,7 +356,7 @@ on('body', 'click', '.law_firm_form_submit', function (e) {
 on('body', 'click', '.attorney_form_submit', function (e) {
     form = this.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement;
     validate_form(form);
-    let is_err = validate_form(form);
+    is_err = validate_form(form);
     if (!is_err) {
       form_data = new FormData(form);
       console.log(form_data);
@@ -368,7 +369,7 @@ on('body', 'click', '.attorney_form_submit', function (e) {
 on('body', 'click', '.corporate_form_submit', function (e) {
     form = this.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement;
     validate_form(form);
-    let is_err = validate_form(form);
+    is_err = validate_form(form);
     if (!is_err) {
       form_data = new FormData(form);
       console.log(form_data);
