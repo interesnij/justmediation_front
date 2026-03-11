@@ -254,7 +254,7 @@ function validate_form(form) {
             required_list[g].classList.remove("required");
           }
           list_2 = form.querySelector("#client_individual");
-          required_list_2 = list_2.querySelectorAll(".required");
+          required_list_2 = list_2.querySelectorAll("input");
           for (var t = 0; t < required_list_2.length; t++) {
             required_list_2[t].classList.add("required");
           }
@@ -266,7 +266,7 @@ function validate_form(form) {
             required_list[g].classList.remove("required");
           }
           list_2 = form.querySelector("#client_corporate");
-          required_list_2 = list_2.querySelectorAll(".required");
+          required_list_2 = list_2.querySelectorAll("input");
           for (var t = 0; t < required_list_2.length; t++) {
             required_list_2[t].classList.add("required");
           }
