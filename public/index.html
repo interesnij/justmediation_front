@@ -247,15 +247,13 @@ function list_step(step) {
 function validate_form(form) {
       input_lists = form.querySelectorAll(".required");
       is_first_step_found = false;
-      list_loaded = false;
 
       for (var i = 0; i < input_lists.length; i++) {
         if (
           input_lists[i].getAttribute("type") == "text" && input_lists[i].value == ''
         ) {
-          if (!is_first_step_found && !list_loaded) {
+          if (!is_first_step_found) {
             is_first_step_found = true;
-            list_loaded = true;
             step = input_lists[i].parentElement.parentElement.parentElement.parentElement.getAttribute("data-step");
             if (!step) {
               step = input_lists[i].parentElement.parentElement.parentElement.parentElement.parentElement.getAttribute("data-step");
@@ -283,22 +281,22 @@ function validate_form(form) {
           }
           if (!is_checked) {
             checkbox_container.querySelector(".input-control__footer").innerHTML = "This field is required";
-            is_first_step_found = true;
-            list_loaded = true;
-          }
-          if (!is_first_step_found) {
-            step = input_lists[i].parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.getAttribute("data-step");
-            if (!step) {
-              step = input_lists[i].parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.getAttribute("data-step");
-            }
-            if (!step) {
-              step = input_lists[i].parentElement.parentElement.parentElement.parentElement.parentElement.getAttribute("data-step");
-            }
+            if (!is_first_step_found) {
+              step = input_lists[i].parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.getAttribute("data-step");
+              if (!step) {
+                step = input_lists[i].parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.getAttribute("data-step");
+              }
+              if (!step) {
+                step = input_lists[i].parentElement.parentElement.parentElement.parentElement.parentElement.getAttribute("data-step");
+              }
 
-            console.log("step checked:", step);
-            console.log("checkbox checked:", input_lists[i]);
-            list_step(step);
+              console.log("step checked:", step);
+              console.log("checkbox checked:", input_lists[i]);
+              list_step(step);
+            }
+            is_first_step_found = true;
           }
+          
         }
       };
   }
