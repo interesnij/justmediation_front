@@ -247,6 +247,7 @@ function list_step(step) {
 function validate_form(form) {
       input_lists = form.querySelectorAll(".required");
       is_first_step_found = false;
+      is_checked = false;
       for (var i = 0; i < input_lists.length; i++) {
         
         if (
@@ -269,7 +270,7 @@ function validate_form(form) {
         }
         else if (input_lists[i].getAttribute("type") == "checkbox"){
           checkbox_container = input_lists[i].parentElement.parentElement.parentElement.parentElement.parentElement;
-          is_checked = false;
+          
           checkboxs = checkbox_container.querySelectorAll(".required");
           for (var a = 0; a < checkboxs.length; a++) {
             if (checkboxs[a].checked == true) {
