@@ -247,13 +247,12 @@ function list_step(step) {
 function validate_form(form) {
       input_lists = form.querySelectorAll(".required");
       is_first_step_found = false;
-      is_checked = false;
+
       for (var i = 0; i < input_lists.length; i++) {
         
         if (
           input_lists[i].getAttribute("type") == "text" && input_lists[i].value == ''
         ) {
-          console.log("required", input_lists[i]);
           if (!is_first_step_found) {
             is_first_step_found = true;
             step = input_lists[i].parentElement.parentElement.parentElement.parentElement.getAttribute("data-step");
@@ -265,10 +264,12 @@ function validate_form(form) {
             }
             console.log("step input", step);
             list_step(step);
+            console.log("input checked:", input_lists[i]);
           }
           input_lists[i].nextElementSibling.innerHTML = "This field is required";
         }
         else if (input_lists[i].getAttribute("type") == "checkbox"){
+          is_checked = false;
           checkbox_container = input_lists[i].parentElement.parentElement.parentElement.parentElement.parentElement;
           
           checkboxs = checkbox_container.querySelectorAll(".required");
@@ -278,7 +279,7 @@ function validate_form(form) {
               break;
             }
           }
-          if (!is_checked && !is_first_step_found) {
+          if (!is_checked) {
             checkbox_container.querySelector(".input-control__footer").innerHTML = "This field is required";
             is_first_step_found = true;
             step = input_lists[i].parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.getAttribute("data-step");
@@ -288,8 +289,12 @@ function validate_form(form) {
             if (!step) {
               step = input_lists[i].parentElement.parentElement.parentElement.parentElement.parentElement.getAttribute("data-step");
             }
-            console.log("step checked", step);
-            list_step(step);
+            if (!is_first_step_found) {
+              is_first_step_found = true;
+              console.log("step checked:", step);
+              console.log("checkbox checked:", input_lists[i]);
+              list_step(step);
+            }
           }
         }
       };
