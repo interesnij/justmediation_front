@@ -308,6 +308,9 @@ on('body', 'click', '.mediator_form_submit', function (e) {
   if (!is_err) {
     let form_data = new FormData(form);
   }
+  else {
+    let form_data = new FormData();
+  }
   console.log(form_data);
 });
 on('body', 'click', '.law_firm_form_submit', function (e) {
@@ -315,27 +318,36 @@ on('body', 'click', '.law_firm_form_submit', function (e) {
     validate_form(form);
     let is_err = validate_form(form);
     if (!is_err) {
-      let form_data = new FormData(form);
-    }
-    console.log(form_data);
+    let form_data = new FormData(form);
+  }
+  else {
+    let form_data = new FormData();
+  }
+  console.log(form_data);
 });
 on('body', 'click', '.attorney_form_submit', function (e) {
     form = this.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement;
     validate_form(form);
     let is_err = validate_form(form);
-    if (!is_err) {
-      let form_data = new FormData(form);
-    }
-    console.log(form_data);
+  if (!is_err) {
+    let form_data = new FormData(form);
+  }
+  else {
+    let form_data = new FormData();
+  }
+  console.log(form_data);
 });
 on('body', 'click', '.corporate_form_submit', function (e) {
     form = this.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement;
     validate_form(form);
     let is_err = validate_form(form);
-    if (!is_err) {
-      let form_data = new FormData(form);
-    }
-    console.log(form_data);
+  if (!is_err) {
+    let form_data = new FormData(form);
+  }
+  else {
+    let form_data = new FormData();
+  }
+  console.log(form_data);
 });
 on('body', 'click', '.select_files', function (e) {
     this.parentElement.style.border = "1px solid #e0e0e1";
