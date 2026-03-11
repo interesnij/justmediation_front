@@ -282,6 +282,8 @@ function validate_form(form) {
           if (!is_checked) {
             checkbox_container.querySelector(".input-control__footer").innerHTML = "This field is required";
             is_first_step_found = true;
+          }
+          if (is_first_step_found) {
             step = input_lists[i].parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.getAttribute("data-step");
             if (!step) {
               step = input_lists[i].parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.getAttribute("data-step");
@@ -289,12 +291,10 @@ function validate_form(form) {
             if (!step) {
               step = input_lists[i].parentElement.parentElement.parentElement.parentElement.parentElement.getAttribute("data-step");
             }
-            if (!is_first_step_found) {
-              is_first_step_found = true;
-              console.log("step checked:", step);
-              console.log("checkbox checked:", input_lists[i]);
-              list_step(step);
-            }
+            is_first_step_found = true;
+            console.log("step checked:", step);
+            console.log("checkbox checked:", input_lists[i]);
+            list_step(step);
           }
         }
       };
