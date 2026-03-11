@@ -248,7 +248,7 @@ function validate_form(form) {
       input_lists = form.querySelectorAll(".required");
       is_first_step_found = false;
       for (var i = 0; i < input_lists.length; i++) {
-        console.log("required", required);
+        console.log("required", input_lists[i]);
         if (
           input_lists[i].getAttribute("type") == "text" && input_lists[i].value == ''
         ) {
