@@ -277,7 +277,7 @@ function validate_form(form) {
               break;
             }
           }
-          if (!is_checked) {
+          if (!is_checked && !is_first_step_found) {
             checkbox_container.querySelector(".input-control__footer").innerHTML = "This field is required";
             is_first_step_found = true;
             step = input_lists[i].parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.getAttribute("data-step");
