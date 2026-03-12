@@ -259,7 +259,7 @@ function validate_form(form) {
           required_list_2 = list_2.querySelectorAll("input");
           for (var t = 0; t < required_list_2.length; t++) {
             required_list_2[t].classList.add("required");
-            console.log("client_individual", required_list_2[g]);
+            console.log("client_individual", required_list_2[t]);
           }
 
         } else if (form.querySelector(".change_corporate_client_type").checked == true) {
@@ -275,7 +275,7 @@ function validate_form(form) {
           required_list_2 = list_2.querySelectorAll("input");
           for (var t = 0; t < required_list_2.length; t++) {
             required_list_2[t].classList.add("required");
-            console.log("client_corporate", required_list[g]);
+            console.log("client_corporate", required_list[t]);
           }
         }
       };
@@ -341,6 +341,7 @@ function validate_form(form) {
 on('body', 'click', '.mediator_form_submit', function (e) {
   form = this.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement;
   is_err = validate_form(form);
+  console.log(is_err);
   if (!is_err) {
     form_data = new FormData(form);
     console.log(form_data);
@@ -354,6 +355,7 @@ on('body', 'click', '.law_firm_form_submit', function (e) {
     form = this.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement;
     validate_form(form);
     is_err = validate_form(form);
+    console.log(is_err);
     if (!is_err) {
       form_data = new FormData(form);
       console.log(form_data);
@@ -367,6 +369,7 @@ on('body', 'click', '.attorney_form_submit', function (e) {
     form = this.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement;
     validate_form(form);
     is_err = validate_form(form);
+    console.log(is_err);
     if (!is_err) {
       form_data = new FormData(form);
       console.log(form_data);
@@ -380,6 +383,7 @@ on('body', 'click', '.corporate_form_submit', function (e) {
     form = this.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement;
     validate_form(form);
     is_err = validate_form(form);
+    console.log(is_err);
     if (!is_err) {
       form_data = new FormData(form);
       console.log(form_data);
