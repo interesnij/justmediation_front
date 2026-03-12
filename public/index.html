@@ -366,7 +366,7 @@ on('body', 'click', '.law_firm_form_submit', function (e) {
     form_data = new FormData(form);
     console.log(form_data);
     console.log("ok");
-    for (const [key, value] of formData) {
+    for (const [key, value] of form_data) {
       console.log(`${key}: ${value}`);
       }
   }
