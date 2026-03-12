@@ -245,28 +245,37 @@ function list_step(step) {
 }
 function validate_form(form) {
       if (form.querySelector("#client_individual")) {
+        console.log("form change client active");
         if (form.querySelector(".change_individual_client_type").checked == true) {
           list_1 = form.querySelector("#client_corporate");
+          console.log("client_corporate form", list_1);
           required_list = list_1.querySelectorAll("input");
           for (var g = 0; g < required_list.length; g++) {
             required_list[g].classList.remove("required");
+            console.log("client_corporate", required_list[g]);
           }
           list_2 = form.querySelector("#client_individual");
+          console.log("client_individual form", list_2);
           required_list_2 = list_2.querySelectorAll("input");
           for (var t = 0; t < required_list_2.length; t++) {
             required_list_2[t].classList.add("required");
+            console.log("client_individual", required_list_2[g]);
           }
 
         } else if (form.querySelector(".change_corporate_client_type").checked == true) {
           list = form.querySelector("#client_individual");
+          console.log("client_individual form", list);
           required_list = list.querySelectorAll("input");
           for (var g = 0; g < required_list.length; g++) {
             required_list[g].classList.remove("required");
+            console.log("client_individual", required_list[g]);
           }
           list_2 = form.querySelector("#client_corporate");
+          console.log("client_corporate form", list_2);
           required_list_2 = list_2.querySelectorAll("input");
           for (var t = 0; t < required_list_2.length; t++) {
             required_list_2[t].classList.add("required");
+            console.log("client_corporate", required_list[g]);
           }
         }
       };
