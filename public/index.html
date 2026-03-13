@@ -310,6 +310,7 @@ function validate_form(form) {
           
           checkboxs = checkbox_container.querySelectorAll(".required");
           for (var a = 0; a < checkboxs.length; a++) {
+            checkboxs[a].setAttribute("value", checkboxs[a].parentElement.innerHTML);
             if (checkboxs[a].checked == true) {
               is_checked = true;
               break;
