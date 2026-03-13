@@ -181,7 +181,8 @@
     on('body', 'click', '.add_user_card_for_mediator', function (e) {
       users_container = this.previousElementSibling;
       users_container.innerHTML = user_card;
-      users_container.insertAdjacentElement('afterend', '<div class="new_member_block"></div>');
+      $div = document.createElement("div");
+      users_container.insertAdjacentElement('afterend', $div);
     });
       on('body', 'click', '.signup-page-account', function (e) {
       e.preventDefault();
