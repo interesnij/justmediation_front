@@ -357,6 +357,9 @@ on('body', 'click', '.mediator_form_submit', function (e) {
     form_data = new FormData(form);
     console.log(form_data);
     console.log("ok");
+    for (const [key, value] of form_data) {
+      console.log(`${key}: ${value}`);
+    }
   }
   else {
     form_data = new FormData();
@@ -392,6 +395,9 @@ on('body', 'click', '.attorney_form_submit', function (e) {
       form_data = new FormData(form);
       console.log(form_data);
       console.log("ok");
+      for (const [key, value] of form_data) {
+        console.log(`${key}: ${value}`);
+      }
     }
     else {
       form_data = new FormData();
@@ -408,6 +414,9 @@ on('body', 'click', '.corporate_form_submit', function (e) {
     form_data = new FormData(form);
     console.log(form_data);
     console.log("ok");
+    for (const [key, value] of form_data) {
+        console.log(`${key}: ${value}`);
+      }
   }
   else {
     form_data = new FormData();
