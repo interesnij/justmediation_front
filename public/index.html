@@ -243,6 +243,13 @@ function list_step(step) {
     }
   };
 }
+
+function stripHtml(html) {
+  let tmp = document.createElement("DIV");
+  tmp.innerHTML = html;
+  return tmp.textContent || tmp.innerText || "";
+}
+
 function validate_form(form) {
       if (form.querySelector("#client_individual")) {
         console.log("form change client active");
@@ -310,7 +317,7 @@ function validate_form(form) {
           
           checkboxs = checkbox_container.querySelectorAll(".required");
           for (var a = 0; a < checkboxs.length; a++) {
-            checkboxs[a].setAttribute("value", checkboxs[a].parentElement.innerHTML);
+            checkboxs[a].setAttribute("value", stripHtml(checkboxs[a].parentElement.innerHTML));
             if (checkboxs[a].checked == true) {
               is_checked = true;
               break;
