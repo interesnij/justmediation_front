@@ -320,7 +320,6 @@ function validate_form(form) {
             checkboxs[a].setAttribute("value", stripHtml(checkboxs[a].parentElement.innerHTML));
             if (checkboxs[a].checked == true) {
               is_checked = true;
-              break;
             }
           }
           if (!is_checked) {
