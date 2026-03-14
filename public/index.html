@@ -268,36 +268,28 @@ function prepare_checkboxes(form) {
 }
 
 function send_files(files, folder) {
-  let formData = new FormData();
+  formData = new FormData();
+  files_res = [];
   formData.append("token", "key_BUVEnKnbfbddfdf_gggg_fbfbf_XXBcLGdyg3ZdsO6JCPG5kh947MPjy");
   formData.append("folder", folder);
   formData.append("object_id", 100);
-  //formData.append("file", files);
   for (let i = 0; i < files.length; i++) {
     console.log("upload:" + " folder", files[i]);
     formData.append("file", files[i]);
   }
-  const _url = 'https://upload.justmediationhub.com/classic_create/';
-  //const token = localStorage.getItem("key");
-  const res = fetch(_url, {
-    headers: {
-      //'Accept': 'application/json, application/xml, text/plain, text/html, *.*',
-      //Origin: "https://app.justmediationhub.com",
-    },
-    method: 'POST',
-    mode: "cors",
-    body: formData
-  });
-  //const text = res.text();
-  const data = JSON.parse(res);
-  const res_files = data["files"];
-  for (let i = 0; i < res_files.length; i++) {
-    console.log("i", res_files[i]);
-    files_res.push(res_files[i]);
-  }
-
-  console.log(data["files"]);
-  console.log("url", _url);
+  link = window.XMLHttpRequest ? new XMLHttpRequest() : new ActiveXObject('Microsoft.XMLHTTP');
+  link.open('POST', 'https://upload.justmediationhub.com/classic_create/', true);
+  link.onreadystatechange = function () {
+    if (link.readyState == 4 && link.status == 200) {
+      data = JSON.parse(link.responseText);
+      res_files = data["files"];
+      for (let i = 0; i < res_files.length; i++) {
+        console.log("i", res_files[i]);
+        files_res.push(res_files[i]);
+      }
+    }
+  };
+  link.send(form_data);
   return files_res;
 };
 function validate_form(form) {
