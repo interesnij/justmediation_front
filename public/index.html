@@ -402,15 +402,18 @@ function validate_form(form) {
   }
 
   function prepare_files(form) {
-    files_lists = form.querySelectorAll('[type="files"]');
+    files_lists = form.querySelectorAll('[type="file"]');
 
     for (var i = 0; i < files_lists.length; i++) {
       if (files_lists[i].files.length > 0) {
-        list = send_files(files_lists[i].files, files_lists[i].getAttribute("name"));
+        name = files_lists[i].getAttribute("name");
+        list = send_files(files_lists[i].files, name);
         for (var a = 0; a < list.length; a++) {
           $input = document.createElement("input");
           $input.setAttribute("type", "hidden");
           $input.value = list[a];
+          form.append($input);
+          form.querySelector('[name="' + name + '"]').remove();
           form.append($input);
         }
       }
