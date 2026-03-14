@@ -288,8 +288,8 @@ function send_files(files, folder) {
     mode: "cors",
     body: formData
   });
-  const text = res.text();
-  const data = JSON.parse(text);
+  //const text = res.text();
+  const data = JSON.parse(res);
   const res_files = data["files"];
   for (let i = 0; i < res_files.length; i++) {
     console.log("i", res_files[i]);
