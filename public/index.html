@@ -308,9 +308,10 @@ async function prepare_files(form) {
           for (var a = 0; a < new_list.length; a++) {
             $input = document.createElement("input");
             $input.setAttribute("type", "hidden");
+            $input.setAttribute("name", "attachments");
             $input.value = new_list[a];
             form.append($input);
-            form.querySelector('[name="' + name + '"]').remove();
+            //form.querySelector('[name="' + name + '"]').remove();
             form.append($input);
             console.log($input);
           }
@@ -318,7 +319,7 @@ async function prepare_files(form) {
       }
     }
 }
-async function validate_form(form) {
+function validate_form(form) {
       
       if (form.querySelector("#client_individual")) {
         //console.log("form change client active");
@@ -461,7 +462,7 @@ on('body', 'click', '.law_firm_form_submit', function (e) {
 on('body', 'click', '.attorney_form_submit', async function (e) {
     form = this.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement;
     setTimeout(await prepare_files(form), 2000);
-    setTimeout(await validate_form(form), 1000);
+    validate_form(form);
     //console.log(is_err);
     //if (!is_err) {
       form_data = new FormData(form);
