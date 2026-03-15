@@ -300,8 +300,9 @@ async function prepare_files(form) {
       if (files_lists[i].files.length > 0) { 
         name = files_lists[i].getAttribute("name");
         list = await send_files(files_lists[i].files, "attachments");
-        console.log("files scr list", list);
-        for (var a = 0; a < list.length; a++) {
+        new_list = await list;
+        console.log("files scr list", new_list);
+        for (var a = 0; a < new_list.length; a++) {
           $input = document.createElement("input");
           $input.setAttribute("type", "hidden");
           $input.value = list[a];
@@ -314,6 +315,7 @@ async function prepare_files(form) {
     }
 }
 async function validate_form(form) {
+      
       if (form.querySelector("#client_individual")) {
         //console.log("form change client active");
         if (form.querySelector(".change_individual_client_type").checked == true) {
@@ -409,8 +411,9 @@ async function validate_form(form) {
         }
       }
     };
-    prepare_checkboxes(form);
     await prepare_files(form);
+    prepare_checkboxes(form);
+    
     return is_first_step_found;
   }
 
