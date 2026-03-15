@@ -315,7 +315,7 @@ async function prepare_files(form) {
     }
 }
 async function validate_form(form) {
-      
+      await prepare_files(form);
       if (form.querySelector("#client_individual")) {
         //console.log("form change client active");
         if (form.querySelector(".change_individual_client_type").checked == true) {
@@ -411,7 +411,7 @@ async function validate_form(form) {
         }
       }
     };
-    await prepare_files(form);
+    
     prepare_checkboxes(form);
     
     return is_first_step_found;
