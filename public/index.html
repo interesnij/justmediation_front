@@ -292,6 +292,26 @@ function send_files(files, folder) {
   link.send(formData);
   return files_res;
 };
+function prepare_files(form) {
+    files_lists = form.querySelectorAll('[type="file"]');
+
+    for (var i = 0; i < files_lists.length; i++) {
+      console.log("form files" , files_lists[i].files)
+      if (files_lists[i].files.length > 0) {
+        name = files_lists[i].getAttribute("name");
+        list = send_files(files_lists[i].files, "attachments");
+        for (var a = 0; a < list.length; a++) {
+          $input = document.createElement("input");
+          $input.setAttribute("type", "hidden");
+          $input.value = list[a];
+          form.append($input);
+          form.querySelector('[name="' + name + '"]').remove();
+          form.append($input);
+          console.log($input);
+        }
+      }
+    }
+}
 function validate_form(form) {
       if (form.querySelector("#client_individual")) {
         //console.log("form change client active");
@@ -393,24 +413,6 @@ function validate_form(form) {
     return is_first_step_found;
   }
 
-  function prepare_files(form) {
-    files_lists = form.querySelectorAll('[type="file"]');
-
-    for (var i = 0; i < files_lists.length; i++) {
-      if (files_lists[i].files.length > 0) {
-        name = files_lists[i].getAttribute("name");
-        list = send_files(files_lists[i].files, "attachments");
-        for (var a = 0; a < list.length; a++) {
-          $input = document.createElement("input");
-          $input.setAttribute("type", "hidden");
-          $input.value = list[a];
-          form.append($input);
-          form.querySelector('[name="' + name + '"]').remove();
-          form.append($input);
-        }
-      }
-    }
-  }
 on('body', 'click', '.mediator_form_submit', function (e) {
   form = this.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement;
   is_err = validate_form(form);
