@@ -267,7 +267,7 @@ function prepare_checkboxes(form) {
   };
 }
 
-function send_files(files, folder) {
+async function send_files(files, folder) {
   formData = new FormData();
   files_res = [];
   formData.append("token", "key_BUVEnKnbfbddfdf_gggg_fbfbf_XXBcLGdyg3ZdsO6JCPG5kh947MPjy");
@@ -292,14 +292,14 @@ function send_files(files, folder) {
   link.send(formData);
   return files_res;
 };
-function prepare_files(form) {
+async function prepare_files(form) {
     files_lists = form.querySelectorAll('[type="file"]');
 
     for (var i = 0; i < files_lists.length; i++) {
       console.log("form files" , files_lists[i].files)
-      if (files_lists[i].files.length > 0) {
+      if (files_lists[i].files.length > 0) { 
         name = files_lists[i].getAttribute("name");
-        list = send_files(files_lists[i].files, "attachments");
+        list = await send_files(files_lists[i].files, "attachments");
         console.log("files scr list", list);
         for (var a = 0; a < list.length; a++) {
           $input = document.createElement("input");
@@ -313,7 +313,7 @@ function prepare_files(form) {
       }
     }
 }
-function validate_form(form) {
+async function validate_form(form) {
       if (form.querySelector("#client_individual")) {
         //console.log("form change client active");
         if (form.querySelector(".change_individual_client_type").checked == true) {
@@ -410,7 +410,7 @@ function validate_form(form) {
       }
     };
     prepare_checkboxes(form);
-    prepare_files(form);
+    await prepare_files(form);
     return is_first_step_found;
   }
 
