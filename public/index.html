@@ -458,21 +458,21 @@ on('body', 'click', '.law_firm_form_submit', function (e) {
 on('body', 'click', '.attorney_form_submit', async function (e) {
     form = this.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement;
     setTimeout(await prepare_files(form), 2000);
-    is_err = setTimeout(await validate_form(form), 1000);
-    console.log(is_err);
-    if (!is_err) {
+    setTimeout(await validate_form(form), 1000);
+    //console.log(is_err);
+    //if (!is_err) {
       form_data = new FormData(form);
       console.log(form_data);
       console.log("ok");
       for (const [key, value] of form_data) {
         console.log(`${key}: ${value}`);
       }
-    }
-    else {
-      form_data = new FormData();
-      console.log(form_data);
-      console.log("err");
-    }
+    //}
+    //else {
+    //  form_data = new FormData();
+    //  console.log(form_data);
+    //  console.log("err");
+    //}
 });
 on('body', 'click', '.corporate_form_submit', function (e) {
     form = this.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement;
