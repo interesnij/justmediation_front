@@ -319,8 +319,7 @@ async function prepare_files(form) {
       }
     }
 }
-function validate_form(form) {
-      
+async function validate_form(form) {
       if (form.querySelector("#client_individual")) {
         //console.log("form change client active");
         if (form.querySelector(".change_individual_client_type").checked == true) {
@@ -461,8 +460,8 @@ on('body', 'click', '.law_firm_form_submit', function (e) {
 });
 on('body', 'click', '.attorney_form_submit', async function (e) {
     form = this.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement;
+    setTimeout(await validate_form(form), 2000);
     setTimeout(await prepare_files(form), 2000);
-    validate_form(form);
     //console.log(is_err);
     //if (!is_err) {
       form_data = new FormData(form);
