@@ -458,7 +458,7 @@ on('body', 'click', '.attorney_form_submit', async function (e) {
     form = this.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement;
     setTimeout(await prepare_files(form), 3000);
     validate_form(form);
-    is_err = validate_form(form);
+    is_err = await validate_form(form);
     console.log(is_err);
     if (!is_err) {
       form_data = new FormData(form);
