@@ -306,8 +306,9 @@ async function prepare_files(form) {
           new_list = await list;
           console.log("files scr list", new_list);
           console.log("files list length", new_list.length);
-          //_as = JSON.parse(new_list);
-          console.log(new_list[0]);
+          _as = Object.values(new_list);
+          console.log("new_list[0]", new_list[0]);
+          console.log("_as", _as);
           for (var a = 0; a < new_list.length; a++) {
             $input = document.createElement("input");
             $input.setAttribute("type", "hidden");
