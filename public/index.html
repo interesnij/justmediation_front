@@ -302,7 +302,7 @@ function asyncFunction(list, val) {
       $input = document.createElement("input");
       $input.setAttribute("type", "hidden");
       $input.setAttribute("name", "attachments");
-      $input.value = list[a];
+      $input.value = val;
       form.append($input);
     }, 2000); // 2 seconds timeout
   }
