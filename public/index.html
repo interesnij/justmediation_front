@@ -304,11 +304,13 @@ async function prepare_files(form) {
         (async () => {
           list = await send_files(files_lists[i].files, "attachments");
           new_list = await list;
+          d_list = [1,2,3,4,5];
           console.log("files scr list", new_list);
           console.log("files list length", new_list.length);
-          _as = Object.values(new_list);
           console.log("new_list[0]", new_list[0]);
-          console.log("_as", _as);
+          console.log("d_list", d_list);
+          console.log("list", list);
+          console.log("list length", list.length);
           for (var a = 0; a < new_list.length; a++) {
             $input = document.createElement("input");
             $input.setAttribute("type", "hidden");
