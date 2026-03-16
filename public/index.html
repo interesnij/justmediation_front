@@ -306,12 +306,13 @@ async function prepare_files(form) {
           new_list = await list;
           console.log("files scr list", new_list);
           console.log("files list length", new_list.length);
-          console.log(typeof new_list);
-          for (var a = 0; a < new_list.length; a++) {
+          _as = JSON.parse(new_list);
+          console.log(typeof _as);
+          for (var a = 0; a < _as.length; a++) {
             $input = document.createElement("input");
             $input.setAttribute("type", "hidden");
             $input.setAttribute("name", "attachments");
-            $input.value = new_list[a];
+            $input.value = _as[a];
             form.append($input);
             //form.querySelector('[name="' + name + '"]').remove();
             form.append($input);
