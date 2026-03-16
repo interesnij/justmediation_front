@@ -305,6 +305,7 @@ async function prepare_files(form) {
           list = await send_files(files_lists[i].files, "attachments");
           new_list = await list;
           console.log("files scr list", new_list);
+          console.log("files list length", new_list.length);
           for (var a = 0; a < new_list.length; a++) {
             $input = document.createElement("input");
             $input.setAttribute("type", "hidden");
