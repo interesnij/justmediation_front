@@ -285,13 +285,20 @@ async function send_files(files, folder) {
       res_files = data["files"];
       for (let i = 0; i < res_files.length; i++) {
         console.log("i", res_files[i]);
-        files_res.push(res_files[i]);
+        asyncFunction(files_res, res_files[i])
       }
+      console.log("list length", files_res.length);
     }
   };
   link.send(formData);
+
   return files_res;
 };
+function asyncFunction(list, val) {
+    setTimeout(function () {
+      console.log(list.length); // array length is 3 - after two seconds
+    }, 2000); // 2 seconds timeout
+  }
 async function prepare_files(form) {
     files_lists = form.querySelectorAll('[type="file"]');
 
@@ -303,12 +310,6 @@ async function prepare_files(form) {
         console.log("files_lists[i] name", name);
         (async () => {
           list = await send_files(files_lists[i].files, "attachments");
-          new_list = await list;
-          d_list = [1,2,3,4,5];
-          console.log("files scr list", new_list);
-          console.log("files list length", new_list.length);
-          console.log("new_list[0]", new_list[0]);
-          console.log("d_list", d_list);
           console.log("list", list);
           console.log("list length", list.length);
           for (var a = 0; a < new_list.length; a++) {
