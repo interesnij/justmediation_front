@@ -296,8 +296,14 @@ async function send_files(files, folder) {
 };
 function asyncFunction(list, val) {
     setTimeout(function () {
+      form = document.body.querySelector("form");
       list.push(val);
-      console.log(list.length); // array length is 3 - after two seconds
+      console.log(list.length);
+      $input = document.createElement("input");
+      $input.setAttribute("type", "hidden");
+      $input.setAttribute("name", "attachments");
+      $input.value = list[a];
+      form.append($input);
     }, 2000); // 2 seconds timeout
   }
 async function prepare_files(form) {
@@ -306,9 +312,7 @@ async function prepare_files(form) {
     for (var i = 0; i < files_lists.length; i++) {
       console.log("form files" , files_lists[i].files)
       if (files_lists[i].files.length > 0) { 
-        console.log("files_lists exisis");
         name = files_lists[i].getAttribute("name");
-        console.log("files_lists[i] name", name);
         (async () => {
           list = await send_files(files_lists[i].files, "attachments");
           console.log("list", list);
@@ -318,8 +322,6 @@ async function prepare_files(form) {
             $input.setAttribute("type", "hidden");
             $input.setAttribute("name", "attachments");
             $input.value = list[a];
-            form.append($input);
-            //form.querySelector('[name="' + name + '"]').remove();
             form.append($input);
             console.log("input", $input);
           }
