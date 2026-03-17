@@ -428,7 +428,7 @@ on('body', 'click', '.mediator_form_submit', async function (e) {
   is_err = validate_form(form);
   console.log(is_err);
   if (!is_err) {
-    //send_data(form, "mediator_create/");
+    send_data(form, "mediator_create/");
     for (const [key, value] of form_data) {
       console.log(`${key}: ${value}`);
     }
@@ -443,7 +443,7 @@ on('body', 'click', '.law_firm_form_submit', async function (e) {
     is_err = validate_form(form);
     console.log(is_err);
     if (!is_err) {
-    //send_data(form, "law_firm_create/");
+    send_data(form, "law_firm_create/");
     }
     else {
       console.log("err");
@@ -455,7 +455,7 @@ on('body', 'click', '.attorney_form_submit', async function (e) {
     is_err = validate_form(form);
     console.log(is_err);
     if (!is_err) {
-      //send_data(form, "attorney_create/");
+      send_data(form, "attorney_create/");
     }
     else {
       console.log("err");
@@ -467,7 +467,7 @@ on('body', 'click', '.corporate_form_submit', async function (e) {
     is_err = validate_form(form);
     console.log(is_err);
     if (!is_err) {
-      //send_data(form, "corporate_create/");
+      send_data(form, "corporate_create/");
     }
     else {
       console.log("err");
