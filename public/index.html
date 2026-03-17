@@ -179,7 +179,7 @@
     
     member_card = '<div><div class="users_card"><div class="input-control mt-1"><div class="d-flex justify-content-between align-items-center"><label class="input-control__label" for="id_user_name">Name</label></div><input class="required" name="user_name" type="text" id="id_user_name"><div class="input-control__footer red"></div></div><div class="input-control mt-1"><div class="d-flex justify-content-between align-items-center"><label class="input-control__label" for="id_user_title">Title</label></div><input class="required" name="user_title" type="text" id="id_user_title"><div class="input-control__footer red"></div></div></div><div class="input-control mt-1"><div class="d-flex justify-content-between align-items-center"><label class="input-control__label" for="id_user_email">Email</label></div><input class="required" name="user_email" type="text" id="id_user_email"><div class="input-control__footer red"></div></div><div class="input-control mt-1"><div class="d-flex justify-content-between align-items-center"><label class="input-control__label" for="id_user_departament">Departament</label></div><input class="required" name="user_departament" type="text" id="id_user_departament"><div class="input-control__footer red"></div></div><div class="col-12 mt-2"><p>Role:<div class="input-control__footer red"></div><div class="row"><div class="d-flex justify-content-between col-md-6 my-1 practice-area-item test"><div><label class="checkbox-component">Enterprise Admin<input class="required radio_style" name="user_role" type="checkbox"><span></span></label></div></div><div class="d-flex justify-content-between col-md-6 my-1 practice-area-item test"><div><label class="checkbox-component">Case Admin<input class="required radio_style" name="user_role" type="checkbox"><span></span></label></div></div><div class="d-flex justify-content-between col-md-6 my-1 practice-area-item test"><div><label class="checkbox-component">Legal team<input class="required radio_style" name="user_role" type="checkbox"><span></span></label></div></div><div class="d-flex justify-content-between col-md-6 my-1 practice-area-item test"><div><label class="checkbox-component">Litigation Hold<input class="required radio_style" name="user_role" type="checkbox"><span></span></label></div></div><div class="d-flex justify-content-between col-md-6 my-1 practice-area-item test"><div><label class="checkbox-component">HR<input class="required radio_style" name="user_role" type="checkbox"><span></span></label></div></div><div class="d-flex justify-content-between col-md-6 my-1 practice-area-item test"><div><label class="checkbox-component">Finance<input class="required radio_style" name="user_role" type="checkbox"><span></span></label></div></div><div class="d-flex justify-content-between col-md-6 my-1 practice-area-item test"><div><label class="checkbox-component">Executive View<input class="required radio_style" name="user_role" type="checkbox"><span></span></label></div></div><div class="d-flex justify-content-between col-md-6 my-1 practice-area-item test"><div><label class="checkbox-component">External Guest<input class="required radio_style" name="user_role" type="checkbox"><span></span></label></div></div></div></div></div><div class="new_member_block"></div><hr />';
     participant_card = '<div><div class="input-control mt-1"><div class="d-flex justify-content-between align-items-center"><label class="input-control__label" for="id_participant_name">Name</label></div><input class="required" name="participant_name" type="text" id="id_participant_name"><div class="input-control__footer red"></div></div><div class="input-control mt-1"><div class="d-flex justify-content-between align-items-center"><label class="input-control__label" for="id_participant_title">Title</label></div><input class="required" name="participant_title" type="text" id="id_participant_title"><div class="input-control__footer red"></div></div><div class="input-control mt-1"><div class="d-flex justify-content-between align-items-center"><label class="input-control__label" for="id_participant_departament">Departament</label></div><input class="required" name="participant_departament" type="text" id="id_participant_departament"><div class="input-control__footer red"></div></div><div class="input-control mt-1"><div class="d-flex justify-content-between align-items-center"><label class="input-control__label" for="id_participant_role">Role in Matter</label></div><input class="required" name="participant_role" type="text" id="id_participant_role"><div class="input-control__footer red"></div></div><div class="input-control mt-1"><div class="d-flex justify-content-between align-items-center"><label class="input-control__label" for="id_participant_role">Role in Matter</label></div><input class="required" name="participant_role" type="text" id="id_participant_role"><div class="input-control__footer red"></div></div><div class="col-12 mt-2"><p>Permission Level:<div class="input-control__footer red"></div><div class="row"><div class="d-flex justify-content-between col-md-6 my-1 practice-area-item test"><div><label class="checkbox-component">View Only<input class="required radio_style" name="participant_level" type="checkbox"><span></span></label></div></div><div class="d-flex justify-content-between col-md-6 my-1 practice-area-item test"><div><label class="checkbox-component">Case Manager<input class="required radio_style" name="participant_level" type="checkbox"><span></span></label></div></div><div class="d-flex justify-content-between col-md-6 my-1 practice-area-item test"><div><label class="checkbox-component">Executive Access<input class="required radio_style" name="participant_level" type="checkbox"><span></span></label></div></div><div class="d-flex justify-content-between col-md-6 my-1 practice-area-item test"><div><label class="checkbox-component">Billing Access<input class="required radio_style" name="participant_level" type="checkbox"><span></span></label></div></div></div></div></div><div></div><hr>';
-
+    
     on('body', 'click', '.add_user_card_for_mediator', function (e) {
       users_container = this.previousElementSibling.previousElementSibling;
       users_container.innerHTML = member_card;
@@ -275,7 +275,6 @@ async function send_files(files, folder) {
   formData.append("object_id", 100);
   for (let i = 0; i < files.length; i++) {
     console.log("upload:" + " folder", files[i]);
-    formData.append("file", files[i]);
   }
   link = window.XMLHttpRequest ? new XMLHttpRequest() : new ActiveXObject('Microsoft.XMLHTTP');
   link.open('POST', 'https://upload.justmediationhub.com/classic_create/', true);
@@ -284,7 +283,6 @@ async function send_files(files, folder) {
       data = JSON.parse(link.responseText);
       res_files = data["files"];
       for (let i = 0; i < res_files.length; i++) {
-        console.log("i", res_files[i]);
         asyncFunction(files_res, res_files[i])
       }
       console.log("list length", files_res.length);
@@ -308,64 +306,43 @@ function asyncFunction(list, val) {
   }
 async function prepare_files(form) {
     files_lists = form.querySelectorAll('[type="file"]');
-
     for (var i = 0; i < files_lists.length; i++) {
-      console.log("form files" , files_lists[i].files)
       if (files_lists[i].files.length > 0) { 
         name = files_lists[i].getAttribute("name");
         (async () => {
           list = await send_files(files_lists[i].files, "attachments");
-          console.log("list", list);
-          console.log("list length", list.length);
-          for (var a = 0; a < list.length; a++) {
-            $input = document.createElement("input");
-            $input.setAttribute("type", "hidden");
-            $input.setAttribute("name", "attachments");
-            $input.value = list[a];
-            form.append($input);
-            console.log("input", $input);
-          }
         })();
       }
     }
 }
-async function validate_form(form) {
+function validate_form(form) {
       if (form.querySelector("#client_individual")) {
-        //console.log("form change client active");
         if (form.querySelector(".change_individual_client_type").checked == true) {
           list_1 = form.querySelector("#client_corporate");
-          //console.log("client_corporate form", list_1);
           required_list = list_1.querySelectorAll("input");
           for (var g = 0; g < required_list.length; g++) {
             required_list[g].classList.remove("required");
-            //console.log("client_corporate", required_list[g]);
           }
           list_2 = form.querySelector("#client_individual");
-          //console.log("client_individual form", list_2);
           required_list_2 = list_2.querySelectorAll("input");
           for (var t = 0; t < required_list_2.length; t++) {
             if (!required_list_2[t].classList.contains("no_required")) {
               required_list_2[t].classList.add("required");
             }
-            //console.log("client_individual", required_list_2[t]);
           }
 
         } else if (form.querySelector(".change_corporate_client_type").checked == true) {
           list = form.querySelector("#client_individual");
-          //console.log("client_individual form", list);
           required_list = list.querySelectorAll("input");
           for (var g = 0; g < required_list.length; g++) {
             required_list[g].classList.remove("required");
-            //console.log("client_individual", required_list[g]);
           }
           list_2 = form.querySelector("#client_corporate");
-          //console.log("client_corporate form", list_2);
           required_list_2 = list_2.querySelectorAll("input");
           for (var t = 0; t < required_list_2.length; t++) {
             if (!required_list_2[t].classList.contains("no_required")) {
               required_list_2[t].classList.add("required");
             }
-            //console.log("client_corporate", required_list[t]);
           }
         }
       };
@@ -427,85 +404,74 @@ async function validate_form(form) {
     };
     
     prepare_checkboxes(form);
-    
     return is_first_step_found;
-  }
+}
 
-on('body', 'click', '.mediator_form_submit', function (e) {
+function send_data(form, url) {
+    formData = new FormData(form);
+    for (const [key, value] of form_data) {
+      console.log(`${key}: ${value}`);
+    }
+    link = window.XMLHttpRequest ? new XMLHttpRequest() : new ActiveXObject('Microsoft.XMLHTTP');
+    link.open('POST', "https://backend.justmediationhub.com/" + url, true);
+    link.onreadystatechange = function () {
+      if (link.readyState == 4 && link.status == 200) {
+        console.log("ok");
+        form.parentElement.innerHTML.innerHTML.innerHTML.innerHTML.innerHTML.innerHTML = '<div class="pb-4" style="width: 600"><div class="text-black" style="font-size: 18">JustMediationHub has received your registration.</div><br /><div class="text-dark">Please check your inbox for an email from JustMediationHub to verify your email address.</div></div><div class="d-flex mt-4"><button class="ml-auto"><a href="/">Return Home</a></button></div>';
+      }
+    };
+    link.send(formData);
+};
+on('body', 'click', '.mediator_form_submit', async function (e) {
   form = this.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement;
+  setTimeout(await prepare_files(form), 3000);
   is_err = validate_form(form);
   console.log(is_err);
   if (!is_err) {
-    form_data = new FormData(form);
-    console.log(form_data);
-    console.log("ok");
+    //send_data(form, "mediator_create/");
     for (const [key, value] of form_data) {
       console.log(`${key}: ${value}`);
     }
   }
   else {
-    form_data = new FormData();
-    console.log(form_data);
     console.log("err");
   }
 });
-on('body', 'click', '.law_firm_form_submit', function (e) {
+on('body', 'click', '.law_firm_form_submit', async function (e) {
     form = this.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement;
-    validate_form(form);
+    setTimeout(await prepare_files(form), 3000);
     is_err = validate_form(form);
     console.log(is_err);
     if (!is_err) {
-    form_data = new FormData(form);
-    console.log(form_data);
-    console.log("ok");
-    for (const [key, value] of form_data) {
-      console.log(`${key}: ${value}`);
-      }
-  }
-  else {
-    form_data = new FormData();
-    console.log(form_data);
-    console.log("err");
-  }
+    //send_data(form, "law_firm_create/");
+    }
+    else {
+      console.log("err");
+    }
 });
 on('body', 'click', '.attorney_form_submit', async function (e) {
     form = this.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement;
-    setTimeout(await prepare_files(form), 2000);
-    setTimeout(await validate_form(form), 2000);
-    
-    //console.log(is_err);
-    //if (!is_err) {
-      form_data = new FormData(form);
-      console.log(form_data);
-      console.log("ok");
-      for (const [key, value] of form_data) {
-        console.log(`${key}: ${value}`);
-      }
-    //}
-    //else {
-    //  form_data = new FormData();
-    //  console.log(form_data);
-    //  console.log("err");
-    //}
-});
-on('body', 'click', '.corporate_form_submit', function (e) {
-    form = this.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement;
-    validate_form(form);
+    setTimeout(await prepare_files(form), 3000);
     is_err = validate_form(form);
     console.log(is_err);
     if (!is_err) {
-    form_data = new FormData(form);
-    console.log(form_data);
-    console.log("ok");
-    for (const [key, value] of form_data) {
-        console.log(`${key}: ${value}`);
-      }
-  }
-  else {
-    form_data = new FormData();
-    console.log(form_data);
-    console.log("err");
-  }
+      //send_data(form, "attorney_create/");
+    }
+    else {
+      console.log("err");
+    }
+});
+on('body', 'click', '.corporate_form_submit', async function (e) {
+    form = this.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement;
+    setTimeout(await prepare_files(form), 3000);
+    is_err = validate_form(form);
+    console.log(is_err);
+    if (!is_err) {
+      //send_data(form, "corporate_create/");
+    }
+    else {
+      console.log("err");
+    }
 });
 on('body', 'click', '.select_files', function (e) {
     this.parentElement.style.border = "1px solid #e0e0e1";
