@@ -422,7 +422,7 @@ function send_data(form, url) {
     link.onreadystatechange = function () {
       if (link.readyState == 4 && link.status == 200) {
         console.log("ok");
-        document.body.querySelector(".create-account-layout__form").innerHTML = '<div class="pb-4" style="text-align: center;"><div style="font-size: 18px">JustMediationHub has received your registration.</div><br /><div>Please check your inbox for an email from JustMediationHub to verify your email address.</div></div><div class="d-flex mt-4"><button class="btn btn--green ripple-effect large ml-auto return_home_btn" style="margin: auto;"><span>Return Home</span></button></div>';
+        document.body.querySelector(".create-account-layout__content").innerHTML = '<div class="pb-4" style="text-align: center;"><div style="font-size: 18px">JustMediationHub has received your registration.</div><br /><div>Please check your inbox for an email from JustMediationHub to verify your email address.</div></div><div class="d-flex mt-4"><button class="btn btn--green ripple-effect large ml-auto return_home_btn" style="margin: auto;"><span>Return Home</span></button></div>';
       }
     };
     link.send(formData);
