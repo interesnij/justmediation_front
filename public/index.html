@@ -214,6 +214,13 @@
       }
     });
 
+    function ready () {
+       params = window.location.href;
+       console.log(params);
+    }
+
+    document.addEventListener("load", ready);
+
     on('body', 'click', '.this_fullscreen_hide', function (e) {
       e.preventDefault();
       close_fullscreen();
