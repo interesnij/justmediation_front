@@ -215,8 +215,20 @@
     });
 
     window.onload = function () {
-       params = window.location.href;
-       console.log(params);
+      params = window.location.href;
+      if (params.includes("auth/register#attorney_register")) {
+        create_fullscreen(attorney_reg);
+      }
+      else if (params.includes("auth/register#mediator_register")) {
+        create_fullscreen(mediator_reg);
+      }
+      else if (params.includes("auth/register#enterprise_register")) {
+        create_fullscreen(law_firm_reg);
+      }
+      else if (params.includes("auth/register#corporate_register")) {
+        create_fullscreen(corporate_reg);
+      }
+      console.log(params);
     };
 
     on('body', 'click', '.this_fullscreen_hide', function (e) {
