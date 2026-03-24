@@ -326,7 +326,7 @@ function send_data(form, url) {
         data = JSON.parse(link.responseText);
         res = data["resp"];
         console.log("data", res);
-        if (data == "user exists") {
+        if (res == "user exists") {
           alert("This email already exists");
           return;
         }
